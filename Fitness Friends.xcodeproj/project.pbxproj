@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F43CC51A1CE0D793008D1A83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F43CC5191CE0D793008D1A83 /* Assets.xcassets */; };
+		F43CC51C1CE0DAEE008D1A83 /* Coins.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43CC51B1CE0DAEE008D1A83 /* Coins.swift */; };
+		F43CC51E1CE1058C008D1A83 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43CC51D1CE1058C008D1A83 /* Store.swift */; };
 		F4DF45271CDB929000826CEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF45261CDB929000826CEB /* AppDelegate.swift */; };
-		F4DF45291CDB929000826CEB /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F4DF45281CDB929000826CEB /* GameScene.sks */; };
 		F4DF452B1CDB929000826CEB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF452A1CDB929000826CEB /* GameScene.swift */; };
 		F4DF452D1CDB929000826CEB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF452C1CDB929000826CEB /* GameViewController.swift */; };
 		F4DF45301CDB929000826CEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4DF452E1CDB929000826CEB /* Main.storyboard */; };
-		F4DF45321CDB929000826CEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4DF45311CDB929000826CEB /* Assets.xcassets */; };
 		F4DF45351CDB929000826CEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4DF45331CDB929000826CEB /* LaunchScreen.storyboard */; };
 		F4DF45401CDB929000826CEB /* Fitness_FriendsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF453F1CDB929000826CEB /* Fitness_FriendsTests.swift */; };
 		F4DF454B1CDB929100826CEB /* Fitness_FriendsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF454A1CDB929100826CEB /* Fitness_FriendsUITests.swift */; };
@@ -36,13 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F43CC5191CE0D793008D1A83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F43CC51B1CE0DAEE008D1A83 /* Coins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coins.swift; sourceTree = "<group>"; };
+		F43CC51D1CE1058C008D1A83 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		F4DF45231CDB929000826CEB /* Fitness Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fitness Friends.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4DF45261CDB929000826CEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F4DF45281CDB929000826CEB /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		F4DF452A1CDB929000826CEB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		F4DF452C1CDB929000826CEB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		F4DF452F1CDB929000826CEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F4DF45311CDB929000826CEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4DF45341CDB929000826CEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4DF45361CDB929000826CEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4DF453B1CDB929000826CEB /* Fitness FriendsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fitness FriendsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,11 +104,12 @@
 			isa = PBXGroup;
 			children = (
 				F4DF45261CDB929000826CEB /* AppDelegate.swift */,
-				F4DF45281CDB929000826CEB /* GameScene.sks */,
+				F43CC51D1CE1058C008D1A83 /* Store.swift */,
+				F43CC51B1CE0DAEE008D1A83 /* Coins.swift */,
 				F4DF452A1CDB929000826CEB /* GameScene.swift */,
 				F4DF452C1CDB929000826CEB /* GameViewController.swift */,
+				F43CC5191CE0D793008D1A83 /* Assets.xcassets */,
 				F4DF452E1CDB929000826CEB /* Main.storyboard */,
-				F4DF45311CDB929000826CEB /* Assets.xcassets */,
 				F4DF45331CDB929000826CEB /* LaunchScreen.storyboard */,
 				F4DF45361CDB929000826CEB /* Info.plist */,
 			);
@@ -235,9 +238,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4DF45291CDB929000826CEB /* GameScene.sks in Resources */,
 				F4DF45351CDB929000826CEB /* LaunchScreen.storyboard in Resources */,
-				F4DF45321CDB929000826CEB /* Assets.xcassets in Resources */,
+				F43CC51A1CE0D793008D1A83 /* Assets.xcassets in Resources */,
 				F4DF45301CDB929000826CEB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F43CC51E1CE1058C008D1A83 /* Store.swift in Sources */,
 				F4DF452B1CDB929000826CEB /* GameScene.swift in Sources */,
 				F4DF452D1CDB929000826CEB /* GameViewController.swift in Sources */,
+				F43CC51C1CE0DAEE008D1A83 /* Coins.swift in Sources */,
 				F4DF45271CDB929000826CEB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +496,7 @@
 				F4DF45511CDB929100826CEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F4DF45521CDB929100826CEB /* Build configuration list for PBXNativeTarget "Fitness FriendsTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +505,7 @@
 				F4DF45541CDB929100826CEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F4DF45551CDB929100826CEB /* Build configuration list for PBXNativeTarget "Fitness FriendsUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +514,7 @@
 				F4DF45571CDB929100826CEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8118" systemVersion="15A172" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BV1-FR-VrT">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8098"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Game View Controller-->
+        <!--Home-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" id="BV1-FR-VrT" customClass="GameViewController" customModule="Fitness_Friends" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
@@ -15,11 +16,267 @@
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fitness Friends" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OV4-1u-qsT">
+                                <rect key="frame" x="161" y="28" width="279" height="105"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXe-7l-my9" userLabel="myRoom">
+                                <rect key="frame" x="146" y="160" width="308" height="106"/>
+                                <accessibility key="accessibilityConfiguration" label="MyRoom"/>
+                                <state key="normal" backgroundImage="Room">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1h-7l-qn8" userLabel="exercise">
+                                <rect key="frame" x="146" y="269" width="308" height="104"/>
+                                <accessibility key="accessibilityConfiguration" label="Exercise"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" backgroundImage="Exercise">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRA-D6-RUj" userLabel="settings">
+                                <rect key="frame" x="146" y="373" width="308" height="104"/>
+                                <accessibility key="accessibilityConfiguration" label="Settings"/>
+                                <state key="normal" backgroundImage="Settings"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdv-NF-Ufw" userLabel="ourMission">
+                                <rect key="frame" x="146" y="478" width="308" height="108"/>
+                                <accessibility key="accessibilityConfiguration" label="Mission"/>
+                                <state key="normal" backgroundImage="Mission"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.4334612086368721" green="0.77575864601230926" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" image="YES"/>
+                        </accessibility>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-869" y="-2272"/>
+        </scene>
+        <!--My Room-->
+        <scene sceneID="253-Yi-duw">
+            <objects>
+                <viewController title="My Room" id="N4c-S8-EC2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RNm-A3-4Kc"/>
+                        <viewControllerLayoutGuide type="bottom" id="ckJ-Zr-pjZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XXn-FL-4hc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SamplePetsscreencropped" translatesAutoresizingMaskIntoConstraints="NO" id="uEz-WD-gzX">
+                                <rect key="frame" x="93" y="0.0" width="415" height="592"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goldenretriever" translatesAutoresizingMaskIntoConstraints="NO" id="fO6-m3-W19">
+                                <rect key="frame" x="222" y="273" width="156" height="189"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" adjustable="YES"/>
+                                </accessibility>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HP8-qp-CIC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-897" y="-1539"/>
+        </scene>
+        <!--Store-->
+        <scene sceneID="GJT-YO-9iC">
+            <objects>
+                <viewController title="Store" id="UqC-SC-ERC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pls-L5-Z4L"/>
+                        <viewControllerLayoutGuide type="bottom" id="iuD-0Q-j4M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eRu-Vh-e8P">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgL-0r-lUT" userLabel="buyCollar">
+                                <rect key="frame" x="113" y="178" width="136" height="140"/>
+                                <state key="normal" backgroundImage="collar store"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psP-8y-wLg" userLabel="buyCouch">
+                                <rect key="frame" x="343" y="365" width="146" height="141"/>
+                                <state key="normal" backgroundImage="couch store"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoi-Iz-ilf" userLabel="buyFlowerCrown">
+                                <rect key="frame" x="343" y="178" width="146" height="145"/>
+                                <state key="normal" backgroundImage="flowercrown store"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Store" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQf-7b-dAg">
+                                <rect key="frame" x="221" y="50" width="159" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zU8-jH-ebi" userLabel="buyClock">
+                                <rect key="frame" x="113" y="365" width="141" height="140"/>
+                                <state key="normal" backgroundImage="clock store"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tgo-yg-fcu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-879" y="-865"/>
+        </scene>
+        <!--TrackingMethod-->
+        <scene sceneID="3AU-im-Rr7">
+            <objects>
+                <viewController title="TrackingMethod" id="l3q-gs-7BJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W52-aU-Z9k"/>
+                        <viewControllerLayoutGuide type="bottom" id="qNh-aT-sF3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xHO-C8-1ic">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLe-qQ-nur" userLabel="trackDistance">
+                                <rect key="frame" x="161" y="161" width="275" height="88"/>
+                                <accessibility key="accessibilityConfiguration" label="TrackDistance"/>
+                                <state key="normal" backgroundImage="PickDistance"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rH8-tk-XVm" userLabel="trackTime">
+                                <rect key="frame" x="161" y="257" width="275" height="88"/>
+                                <accessibility key="accessibilityConfiguration" label="Timer"/>
+                                <state key="normal" backgroundImage="PickTime"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4a-6S-hrJ" userLabel="trackLog">
+                                <rect key="frame" x="161" y="358" width="275" height="85"/>
+                                <accessibility key="accessibilityConfiguration" label="Log">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                </accessibility>
+                                <state key="normal" backgroundImage="PickLog"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iOx-Ts-AoT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-181" y="-1539"/>
+        </scene>
+        <!--Log-->
+        <scene sceneID="730-2j-QmH">
+            <objects>
+                <viewController title="Log" id="Hca-tH-sZf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rQb-Nx-Cld"/>
+                        <viewControllerLayoutGuide type="bottom" id="lnq-Kr-61m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qv4-H3-nVv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="smX-KP-864" userLabel="milesStepper">
+                                <rect key="frame" x="323" y="454" width="94" height="29"/>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Miles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3M-UJ-jCt">
+                                <rect key="frame" x="247" y="461" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLh-y0-c5Y">
+                                <rect key="frame" x="176" y="449" width="52" height="35"/>
+                                <color key="tintColor" red="0.49907469749450684" green="0.94837373495101929" blue="0.16211330890655518" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DistanceOfExercise" translatesAutoresizingMaskIntoConstraints="NO" id="HJq-1y-coN">
+                                <rect key="frame" x="128" y="316" width="344" height="111"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LengthofExercise" translatesAutoresizingMaskIntoConstraints="NO" id="nYx-fS-yEE">
+                                <rect key="frame" x="128" y="125" width="344" height="116"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tDh-FM-xZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-181" y="-896"/>
+        </scene>
+        <!--Exercise-->
+        <scene sceneID="HKy-cQ-21r">
+            <objects>
+                <viewController title="Exercise" id="epI-HQ-AXr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rcl-0K-pcn"/>
+                        <viewControllerLayoutGuide type="bottom" id="2L0-Oa-6Hg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zhH-OI-wMW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3F3-Kb-i9K" userLabel="bike">
+                                <rect key="frame" x="88" y="320" width="190" height="138"/>
+                                <accessibility key="accessibilityConfiguration" label="Bike"/>
+                                <state key="normal" backgroundImage="Bike"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ayd-rz-g46" userLabel="run">
+                                <rect key="frame" x="88" y="159" width="190" height="153"/>
+                                <accessibility key="accessibilityConfiguration" label="Run"/>
+                                <state key="normal" backgroundImage="Run"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaD-AF-M04" userLabel="walk">
+                                <rect key="frame" x="299" y="159" width="189" height="153"/>
+                                <accessibility key="accessibilityConfiguration" label="Walk"/>
+                                <state key="normal" backgroundImage="Walk"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exercise" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wK4-2e-koJ">
+                                <rect key="frame" x="205" y="28" width="190" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOC-7c-VEZ" userLabel="swim">
+                                <rect key="frame" x="299" y="320" width="189" height="139"/>
+                                <accessibility key="accessibilityConfiguration" label="Swim"/>
+                                <state key="normal" backgroundImage="Swim"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jHd-aP-4bM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175" y="-2231"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Bike" width="226" height="192"/>
+        <image name="DistanceOfExercise" width="470" height="148"/>
+        <image name="Exercise" width="306" height="104"/>
+        <image name="LengthofExercise" width="470" height="136"/>
+        <image name="Mission" width="308" height="108"/>
+        <image name="PickDistance" width="298" height="102"/>
+        <image name="PickLog" width="298" height="104"/>
+        <image name="PickTime" width="296" height="100"/>
+        <image name="Room" width="308" height="106"/>
+        <image name="Run" width="218" height="186"/>
+        <image name="SamplePetsscreencropped" width="417" height="565"/>
+        <image name="Settings" width="304" height="104"/>
+        <image name="Swim" width="228" height="196"/>
+        <image name="Walk" width="216" height="176"/>
+        <image name="clock store" width="100" height="100"/>
+        <image name="collar store" width="100" height="100"/>
+        <image name="couch store" width="100" height="100"/>
+        <image name="flowercrown store" width="100" height="100"/>
+        <image name="goldenretriever" width="139" height="182"/>
+    </resources>
 </document>
