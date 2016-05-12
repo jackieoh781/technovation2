@@ -36,4 +36,14 @@ class GameViewController: UIViewController {
             super.didReceiveMemoryWarning()
         }
 }
+    //MAIN: Actions
+    @IBAction func myRoom(sender: UIButton) {
+    }
+    @IBAction func exercise(sender: UIButton) {
+    }
+    @IBAction func settings(sender: UIButton) {
+    }
+    @IBAction func ourMission(sender: UIButton) {
+    }
+
 }
