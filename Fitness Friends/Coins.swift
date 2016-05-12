@@ -82,4 +82,31 @@ class Coins {
     func pay(itemCost: Double) {
         totalCoins -= itemCost
     }
+    
+    func getExerciseValue(type: String) -> Double {
+        if type == "run" {
+            return runValue
+        }
+        else if type == "walk" {
+            return walkValue
+        }
+        else if type == "swim" {
+            return swimValue
+        }
+        else if type == "bike" {
+            return bikeValue
+        }
+        else if type == "soccer" {
+            return soccerValue
+        }
+        else if type == "dance" {
+            return danceValue
+        }
+        else if type == "basketball" {
+            return basketballValue
+        }
+        else {
+            return gymnasticsValue
+        }
+    }
 }

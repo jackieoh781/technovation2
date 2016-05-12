@@ -64,6 +64,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.4334612086368721" green="0.77575864601230926" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" image="YES"/>
                         </accessibility>
@@ -95,18 +96,25 @@
                                     <accessibilityTraits key="traits" image="YES" adjustable="YES"/>
                                 </accessibility>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfs-ha-4E3">
-                                <rect key="frame" x="267" y="659" width="101" height="57"/>
-                                <state key="normal" backgroundImage="ShopButton"/>
-                                <connections>
-                                    <segue destination="UqC-SC-ERC" kind="show" id="BX3-3j-wj4"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dL9-Je-9gk">
-                                <rect key="frame" x="127" y="659" width="96" height="57"/>
+                                <rect key="frame" x="148" y="654" width="101" height="62"/>
                                 <state key="normal" backgroundImage="ExerciseButton2"/>
                                 <connections>
                                     <segue destination="epI-HQ-AXr" kind="show" id="hN7-V7-VeY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Snj-vI-qlM">
+                                <rect key="frame" x="20" y="656" width="74" height="57"/>
+                                <state key="normal" image="BackButton-1"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="XTg-e9-FOi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfs-ha-4E3">
+                                <rect key="frame" x="293" y="654" width="101" height="57"/>
+                                <state key="normal" backgroundImage="ShopButton"/>
+                                <connections>
+                                    <segue destination="UqC-SC-ERC" kind="show" id="BX3-3j-wj4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -121,7 +129,7 @@
         <!--Store-->
         <scene sceneID="GJT-YO-9iC">
             <objects>
-                <viewController title="Store" id="UqC-SC-ERC" sceneMemberID="viewController">
+                <viewController title="Store" id="UqC-SC-ERC" customClass="StoreViewController" customModule="Fitness_Friends" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pls-L5-Z4L"/>
                         <viewControllerLayoutGuide type="bottom" id="iuD-0Q-j4M"/>
@@ -131,43 +139,61 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgL-0r-lUT" userLabel="buyCollar">
-                                <rect key="frame" x="48" y="195" width="136" height="140"/>
+                                <rect key="frame" x="48" y="167" width="136" height="140"/>
                                 <state key="normal" backgroundImage="collar store"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psP-8y-wLg" userLabel="buyCouch">
-                                <rect key="frame" x="226" y="400" width="146" height="141"/>
+                                <rect key="frame" x="226" y="359" width="146" height="141"/>
                                 <state key="normal" backgroundImage="couch store"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoi-Iz-ilf" userLabel="buyFlowerCrown">
-                                <rect key="frame" x="226" y="195" width="146" height="145"/>
+                                <rect key="frame" x="226" y="167" width="146" height="142"/>
                                 <state key="normal" backgroundImage="flowercrown store"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zU8-jH-ebi" userLabel="buyClock">
-                                <rect key="frame" x="43" y="401" width="141" height="140"/>
+                                <rect key="frame" x="43" y="360" width="141" height="140"/>
                                 <state key="normal" backgroundImage="clock store"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="StoreHeader" translatesAutoresizingMaskIntoConstraints="NO" id="zph-JN-j90">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
                             </imageView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k32-G7-3pa">
-                                <rect key="frame" x="89" y="352" width="51" height="31"/>
+                                <rect key="frame" x="92" y="315" width="51" height="31"/>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kZR-61-WOf">
-                                <rect key="frame" x="92" y="564" width="51" height="31"/>
+                                <rect key="frame" x="92" y="515" width="51" height="31"/>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lKp-TO-8ex">
-                                <rect key="frame" x="281" y="564" width="51" height="31"/>
+                                <rect key="frame" x="281" y="515" width="51" height="31"/>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q5G-AH-N6H">
-                                <rect key="frame" x="275" y="352" width="51" height="31"/>
+                                <rect key="frame" x="276" y="315" width="51" height="31"/>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ktx-lh-jER">
-                                <rect key="frame" x="173" y="613" width="68" height="55"/>
+                                <rect key="frame" x="12" y="600" width="68" height="55"/>
                                 <state key="normal" backgroundImage="BackButton-1"/>
                                 <connections>
                                     <segue destination="N4c-S8-EC2" kind="show" id="06O-FN-jff"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gno-XU-gUJ">
+                                <rect key="frame" x="103" y="606" width="146" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPa-RI-4nO">
+                                <rect key="frame" x="257" y="613" width="42" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7I-Zj-kBJ">
+                                <rect key="frame" x="300" y="612" width="89" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -180,7 +206,7 @@
         <!--TrackingMethod-->
         <scene sceneID="3AU-im-Rr7">
             <objects>
-                <viewController title="TrackingMethod" id="l3q-gs-7BJ" sceneMemberID="viewController">
+                <viewController title="TrackingMethod" id="l3q-gs-7BJ" customClass="ExerciseMethodViewController" customModule="Fitness_Friends" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="W52-aU-Z9k"/>
                         <viewControllerLayoutGuide type="bottom" id="qNh-aT-sF3"/>
@@ -280,7 +306,7 @@
         <!--Log-->
         <scene sceneID="730-2j-QmH">
             <objects>
-                <viewController title="Log" id="Hca-tH-sZf" sceneMemberID="viewController">
+                <viewController title="Log" id="Hca-tH-sZf" customClass="LogViewController" customModule="Fitness_Friends" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rQb-Nx-Cld"/>
                         <viewControllerLayoutGuide type="bottom" id="lnq-Kr-61m"/>
@@ -370,7 +396,7 @@
         <!--Exercise-->
         <scene sceneID="HKy-cQ-21r">
             <objects>
-                <viewController title="Exercise" id="epI-HQ-AXr" sceneMemberID="viewController">
+                <viewController title="Exercise" id="epI-HQ-AXr" customClass="ExerciseViewController" customModule="Fitness_Friends" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rcl-0K-pcn"/>
                         <viewControllerLayoutGuide type="bottom" id="2L0-Oa-6Hg"/>
@@ -383,21 +409,37 @@
                                 <rect key="frame" x="7" y="344" width="190" height="138"/>
                                 <accessibility key="accessibilityConfiguration" label="Bike"/>
                                 <state key="normal" backgroundImage="Bike"/>
+                                <connections>
+                                    <action selector="Bike:" destination="epI-HQ-AXr" eventType="touchUpInside" id="ZNj-WU-xVQ"/>
+                                    <segue destination="l3q-gs-7BJ" kind="show" identifier="bike" id="dRD-ck-thy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ayd-rz-g46" userLabel="run">
                                 <rect key="frame" x="7" y="183" width="190" height="153"/>
                                 <accessibility key="accessibilityConfiguration" label="Run"/>
                                 <state key="normal" backgroundImage="Run"/>
+                                <connections>
+                                    <action selector="Run:" destination="epI-HQ-AXr" eventType="touchUpInside" id="b4e-7H-AKF"/>
+                                    <segue destination="l3q-gs-7BJ" kind="show" identifier="run" id="hkn-A7-m6f"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaD-AF-M04" userLabel="walk">
                                 <rect key="frame" x="218" y="183" width="189" height="153"/>
                                 <accessibility key="accessibilityConfiguration" label="Walk"/>
                                 <state key="normal" backgroundImage="Walk"/>
+                                <connections>
+                                    <action selector="Walk:" destination="epI-HQ-AXr" eventType="touchUpInside" id="K91-Ux-gak"/>
+                                    <segue destination="l3q-gs-7BJ" kind="show" identifier="walk" id="tYR-9t-Qse"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOC-7c-VEZ" userLabel="swim">
                                 <rect key="frame" x="218" y="344" width="189" height="139"/>
                                 <accessibility key="accessibilityConfiguration" label="Swim"/>
                                 <state key="normal" backgroundImage="Swim"/>
+                                <connections>
+                                    <action selector="Swim:" destination="epI-HQ-AXr" eventType="touchUpInside" id="FL7-Hh-OXC"/>
+                                    <segue destination="l3q-gs-7BJ" kind="show" identifier="swim" id="4Zg-SS-5I5"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pawPrintHeaders" translatesAutoresizingMaskIntoConstraints="NO" id="ruV-jc-ZNH">
                                 <rect key="frame" x="0.0" y="15" width="414" height="117"/>
@@ -406,7 +448,7 @@
                                 <rect key="frame" x="170" y="506" width="84" height="54"/>
                                 <state key="normal" backgroundImage="BackButton-1"/>
                                 <connections>
-                                    <segue destination="N4c-S8-EC2" kind="show" id="PBe-Zo-Uvk"/>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="7nd-Os-leg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -416,7 +458,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHd-aP-4bM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-175" y="-2305"/>
+            <point key="canvasLocation" x="140" y="-2272"/>
         </scene>
     </scenes>
     <resources>
@@ -456,5 +498,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="06O-FN-jff"/>
         <segue reference="hN7-V7-VeY"/>
+        <segue reference="7nd-Os-leg"/>
+        <segue reference="dRD-ck-thy"/>
     </inferredMetricsTieBreakers>
 </document>
