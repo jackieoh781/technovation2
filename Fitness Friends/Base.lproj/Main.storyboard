@@ -116,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HP8-qp-CIC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-857" y="-1433"/>
+            <point key="canvasLocation" x="-869" y="-1321"/>
         </scene>
         <!--Store-->
         <scene sceneID="GJT-YO-9iC">
@@ -161,6 +161,13 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q5G-AH-N6H">
                                 <rect key="frame" x="275" y="352" width="51" height="31"/>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ktx-lh-jER">
+                                <rect key="frame" x="173" y="613" width="68" height="55"/>
+                                <state key="normal" backgroundImage="BackButton-1"/>
+                                <connections>
+                                    <segue destination="N4c-S8-EC2" kind="show" id="06O-FN-jff"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -168,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tgo-yg-fcu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-869" y="-611"/>
+            <point key="canvasLocation" x="-869" y="-363"/>
         </scene>
         <!--TrackingMethod-->
         <scene sceneID="3AU-im-Rr7">
@@ -191,6 +198,9 @@
                                 <rect key="frame" x="70" y="294" width="275" height="88"/>
                                 <accessibility key="accessibilityConfiguration" label="Timer"/>
                                 <state key="normal" backgroundImage="PickTime"/>
+                                <connections>
+                                    <segue destination="4zE-kW-P6j" kind="show" id="J3M-sb-sxO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4a-6S-hrJ" userLabel="trackLog">
                                 <rect key="frame" x="70" y="395" width="275" height="85"/>
@@ -215,7 +225,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOx-Ts-AoT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-175" y="-1443"/>
+            <point key="canvasLocation" x="-157" y="-1419"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="T3Z-aT-W7d">
+            <objects>
+                <viewController title="Timer" id="4zE-kW-P6j" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8TS-Pf-WxS"/>
+                        <viewControllerLayoutGuide type="bottom" id="kyL-Xx-tfQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8lK-3P-tti">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBp-eY-bfd">
+                                <rect key="frame" x="67" y="288" width="280" height="77"/>
+                                <state key="normal" backgroundImage="PauseButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8a-cC-vK5">
+                                <rect key="frame" x="67" y="389" width="280" height="72"/>
+                                <state key="normal" backgroundImage="SaveButton"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TimeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="dtZ-Do-kUM">
+                                <rect key="frame" x="103" y="171" width="209" height="87"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dI6-uI-nxV">
+                                <rect key="frame" x="140" y="184" width="40" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="59"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Op-TC-RqI">
+                                <rect key="frame" x="177" y="184" width="23" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="59"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOU-Nv-fWU">
+                                <rect key="frame" x="199" y="192" width="76" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="59"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m29-N8-vfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="461" y="-1484"/>
         </scene>
         <!--Log-->
         <scene sceneID="730-2j-QmH">
@@ -258,7 +318,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDh-FM-xZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-175" y="-582"/>
+            <point key="canvasLocation" x="-169" y="-512"/>
+        </scene>
+        <!--GPSTracker-->
+        <scene sceneID="Wsj-JU-6O5">
+            <objects>
+                <viewController title="GPSTracker" id="ly7-GE-cdO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ony-wp-So1"/>
+                        <viewControllerLayoutGuide type="bottom" id="3sY-RJ-O7E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5er-S6-rHs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGi-w5-Hpl">
+                                <rect key="frame" x="64" y="352" width="287" height="78"/>
+                                <state key="normal" backgroundImage="PauseButton2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRW-xx-ShI">
+                                <rect key="frame" x="64" y="444" width="287" height="74"/>
+                                <state key="normal" backgroundImage="SaveButton2"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MilesBackground" translatesAutoresizingMaskIntoConstraints="NO" id="kDy-bL-ttj">
+                                <rect key="frame" x="82" y="247" width="262" height="86"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TimeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="gtf-o6-jva">
+                                <rect key="frame" x="107" y="151" width="212" height="88"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iU-1j-4w2">
+                                <rect key="frame" x="133" y="260" width="67" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Miles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZt-xJ-7Dp">
+                                <rect key="frame" x="219" y="272" width="73" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l6C-W1-cnp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="436" y="-582"/>
         </scene>
         <!--Exercise-->
         <scene sceneID="HKy-cQ-21r">
@@ -295,6 +402,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pawPrintHeaders" translatesAutoresizingMaskIntoConstraints="NO" id="ruV-jc-ZNH">
                                 <rect key="frame" x="0.0" y="15" width="414" height="117"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBW-63-pJh">
+                                <rect key="frame" x="170" y="506" width="84" height="54"/>
+                                <state key="normal" backgroundImage="BackButton-1"/>
+                                <connections>
+                                    <segue destination="N4c-S8-EC2" kind="show" id="PBe-Zo-Uvk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -306,22 +420,29 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BackButton-1" width="372" height="312"/>
         <image name="Bike" width="226" height="192"/>
         <image name="DistanceOfExercise" width="470" height="148"/>
         <image name="Exercise" width="306" height="104"/>
         <image name="ExerciseButton2" width="146" height="86"/>
         <image name="LengthofExercise" width="470" height="136"/>
+        <image name="MilesBackground" width="286" height="142"/>
         <image name="Mission" width="308" height="108"/>
+        <image name="PauseButton" width="402" height="104"/>
+        <image name="PauseButton2" width="424" height="108"/>
         <image name="PickDistance" width="298" height="102"/>
         <image name="PickLog" width="298" height="104"/>
         <image name="PickTime" width="296" height="100"/>
         <image name="Room" width="308" height="106"/>
         <image name="Run" width="218" height="186"/>
         <image name="SamplePetsscreencropped" width="417" height="565"/>
+        <image name="SaveButton" width="424" height="106"/>
+        <image name="SaveButton2" width="424" height="104"/>
         <image name="Settings" width="304" height="104"/>
         <image name="ShopButton" width="126" height="76"/>
         <image name="StoreHeader" width="415" height="131"/>
         <image name="Swim" width="228" height="196"/>
+        <image name="TimeBackground" width="256" height="140"/>
         <image name="Walk" width="216" height="176"/>
         <image name="clock store" width="100" height="100"/>
         <image name="collar store" width="100" height="100"/>
@@ -333,6 +454,7 @@
         <image name="pawPrintHeaders" width="518" height="144"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SMp-Xq-bO6"/>
+        <segue reference="06O-FN-jff"/>
+        <segue reference="hN7-V7-VeY"/>
     </inferredMetricsTieBreakers>
 </document>
