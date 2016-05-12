@@ -64,7 +64,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.4334612086368721" green="0.77575864601230926" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" image="YES"/>
                         </accessibility>
@@ -141,18 +140,30 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgL-0r-lUT" userLabel="buyCollar">
                                 <rect key="frame" x="48" y="167" width="136" height="140"/>
                                 <state key="normal" backgroundImage="collar store"/>
+                                <connections>
+                                    <action selector="buyCollar:" destination="UqC-SC-ERC" eventType="touchUpInside" id="VkU-53-8YF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psP-8y-wLg" userLabel="buyCouch">
                                 <rect key="frame" x="226" y="359" width="146" height="141"/>
                                 <state key="normal" backgroundImage="couch store"/>
+                                <connections>
+                                    <action selector="buyCouch:" destination="UqC-SC-ERC" eventType="touchUpInside" id="X1b-vU-42I"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoi-Iz-ilf" userLabel="buyFlowerCrown">
                                 <rect key="frame" x="226" y="167" width="146" height="142"/>
                                 <state key="normal" backgroundImage="flowercrown store"/>
+                                <connections>
+                                    <action selector="buyFlowercrown:" destination="UqC-SC-ERC" eventType="touchUpInside" id="nfH-bc-6x9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zU8-jH-ebi" userLabel="buyClock">
                                 <rect key="frame" x="43" y="360" width="141" height="140"/>
                                 <state key="normal" backgroundImage="clock store"/>
+                                <connections>
+                                    <action selector="buyClock:" destination="UqC-SC-ERC" eventType="touchUpInside" id="khx-l2-LFh"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="StoreHeader" translatesAutoresizingMaskIntoConstraints="NO" id="zph-JN-j90">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
@@ -219,6 +230,9 @@
                                 <rect key="frame" x="70" y="198" width="275" height="88"/>
                                 <accessibility key="accessibilityConfiguration" label="TrackDistance"/>
                                 <state key="normal" backgroundImage="PickDistance"/>
+                                <connections>
+                                    <segue destination="ly7-GE-cdO" kind="show" id="Kul-Gm-aRp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rH8-tk-XVm" userLabel="trackTime">
                                 <rect key="frame" x="70" y="294" width="275" height="88"/>
@@ -244,6 +258,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aVd-7t-R8e">
                                 <rect key="frame" x="116" y="6" width="191" height="128"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcA-fN-2hR">
+                                <rect key="frame" x="174" y="508" width="67" height="52"/>
+                                <state key="normal" backgroundImage="BackButton-1"/>
+                                <connections>
+                                    <segue destination="epI-HQ-AXr" kind="show" id="8ul-sv-2oA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -251,7 +272,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOx-Ts-AoT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-157" y="-1419"/>
+            <point key="canvasLocation" x="-309" y="-1063"/>
         </scene>
         <!--Timer-->
         <scene sceneID="T3Z-aT-W7d">
@@ -344,7 +365,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDh-FM-xZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-169" y="-512"/>
+            <point key="canvasLocation" x="-183" y="-84"/>
         </scene>
         <!--GPSTracker-->
         <scene sceneID="Wsj-JU-6O5">
@@ -497,8 +518,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="06O-FN-jff"/>
-        <segue reference="hN7-V7-VeY"/>
-        <segue reference="7nd-Os-leg"/>
+        <segue reference="XTg-e9-FOi"/>
+        <segue reference="8ul-sv-2oA"/>
         <segue reference="dRD-ck-thy"/>
     </inferredMetricsTieBreakers>
 </document>

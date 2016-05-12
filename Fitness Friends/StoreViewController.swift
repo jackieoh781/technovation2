@@ -31,5 +31,32 @@ class StoreViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //MARK: Actions
+    @IBAction func buyCollar(sender: UIButton) {
+        /* Display pop up screen
+         Message: It's just a regular collar. Do you want to buy it?
+         25 coins
+         */
+    }
+    @IBAction func buyFlowercrown(sender: UIButton) {
+        /* Display pop up screen
+         Message: A flower crown to embrace your inner flower child. Do you want to buy it?
+         175 coins
+         */
+    }
+    @IBAction func buyClock(sender: UIButton) {
+        /* Display pop up screen
+         Message: Tick tock, it's a clock! Would you like to buy it?
+         150 coins
+         */
+    }
+    @IBAction func buyCouch(sender: UIButton) {
+        /* Display pop up screen
+         Message: What a comfy couch! Would you like to buy it?
+         150 coins
+         */
+    }
+    
 
 }

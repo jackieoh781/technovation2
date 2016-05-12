@@ -16,7 +16,7 @@ class ExerciseMethodViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //move this stuff to the method that loads before screen is displayed
-        value = Coins.getExerciseValue(type)
+        //value = Coins.getExerciseValue(type)
 
         // Do any additional setup after loading the view.
     }

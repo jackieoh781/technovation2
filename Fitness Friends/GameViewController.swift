@@ -16,6 +16,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /*
         //Configure the view
         let skView = view as! SKView
         skView.multipleTouchEnabled = false
@@ -26,7 +27,7 @@ class GameViewController: UIViewController {
         
         //Present the scene
         skView.presentScene(scene)
-        
+        */
         
         func prefersStatusBarHidden() -> Bool {
             return true
@@ -36,14 +37,4 @@ class GameViewController: UIViewController {
             super.didReceiveMemoryWarning()
         }
 }
-    //MARK: Actions
-    @IBAction func myRoom(sender: UIButton) {
-    }
-    @IBAction func exercise(sender: UIButton) {
-    }
-    @IBAction func settings(sender: UIButton) {
-    }
-    @IBAction func ourMission(sender: UIButton) {
-    }
-
 }
