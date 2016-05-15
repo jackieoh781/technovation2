@@ -21,6 +21,7 @@ class Coins {
     
     var totalCoins = 0.0
     
+    
     func calculateCoins(exerciseType: String, minutes: Double, method: String) -> Double {
         var coinRate = 0.0
         if exerciseType == "Run" {
