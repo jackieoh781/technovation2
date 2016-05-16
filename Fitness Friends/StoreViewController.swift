@@ -50,8 +50,8 @@ class StoreViewController: UIViewController {
             }
             else {
                 let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "No thanks!", style: .Cancel) { (action:UIAlertAction!) in
-                    print("Okay!");
+                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                    print("Okay!")
                 }
                 brokeAlert.addAction(no)
                 self.presentViewController(brokeAlert, animated: true, completion: nil)
@@ -76,8 +76,8 @@ class StoreViewController: UIViewController {
             }
             else {
                 let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "No thanks!", style: .Cancel) { (action:UIAlertAction!) in
-                    print("Okay!");
+                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                    print("Okay!")
                 }
                 brokeAlert.addAction(no)
                 self.presentViewController(brokeAlert, animated: true, completion: nil)
@@ -101,8 +101,8 @@ class StoreViewController: UIViewController {
             }
             else {
                 let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "No thanks!", style: .Cancel) { (action:UIAlertAction!) in
-                    print("Okay!");
+                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                    print("Okay!")
                 }
                 brokeAlert.addAction(no)
                 self.presentViewController(brokeAlert, animated: true, completion: nil)
@@ -120,10 +120,6 @@ class StoreViewController: UIViewController {
     
     //when clicked, this button displays a pop up screen that asks the user if they want to buy a couch for 150 coins
     @IBAction func buyCouch(sender: UIButton) {
-        /* Display pop up screen
-         Message: What a comfy couch! Would you like to buy it?
-         150 coins
-         */
         let alert = UIAlertController(title: "Buy Couch", message: "What a comfy couch! Would you like to buy it?", preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
             if self.coins.canPay(150.0) {
@@ -132,8 +128,8 @@ class StoreViewController: UIViewController {
             }
             else {
                 let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "No thanks!", style: .Cancel) { (action:UIAlertAction!) in
-                    print("Okay!");
+                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                    print("Okay!")
                 }
                 brokeAlert.addAction(no)
                 self.presentViewController(brokeAlert, animated: true, completion: nil)

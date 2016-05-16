@@ -7,14 +7,34 @@
 //
 
 import UIKit
+import CoreLocation
+import HealthKit
 
 class GPSViewController: UIViewController {
 
     var secondsCounter = 0
     var minutesCounter = 0
     var value = 0.0
+    var distance = 0.0
     var paused = false
     var timer = NSTimer()
+    let locationManager = CLLocationManager()
+    
+    /*
+    lazy var locationManager: CLLocationManager = {
+        var _locationManager = CLLocationManager()
+        _locationManager.delegate = self
+        _locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        _locationManager.activityType = .Fitness
+        
+        // Movement threshold for new events
+        _locationManager.distanceFilter = 10.0
+        return _locationManager
+    }()
+    
+    lazy var locations = [CLLocation]()
+  */
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +46,7 @@ class GPSViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -57,13 +77,13 @@ class GPSViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
+        
+        
     //MARK: Outlets
     @IBOutlet weak var minutesLabel: UILabel!
     @IBOutlet weak var secondsLabel: UILabel!
     
     //MARK: Actions
-    
     @IBAction func pauseResumeTimer(sender: UIButton) {
         paused = !paused
         if paused {
@@ -74,7 +94,6 @@ class GPSViewController: UIViewController {
             timer.fire()
             (sender).setBackgroundImage(UIImage(named: "PauseButton2"), forState: .Normal)
         }
-
     }
     
     //Will display a pop up window with an option to collect the coins and continue, or tweet about the exercise
@@ -92,4 +111,9 @@ class GPSViewController: UIViewController {
     }
     saveAlert.addAction(tweetAction)
     }
+    
+    
+        
 }
+
+

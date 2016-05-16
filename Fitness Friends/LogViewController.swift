@@ -49,12 +49,32 @@ class LogViewController: UIViewController {
     @IBAction func milesStepper(sender: UIStepper) {
         milesLabel.text = "\(milesStepperOutlet.value / 10)"
     }
+    
     @IBAction func timeStepper(sender: UIStepper) {
         x = timeStepperOutlet.value
         minutesLabel.text = "\((Int)(x % 60))"
         hoursLabel.text = "\((Int)(x/60))"
     }
-    @IBAction func nextButotn(sender: UIButton) {
+   
+    @IBAction func nextButton(sender: UIButton) {
+        //calculate coins and log them
+        
+        
+        //present alert
+        let saveAlert = UIAlertController(title: "Congratulations!", message: "You have earned __ coins!", preferredStyle: .Alert)
+        let continueAction = UIAlertAction(title: "Collect and continue", style: .Default) { (action:UIAlertAction!) in
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            
+            let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("My Room") as! RoomViewController
+            self.presentViewController(nextViewController, animated:true, completion:nil)
+        }
+        saveAlert.addAction(continueAction)
+        let tweetAction = UIAlertAction(title: "Tweet about it!", style: .Default) { (action:UIAlertAction!) in
+            print("Okay!");
+        }
+        saveAlert.addAction(tweetAction)
+        self.presentViewController(saveAlert, animated: true, completion: nil)
+
     }
     
 }

@@ -5,6 +5,56 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--Settings-->
+        <scene sceneID="fsA-Se-jA9">
+            <objects>
+                <viewController title="Settings" id="lBE-Hg-rXq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dmc-9H-LWK"/>
+                        <viewControllerLayoutGuide type="bottom" id="NU5-Yz-zbb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9xn-tS-Vhv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bFP-Cs-7ma" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1524" y="-1959"/>
+        </scene>
+        <!--Our Mission-->
+        <scene sceneID="rie-Ci-DCW">
+            <objects>
+                <viewController title="Our Mission" id="EUO-HM-vc5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VAX-nn-80x"/>
+                        <viewControllerLayoutGuide type="bottom" id="MsB-gL-GP9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EcF-C0-fEa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OurMission" translatesAutoresizingMaskIntoConstraints="NO" id="k30-ec-Z2M">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hT-g9-ea5">
+                                <rect key="frame" x="172" y="592" width="70" height="48"/>
+                                <state key="normal" backgroundImage="BackButton-1"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="XdX-9t-0OK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oz3-fj-JkO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1513" y="-1122"/>
+        </scene>
         <!--Home-->
         <scene sceneID="tXr-a1-R10">
             <objects>
@@ -42,6 +92,9 @@
                                 <rect key="frame" x="79" y="434" width="257" height="90"/>
                                 <accessibility key="accessibilityConfiguration" label="Settings"/>
                                 <state key="normal" backgroundImage="Settings"/>
+                                <connections>
+                                    <segue destination="lBE-Hg-rXq" kind="show" id="Gbd-76-AEn"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeHeader" translatesAutoresizingMaskIntoConstraints="NO" id="41N-jl-jZD">
                                 <rect key="frame" x="43" y="28" width="328" height="180"/>
@@ -53,6 +106,9 @@
                                 <rect key="frame" x="79" y="532" width="257" height="96"/>
                                 <accessibility key="accessibilityConfiguration" label="Mission"/>
                                 <state key="normal" backgroundImage="Mission"/>
+                                <connections>
+                                    <segue destination="EUO-HM-vc5" kind="show" id="31x-Nl-ZIK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.4334612086368721" green="0.77575864601230926" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -81,12 +137,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SamplePetsscreencropped" translatesAutoresizingMaskIntoConstraints="NO" id="uEz-WD-gzX">
                                 <rect key="frame" x="0.0" y="0.0" width="415" height="736"/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goldenretriever" translatesAutoresizingMaskIntoConstraints="NO" id="fO6-m3-W19">
-                                <rect key="frame" x="105" y="347" width="156" height="206"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" image="YES" adjustable="YES"/>
-                                </accessibility>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dL9-Je-9gk">
                                 <rect key="frame" x="148" y="654" width="101" height="62"/>
                                 <state key="normal" backgroundImage="ExerciseButton2"/>
@@ -108,12 +158,23 @@
                                     <segue destination="UqC-SC-ERC" kind="show" id="BX3-3j-wj4"/>
                                 </connections>
                             </button>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goldenretriever" translatesAutoresizingMaskIntoConstraints="NO" id="fO6-m3-W19">
+                                <rect key="frame" x="120" y="353" width="156" height="199"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" adjustable="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="uvx-dN-ss6" appends="YES" id="qzh-Zk-UXe"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HP8-qp-CIC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="uvx-dN-ss6"/>
             </objects>
             <point key="canvasLocation" x="-847" y="-1446"/>
         </scene>
@@ -585,6 +646,7 @@
         <image name="MilesBackground" width="286" height="142"/>
         <image name="Mission" width="308" height="108"/>
         <image name="NextButton" width="148" height="90"/>
+        <image name="OurMission" width="347" height="576"/>
         <image name="PauseButton" width="402" height="104"/>
         <image name="PauseButton2" width="424" height="108"/>
         <image name="PickDistance" width="298" height="102"/>
@@ -611,9 +673,9 @@
         <image name="pawPrintHeaders" width="518" height="144"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8ul-sv-2oA"/>
         <segue reference="wvl-M6-kHt"/>
-        <segue reference="7nd-Os-leg"/>
-        <segue reference="06O-FN-jff"/>
+        <segue reference="SMp-Xq-bO6"/>
+        <segue reference="XdX-9t-0OK"/>
+        <segue reference="lPb-cM-RzF"/>
     </inferredMetricsTieBreakers>
 </document>
