@@ -15,24 +15,13 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
         
-        //Configure the view
-        let skView = view as! SKView
-        skView.multipleTouchEnabled = false
-        
-        //Create and configure the scene
-        scene = GameScene(size: skView.bounds.size)
-        scene.scaleMode = .AspectFill
-        
-        //Present the scene
-        skView.presentScene(scene)
-        
-        func prefersStatusBarHidden() -> Bool {
-            return true
-        }
-        
-        func didReceiveMemoryWarning() {
-            super.didReceiveMemoryWarning()
-        }
-}
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 }

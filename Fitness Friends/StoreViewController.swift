@@ -10,19 +10,20 @@ import UIKit
 
 class StoreViewController: UIViewController {
     var coins = Coins()
+    var items = Store()
+    var collarCounter = 0
+    var flowercrownCounter = 0
+    var clockCounter = 0
+    var couchCounter = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -35,18 +36,16 @@ class StoreViewController: UIViewController {
     
     //MARK: Outlets
     @IBOutlet weak var coinsLabel: UILabel!
-    
+
     //MARK: Actions
     
+    //when clicked, this button displays a pop up screen that asks the user if they want to buy a collar for 25 coins
     @IBAction func buyCollar(sender: UIButton) {
-        /* Display pop up screen
-         Message: It's just a regular collar. Do you want to buy it?
-         25 coins
-         */
         let alert = UIAlertController(title: "Buy Collar", message: "It's just a regular collar. Do you want to buy it?", preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
             if self.coins.canPay(25.0) {
                 self.coins.pay(25.0)
+                self.items.buyItem("Collar", price: 25.0)
                 //collarSwitch.setEnabled(true)
             }
             else {
@@ -55,6 +54,7 @@ class StoreViewController: UIViewController {
                     print("Okay!");
                 }
                 brokeAlert.addAction(no)
+                self.presentViewController(brokeAlert, animated: true, completion: nil)
             }
         }
         alert.addAction(OKAction)
@@ -62,13 +62,17 @@ class StoreViewController: UIViewController {
             print("Okay!");
         }
         alert.addAction(cancelAction)
+        self.presentViewController(alert, animated: true, completion: nil)
         
     }
+    
+    //when clicked, this button displays a pop up screen that asks the user if they want to buy a flowercrown for 175 coins
     @IBAction func buyFlowercrown(sender: UIButton) {
         let alert = UIAlertController(title: "Buy Flowercrown", message: "A flower crown to embrace your inner flower child. Do you want to buy it?", preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
             if self.coins.canPay(175.0) {
-                self.coins.pay(175.0);
+                self.coins.pay(175.0)
+                self.items.buyItem("Flowercrown", price: 175.0)
             }
             else {
                 let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
@@ -76,6 +80,7 @@ class StoreViewController: UIViewController {
                     print("Okay!");
                 }
                 brokeAlert.addAction(no)
+                self.presentViewController(brokeAlert, animated: true, completion: nil)
             }
         }
         alert.addAction(OKAction)
@@ -83,16 +88,16 @@ class StoreViewController: UIViewController {
             print("Okay!");
         }
         alert.addAction(cancelAction)
+        self.presentViewController(alert, animated: true, completion: nil)
     }
+    
+    //when clicked, this button displays a pop up screen that asks the user if they want to buy a clock for 150 coins
     @IBAction func buyClock(sender: UIButton) {
-        /* Display pop up screen
-         Message: Tick tock, it's a clock! Would you like to buy it?
-         150 coins
-         */
         let alert = UIAlertController(title: "Buy Clock", message: "Tick tock, it's a clock! Would you like to buy it?", preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
             if self.coins.canPay(150.0) {
             self.coins.pay(150.0);
+            self.items.buyItem("Clock", price: 150.0)
             }
             else {
                 let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
@@ -100,6 +105,7 @@ class StoreViewController: UIViewController {
                     print("Okay!");
                 }
                 brokeAlert.addAction(no)
+                self.presentViewController(brokeAlert, animated: true, completion: nil)
 
             }
         }
@@ -108,8 +114,11 @@ class StoreViewController: UIViewController {
             print("Okay!");
         }
         alert.addAction(cancelAction)
+        self.presentViewController(alert, animated: true, completion: nil)
         
     }
+    
+    //when clicked, this button displays a pop up screen that asks the user if they want to buy a couch for 150 coins
     @IBAction func buyCouch(sender: UIButton) {
         /* Display pop up screen
          Message: What a comfy couch! Would you like to buy it?
@@ -119,6 +128,7 @@ class StoreViewController: UIViewController {
         let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
             if self.coins.canPay(150.0) {
                 self.coins.pay(150.0);
+                self.items.buyItem("Couch", price: 150.0)
             }
             else {
                 let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
@@ -126,6 +136,7 @@ class StoreViewController: UIViewController {
                     print("Okay!");
                 }
                 brokeAlert.addAction(no)
+                self.presentViewController(brokeAlert, animated: true, completion: nil)
                 
             }
         }
@@ -134,15 +145,51 @@ class StoreViewController: UIViewController {
             print("Okay!");
         }
         alert.addAction(cancelAction)
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
+    //turns on the collar in the Room screen
     @IBAction func collarSwitch(sender: UISwitch) {
+        collarCounter += 1
+        if collarCounter % 2 == 1 {
+            self.items.itemOn("Collar")
+        }
+        else {
+            self.items.itemOff("Collar")
+        }
     }
+    
+    //turns on the flowercrown in the Room screen
     @IBAction func flowercrownSwitch(sender: UISwitch) {
+        flowercrownCounter += 1
+        if flowercrownCounter % 2 == 1 {
+            self.items.itemOn("Flowercrown")
+        }
+        else {
+            self.items.itemOff("Flowercrown")
+        }
     }
+    
+    //turns on the clock in the Room screen
     @IBAction func clockSwitch(sender: UISwitch) {
+        clockCounter += 1
+        if clockCounter % 2 == 1 {
+            self.items.itemOn("Clock")
+        }
+        else {
+            self.items.itemOff("Clock")
+        }
     }
+    
+    //turns on the couch in the Room screen
     @IBAction func couchSwitch(sender: UISwitch) {
+        couchCounter += 1
+        if couchCounter % 2 == 1 {
+            self.items.itemOn("Couch")
+        }
+        else {
+            self.items.itemOff("Couch")
+        }
     }
     
 }
