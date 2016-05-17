@@ -12,9 +12,11 @@ class Store {
     
     var itemsOwned = [String]()
     var itemsOn = Set<String>()
+    var totalCoinsSpent = 0.0
     
     func buyItem(item: String, price: Double) {
         itemsOwned.append(item)
+        totalCoinsSpent += price
     }
     
     func itemOn(item: String) {

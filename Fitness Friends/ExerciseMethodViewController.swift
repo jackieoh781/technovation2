@@ -43,17 +43,17 @@ class ExerciseMethodViewController: UIViewController {
         
         if segue.identifier == "gpsSegue" {
             if let destinationVC = segue.destinationViewController as? GPSViewController {
-                destinationVC.value = value * 1.5
+                destinationVC.type = type
             }
         }
         else if segue.identifier == "timerSegue" {
             if let destinationVC = segue.destinationViewController as? TimerViewController {
-                destinationVC.value = value
+                destinationVC.type = type
             }
         }
         else if segue.identifier == "logSegue" {
             if let destinationVC = segue.destinationViewController as? LogViewController {
-                destinationVC.exerciseValue = value * 0.75
+                destinationVC.type = type
             }
         }
     }

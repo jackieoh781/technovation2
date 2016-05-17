@@ -9,8 +9,6 @@
 import UIKit
 
 class StoreViewController: UIViewController {
-    var coins = Coins()
-    var items = Store()
     var collarCounter = 0
     var flowercrownCounter = 0
     var clockCounter = 0
@@ -18,6 +16,8 @@ class StoreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        coinsLabel.text = "\(Int(Main().coins.totalCoins))"
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,9 +43,9 @@ class StoreViewController: UIViewController {
     @IBAction func buyCollar(sender: UIButton) {
         let alert = UIAlertController(title: "Buy Collar", message: "It's just a regular collar. Do you want to buy it?", preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
-            if self.coins.canPay(25.0) {
-                self.coins.pay(25.0)
-                self.items.buyItem("Collar", price: 25.0)
+            if Main().coins.canPay(25.0) {
+                Main().coins.pay(25.0)
+                Main().items.buyItem("Collar", price: 25.0)
                 //collarSwitch.setEnabled(true)
             }
             else {
@@ -70,9 +70,9 @@ class StoreViewController: UIViewController {
     @IBAction func buyFlowercrown(sender: UIButton) {
         let alert = UIAlertController(title: "Buy Flowercrown", message: "A flower crown to embrace your inner flower child. Do you want to buy it?", preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
-            if self.coins.canPay(175.0) {
-                self.coins.pay(175.0)
-                self.items.buyItem("Flowercrown", price: 175.0)
+            if Main().coins.canPay(175.0) {
+                Main().coins.pay(175.0)
+                Main().items.buyItem("Flowercrown", price: 175.0)
             }
             else {
                 let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
@@ -95,9 +95,9 @@ class StoreViewController: UIViewController {
     @IBAction func buyClock(sender: UIButton) {
         let alert = UIAlertController(title: "Buy Clock", message: "Tick tock, it's a clock! Would you like to buy it?", preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
-            if self.coins.canPay(150.0) {
-            self.coins.pay(150.0);
-            self.items.buyItem("Clock", price: 150.0)
+            if Main().coins.canPay(150.0) {
+                Main().coins.pay(150.0);
+                Main().items.buyItem("Clock", price: 150.0)
             }
             else {
                 let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
@@ -122,9 +122,9 @@ class StoreViewController: UIViewController {
     @IBAction func buyCouch(sender: UIButton) {
         let alert = UIAlertController(title: "Buy Couch", message: "What a comfy couch! Would you like to buy it?", preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
-            if self.coins.canPay(150.0) {
-                self.coins.pay(150.0);
-                self.items.buyItem("Couch", price: 150.0)
+            if Main().coins.canPay(150.0) {
+                Main().coins.pay(150.0);
+                Main().items.buyItem("Couch", price: 150.0)
             }
             else {
                 let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
@@ -148,10 +148,10 @@ class StoreViewController: UIViewController {
     @IBAction func collarSwitch(sender: UISwitch) {
         collarCounter += 1
         if collarCounter % 2 == 1 {
-            self.items.itemOn("Collar")
+            Main().items.itemOn("Collar")
         }
         else {
-            self.items.itemOff("Collar")
+            Main().items.itemOff("Collar")
         }
     }
     
@@ -159,10 +159,10 @@ class StoreViewController: UIViewController {
     @IBAction func flowercrownSwitch(sender: UISwitch) {
         flowercrownCounter += 1
         if flowercrownCounter % 2 == 1 {
-            self.items.itemOn("Flowercrown")
+            Main().items.itemOn("Flowercrown")
         }
         else {
-            self.items.itemOff("Flowercrown")
+            Main().items.itemOff("Flowercrown")
         }
     }
     
@@ -170,10 +170,10 @@ class StoreViewController: UIViewController {
     @IBAction func clockSwitch(sender: UISwitch) {
         clockCounter += 1
         if clockCounter % 2 == 1 {
-            self.items.itemOn("Clock")
+            Main().items.itemOn("Clock")
         }
         else {
-            self.items.itemOff("Clock")
+            Main().items.itemOff("Clock")
         }
     }
     
@@ -181,10 +181,10 @@ class StoreViewController: UIViewController {
     @IBAction func couchSwitch(sender: UISwitch) {
         couchCounter += 1
         if couchCounter % 2 == 1 {
-            self.items.itemOn("Couch")
+            Main().items.itemOn("Couch")
         }
         else {
-            self.items.itemOff("Couch")
+            Main().items.itemOff("Couch")
         }
     }
     

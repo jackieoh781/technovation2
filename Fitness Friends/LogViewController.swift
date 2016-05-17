@@ -10,11 +10,12 @@ import UIKit
 
 class LogViewController: UIViewController {
 
-    var exerciseType = ""
+    var type = ""
     var exerciseValue = 0.0
     var minutesCounter = 0.0
     var hoursCounter = 0.0
     var x = 0.0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,11 +58,11 @@ class LogViewController: UIViewController {
     }
    
     @IBAction func nextButton(sender: UIButton) {
-        //calculate coins and log them
-        
+        //add coins
+        let x = Main().coins.addCoins(type, minutes: minutesCounter, method: "Log")
         
         //present alert
-        let saveAlert = UIAlertController(title: "Congratulations!", message: "You have earned __ coins!", preferredStyle: .Alert)
+        let saveAlert = UIAlertController(title: "Congratulations!", message: "You have earned \(x) coins!", preferredStyle: .Alert)
         let continueAction = UIAlertAction(title: "Collect and continue", style: .Default) { (action:UIAlertAction!) in
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             

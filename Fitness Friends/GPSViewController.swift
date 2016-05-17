@@ -13,11 +13,14 @@ import HealthKit
 class GPSViewController: UIViewController {
 
     var secondsCounter = 0
-    var minutesCounter = 0
+    var minutesCounter = 0.0
     var value = 0.0
     var distance = 0.0
     var paused = false
     var timer = NSTimer()
+    var x = 0.0
+    var type = ""
+    
     let locationManager = CLLocationManager()
     
     /*
@@ -98,19 +101,23 @@ class GPSViewController: UIViewController {
     
     //Will display a pop up window with an option to collect the coins and continue, or tweet about the exercise
     @IBAction func save(sender: UIButton) {
-        let saveAlert = UIAlertController(title: "Congratulations!", message: "You have earned __ coins!", preferredStyle: .Alert)
+        //add coins
+        let x = Main().coins.addCoins(type, minutes: minutesCounter, method: "GPS")
+        
+        //present alert
+        let saveAlert = UIAlertController(title: "Congratulations!", message: "You have earned \(x) coins!", preferredStyle: .Alert)
         let continueAction = UIAlertAction(title: "Collect and continue", style: .Default) { (action:UIAlertAction!) in
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             
             let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("My Room") as! RoomViewController
             self.presentViewController(nextViewController, animated:true, completion:nil)
         }
-    saveAlert.addAction(continueAction)
-    let tweetAction = UIAlertAction(title: "Tweet about it!", style: .Default) { (action:UIAlertAction!) in
-        print("Okay!");
-    }
-    saveAlert.addAction(tweetAction)
-    }
+        saveAlert.addAction(continueAction)
+        let tweetAction = UIAlertAction(title: "Tweet about it!", style: .Default) { (action:UIAlertAction!) in
+            print("Okay!");
+        }
+        saveAlert.addAction(tweetAction)
+        }
     
     
         
