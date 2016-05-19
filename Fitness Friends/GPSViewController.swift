@@ -12,48 +12,50 @@ import HealthKit
 
 class GPSViewController: UIViewController {
 
+    //Timer variables
     var secondsCounter = 0
-    var minutesCounter = 0.0
-    var value = 0.0
-    var distance = 0.0
+    var minutesCounter = 0
     var paused = false
     var timer = NSTimer()
-    var x = 0.0
+    var coinsEarned = 0.0
     var type = ""
-    
-    let locationManager = CLLocationManager()
-    
+    var value = 0.0
+
     /*
-    lazy var locationManager: CLLocationManager = {
-        var _locationManager = CLLocationManager()
-        _locationManager.delegate = self
-        _locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        _locationManager.activityType = .Fitness
-        
-        // Movement threshold for new events
-        _locationManager.distanceFilter = 10.0
-        return _locationManager
-    }()
-    
+    //GPS tracking variables
+    var startLocation:CLLocation!
+    var lastLocation: CLLocation!
+    var traveledDistance:Double = 0
+    let locationManager = CLLocationManager()
     lazy var locations = [CLLocation]()
-  */
-    
+ */
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        timer.invalidate() // just in case this button is tapped multiple times
+        timer.invalidate()
         
         // start the timer
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
-
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    /*
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        if startLocation == nil {
+            startLocation = locations.first as! CLLocation
+        } else {
+            let lastLocation = locations.last as! CLLocation
+            let distance = startLocation.distanceFromLocation(lastLocation)
+            startLocation = lastLocation
+            traveledDistance += distance
+        }
+    }
+ */
     
     func timerAction() {
         secondsCounter += 1
@@ -69,8 +71,13 @@ class GPSViewController: UIViewController {
             secondsLabel.text = "\(secondsCounter)"
         }
         minutesLabel.text = "\(minutesCounter)"
+       
     }
 
+    /*
+     locationManager(locationManager, didUpdateLocations: locations)
+     */
+    
     /*
     // MARK: - Navigation
 
@@ -83,9 +90,10 @@ class GPSViewController: UIViewController {
         
         
     //MARK: Outlets
+
     @IBOutlet weak var minutesLabel: UILabel!
     @IBOutlet weak var secondsLabel: UILabel!
-    
+
     //MARK: Actions
     @IBAction func pauseResumeTimer(sender: UIButton) {
         paused = !paused
@@ -102,10 +110,10 @@ class GPSViewController: UIViewController {
     //Will display a pop up window with an option to collect the coins and continue, or tweet about the exercise
     @IBAction func save(sender: UIButton) {
         //add coins
-        let x = Main().coins.addCoins(type, minutes: minutesCounter, method: "GPS")
+        let coinsEarned = mainInstance.coins.addCoins(type, minutes: Double(minutesCounter), method: "GPS")
         
         //present alert
-        let saveAlert = UIAlertController(title: "Congratulations!", message: "You have earned \(x) coins!", preferredStyle: .Alert)
+        let saveAlert = UIAlertController(title: "Congratulations!", message: "You have earned \(coinsEarned) coins!", preferredStyle: .Alert)
         let continueAction = UIAlertAction(title: "Collect and continue", style: .Default) { (action:UIAlertAction!) in
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             
@@ -118,9 +126,7 @@ class GPSViewController: UIViewController {
         }
         saveAlert.addAction(tweetAction)
         }
-    
-    
-        
+
 }
 
 

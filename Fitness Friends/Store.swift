@@ -12,6 +12,7 @@ class Store {
     
     var itemsOwned = [String]()
     var itemsOn = Set<String>()
+    var pet = ""
     var totalCoinsSpent = 0.0
     
     func buyItem(item: String, price: Double) {
@@ -27,4 +28,25 @@ class Store {
         itemsOn.remove(item)
     }
     
+    func setPet(animal:String) {
+        pet = animal
+    }
+    
+    func isItemOn(item:String) -> Bool {
+        for items in itemsOn {
+            if items == item {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func hasItem(item:String) -> Bool {
+        for items in itemsOwned {
+            if items == item {
+                return true
+            }
+        }
+        return false
+    }
 }

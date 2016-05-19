@@ -14,6 +14,7 @@
 		F483369F1CE4FAA600CED334 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483369E1CE4FAA600CED334 /* ExerciseViewController.swift */; };
 		F48336A11CE4FD4B00CED334 /* ExerciseMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48336A01CE4FD4B00CED334 /* ExerciseMethodViewController.swift */; };
 		F48336A31CE5024E00CED334 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48336A21CE5024E00CED334 /* StoreViewController.swift */; };
+		F4DB47051CEB5FA500FF35E7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB47041CEB5FA500FF35E7 /* SettingsViewController.swift */; };
 		F4DF45271CDB929000826CEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF45261CDB929000826CEB /* AppDelegate.swift */; };
 		F4DF452B1CDB929000826CEB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF452A1CDB929000826CEB /* GameScene.swift */; };
 		F4DF452D1CDB929000826CEB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF452C1CDB929000826CEB /* GameViewController.swift */; };
@@ -52,6 +53,7 @@
 		F483369E1CE4FAA600CED334 /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		F48336A01CE4FD4B00CED334 /* ExerciseMethodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseMethodViewController.swift; sourceTree = "<group>"; };
 		F48336A21CE5024E00CED334 /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		F4DB47041CEB5FA500FF35E7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F4DF45231CDB929000826CEB /* Fitness Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fitness Friends.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4DF45261CDB929000826CEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4DF452A1CDB929000826CEB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			children = (
 				F4DF45261CDB929000826CEB /* AppDelegate.swift */,
 				F43CC51D1CE1058C008D1A83 /* Store.swift */,
+				F4DB47041CEB5FA500FF35E7 /* SettingsViewController.swift */,
 				F43CC51B1CE0DAEE008D1A83 /* Coins.swift */,
 				F4DF452A1CDB929000826CEB /* GameScene.swift */,
 				F4DF452C1CDB929000826CEB /* GameViewController.swift */,
@@ -303,6 +306,7 @@
 				F4DF452B1CDB929000826CEB /* GameScene.swift in Sources */,
 				F4DF452D1CDB929000826CEB /* GameViewController.swift in Sources */,
 				F48336A31CE5024E00CED334 /* StoreViewController.swift in Sources */,
+				F4DB47051CEB5FA500FF35E7 /* SettingsViewController.swift in Sources */,
 				F483369D1CE4E9C400CED334 /* LogViewController.swift in Sources */,
 				F43CC51C1CE0DAEE008D1A83 /* Coins.swift in Sources */,
 				F4FD9AAE1CE91F3D00BBA331 /* TimerViewController.swift in Sources */,

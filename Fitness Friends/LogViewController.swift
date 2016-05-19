@@ -59,7 +59,7 @@ class LogViewController: UIViewController {
    
     @IBAction func nextButton(sender: UIButton) {
         //add coins
-        let x = Main().coins.addCoins(type, minutes: minutesCounter, method: "Log")
+        let x = mainInstance.coins.addCoins(type, minutes: minutesCounter, method: "Log")
         
         //present alert
         let saveAlert = UIAlertController(title: "Congratulations!", message: "You have earned \(x) coins!", preferredStyle: .Alert)

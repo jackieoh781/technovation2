@@ -11,7 +11,7 @@ import UIKit
 class TimerViewController: UIViewController {
     
     var secondsCounter = 0
-    var minutesCounter = 0.0
+    var minutesCounter = 0
     var value = 0.0
     var paused = false
     var timer = NSTimer()
@@ -62,7 +62,7 @@ class TimerViewController: UIViewController {
     //MARK: Outlets
     @IBOutlet weak var minutesLabel: UILabel!
     @IBOutlet weak var secondsLabel: UILabel!
-    
+    @IBOutlet weak var pauseResume: UIButton!
     
     //MARK: Actions
     
@@ -71,18 +71,18 @@ class TimerViewController: UIViewController {
         paused = !paused
         if paused {
             timer.invalidate()
-            (sender).setBackgroundImage(UIImage(named: "ResumeButton"), forState: .Normal)
+            pauseResume.setBackgroundImage(UIImage(named: "ResumeButton"), forState: .Normal)
         }
         else {
             timer.fire()
-            (sender).setBackgroundImage(UIImage(named: "PauseButton"), forState: .Normal)
+            pauseResume.setBackgroundImage(UIImage(named: "PauseButton"), forState: .Normal)
         }
     }
     
     //Will display a pop up window with an option to collect the coins and continue, or tweet about the exercise
     @IBAction func save(sender: UIButton) {
         //add coins
-        let x = Main().coins.addCoins(type, minutes: minutesCounter, method: "Timer")
+        let x = mainInstance.coins.addCoins(type, minutes: Double(minutesCounter), method: "Timer")
         
         //present alert
         let saveAlert = UIAlertController(title: "Congratulations!", message: "You have earned \(x) coins!", preferredStyle: .Alert)

@@ -11,5 +11,11 @@ import Foundation
 class Main {
     var coins = Coins()
     var items = Store()
+    var name = ""
     
+    init(name:String) {
+        self.name = name
+    }
 }
+
+var mainInstance = Main(name:"My Global Class")
