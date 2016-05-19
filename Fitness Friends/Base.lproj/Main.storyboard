@@ -198,7 +198,7 @@
         <!--My Room-->
         <scene sceneID="253-Yi-duw">
             <objects>
-                <viewController title="My Room" id="N4c-S8-EC2" customClass="RoomViewController" customModule="Fitness_Friends" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="My Room" storyboardIdentifier="My Room" title="My Room" id="N4c-S8-EC2" customClass="RoomViewController" customModule="Fitness_Friends" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RNm-A3-4Kc"/>
                         <viewControllerLayoutGuide type="bottom" id="ckJ-Zr-pjZ"/>
@@ -225,7 +225,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfs-ha-4E3">
-                                <rect key="frame" x="293" y="654" width="101" height="57"/>
+                                <rect key="frame" x="293" y="654" width="101" height="63"/>
                                 <state key="normal" backgroundImage="ShopButton"/>
                                 <connections>
                                     <segue destination="UqC-SC-ERC" kind="show" id="BX3-3j-wj4"/>
@@ -368,10 +368,14 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="clockButton" destination="zU8-jH-ebi" id="LoR-MY-w47"/>
                         <outlet property="clockSwitch1" destination="kZR-61-WOf" id="AkK-4I-jwf"/>
                         <outlet property="coinsLabel" destination="bPa-RI-4nO" id="pAp-ED-1iI"/>
+                        <outlet property="collarButton" destination="HgL-0r-lUT" id="c0E-U9-UMa"/>
                         <outlet property="collarSwitch1" destination="k32-G7-3pa" id="Xkw-1x-2bF"/>
+                        <outlet property="couchButton" destination="psP-8y-wLg" id="884-p2-fsp"/>
                         <outlet property="couchSwitch1" destination="lKp-TO-8ex" id="vqr-AR-XPK"/>
+                        <outlet property="flowercrownButton" destination="uoi-Iz-ilf" id="LNe-KD-Jax"/>
                         <outlet property="flowercrownSwitch1" destination="Q5G-AH-N6H" id="Xmd-x0-7e5"/>
                     </connections>
                 </viewController>
@@ -662,6 +666,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="distanceLabel" destination="1iU-1j-4w2" id="2wr-jS-ij6"/>
                         <outlet property="minutesLabel" destination="hdo-1y-Dd8" id="SNd-8G-jY4"/>
                         <outlet property="secondsLabel" destination="zUX-cR-K8R" id="X7i-J1-6dh"/>
                     </connections>

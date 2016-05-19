@@ -19,7 +19,7 @@ class Coins {
     let gymnasticsValue = 23.6
     let basketballValue = 35.4
     
-    var totalCoins = 500.0
+    var totalCoins = 0.0
     var totalCoinsEarned = 0.0
     var totalMinutesExercised = 0.0
     

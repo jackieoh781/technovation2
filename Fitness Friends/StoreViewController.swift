@@ -76,6 +76,11 @@ class StoreViewController: UIViewController {
     @IBOutlet weak var flowercrownSwitch1: UISwitch!
     @IBOutlet weak var clockSwitch1: UISwitch!
     @IBOutlet weak var couchSwitch1: UISwitch!
+    @IBOutlet weak var collarButton: UIButton!
+    @IBOutlet weak var flowercrownButton: UIButton!
+    @IBOutlet weak var clockButton: UIButton!
+    @IBOutlet weak var couchButton: UIButton!
+    
 
     //MARK: Actions
     
@@ -88,6 +93,7 @@ class StoreViewController: UIViewController {
                 mainInstance.items.buyItem("Collar", price: 25.0)
                 self.collarSwitch1.enabled = true
                 self.collarEnabled = true
+                self.collarButton.enabled = false
             }
             else {
                 let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
@@ -117,6 +123,7 @@ class StoreViewController: UIViewController {
                 mainInstance.items.buyItem("Flowercrown", price: 175.0)
                 self.flowercrownSwitch1.enabled = true
                 self.flowercrownEnabled = true
+                self.flowercrownButton.enabled = false
             }
             else {
                 let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
@@ -145,6 +152,7 @@ class StoreViewController: UIViewController {
                 mainInstance.items.buyItem("Clock", price: 150.0)
                 self.clockSwitch1.enabled = true
                 self.clockEnabled = true
+                self.clockButton.enabled = false
             }
             else {
                 let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
@@ -175,6 +183,7 @@ class StoreViewController: UIViewController {
                 mainInstance.items.buyItem("Couch", price: 150.0)
                 self.couchSwitch1.enabled = true
                 self.couchEnabled = true
+                self.couchButton.enabled = false
             }
             else {
                 let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)

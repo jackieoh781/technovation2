@@ -21,14 +21,13 @@ class GPSViewController: UIViewController {
     var type = ""
     var value = 0.0
 
-    /*
+    
     //GPS tracking variables
     var startLocation:CLLocation!
     var lastLocation: CLLocation!
     var traveledDistance:Double = 0
     let locationManager = CLLocationManager()
-    lazy var locations = [CLLocation]()
- */
+    var locations = [CLLocation]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +43,7 @@ class GPSViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    /*
+
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         if startLocation == nil {
             startLocation = locations.first as! CLLocation
@@ -55,7 +54,6 @@ class GPSViewController: UIViewController {
             traveledDistance += distance
         }
     }
- */
     
     func timerAction() {
         secondsCounter += 1
@@ -72,11 +70,13 @@ class GPSViewController: UIViewController {
         }
         minutesLabel.text = "\(minutesCounter)"
        
+        locationManager(locationManager, didUpdateLocations: locations)
+        updateDistanceLabel()
     }
-
-    /*
-     locationManager(locationManager, didUpdateLocations: locations)
-     */
+    
+    func updateDistanceLabel() {
+        distanceLabel.text = "\(round(traveledDistance*1000/1000))"
+    }
     
     /*
     // MARK: - Navigation
@@ -93,6 +93,8 @@ class GPSViewController: UIViewController {
 
     @IBOutlet weak var minutesLabel: UILabel!
     @IBOutlet weak var secondsLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
+    
 
     //MARK: Actions
     @IBAction func pauseResumeTimer(sender: UIButton) {
@@ -122,7 +124,7 @@ class GPSViewController: UIViewController {
         }
         saveAlert.addAction(continueAction)
         let tweetAction = UIAlertAction(title: "Tweet about it!", style: .Default) { (action:UIAlertAction!) in
-            print("Okay!");
+            print("Okay!")
         }
         saveAlert.addAction(tweetAction)
         }
