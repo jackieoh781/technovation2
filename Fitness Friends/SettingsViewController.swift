@@ -17,6 +17,12 @@ class SettingsViewController: UIViewController {
         minutesExercised.text = "\(mainInstance.coins.totalMinutesExercised)"
         milesTravelled.text = ""
         coinsEarned.text = "\(mainInstance.coins.totalCoinsEarned)"
+        
+        if mainInstance.items.pet == "Dog" {
+            dog.enabled = false
+        } else {
+            cat.enabled = false
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,14 +45,21 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var minutesExercised: UILabel!
     @IBOutlet weak var milesTravelled: UILabel!
     @IBOutlet weak var coinsEarned: UILabel!
+    @IBOutlet weak var dog: UIButton!
+    @IBOutlet weak var cat: UIButton!
+    
     
     //MARK: Actions
     @IBAction func chooseDog(sender: UIButton) {
         mainInstance.items.setPet("Dog")
+        dog.enabled = false
+        cat.enabled = true
     }
     
     @IBAction func chooseCat(sender: UIButton) {
         mainInstance.items.setPet("Cat")
+        cat.enabled = false
+        dog.enabled = true
     }
 
 }

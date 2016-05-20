@@ -12,7 +12,7 @@ class Store {
     
     var itemsOwned = [String]()
     var itemsOn = Set<String>()
-    var pet = ""
+    var pet = "Dog"
     var totalCoinsSpent = 0.0
     
     func buyItem(item: String, price: Double) {

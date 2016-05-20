@@ -36,23 +36,28 @@ class GPSViewController: UIViewController {
         
         // start the timer
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+        
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         if startLocation == nil {
-            startLocation = locations.first as! CLLocation
+            startLocation = locationManager.location
+                //locations.first as! CLLocation
         } else {
             let lastLocation = locations.last as! CLLocation
             let distance = startLocation.distanceFromLocation(lastLocation)
             startLocation = lastLocation
             traveledDistance += distance
         }
+        print("This is working")
     }
     
     func timerAction() {
@@ -94,6 +99,8 @@ class GPSViewController: UIViewController {
     @IBOutlet weak var minutesLabel: UILabel!
     @IBOutlet weak var secondsLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var pauseResume: UIButton!
+    
     
 
     //MARK: Actions
@@ -101,11 +108,11 @@ class GPSViewController: UIViewController {
         paused = !paused
         if paused {
             timer.invalidate()
-            (sender).setBackgroundImage(UIImage(named: "ResumeButton2"), forState: .Normal)
+            pauseResume.setBackgroundImage(UIImage(named: "ResumeButton2"), forState: .Normal)
         }
         else {
-            timer.fire()
-            (sender).setBackgroundImage(UIImage(named: "PauseButton2"), forState: .Normal)
+            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+            pauseResume.setBackgroundImage(UIImage(named: "PauseButton2"), forState: .Normal)
         }
     }
     
@@ -113,6 +120,8 @@ class GPSViewController: UIViewController {
     @IBAction func save(sender: UIButton) {
         //add coins
         let coinsEarned = mainInstance.coins.addCoins(type, minutes: Double(minutesCounter), method: "GPS")
+        self.locationManager.stopUpdatingLocation()
+        timer.invalidate()
         
         //present alert
         let saveAlert = UIAlertController(title: "Congratulations!", message: "You have earned \(coinsEarned) coins!", preferredStyle: .Alert)
@@ -127,6 +136,7 @@ class GPSViewController: UIViewController {
             print("Okay!")
         }
         saveAlert.addAction(tweetAction)
+        self.presentViewController(saveAlert, animated: true, completion: nil)
         }
 
 }

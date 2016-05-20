@@ -27,13 +27,13 @@ class Coins {
     func calculateCoins(exerciseType: String, minutes: Double, method: String) -> Double {
         var coinRate = 0.0
         if exerciseType == "Run" {
-            coinRate = runValue
+            coinRate = 59.0
         }
         else if exerciseType == "Walk" {
-            coinRate = walkValue
+            coinRate = 17.7
         }
         else if exerciseType == "Bike" {
-            coinRate = bikeValue
+            coinRate = 35.4
         }
             
         else if exerciseType == "Swim" {
@@ -72,6 +72,7 @@ class Coins {
         totalCoins += amount
         totalCoinsEarned += amount
         totalMinutesExercised += minutes
+        print("\(amount)")
         return amount
     }
     

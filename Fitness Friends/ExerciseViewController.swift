@@ -34,22 +34,22 @@ class ExerciseViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "run" {
             if let destinationVC = segue.destinationViewController as? ExerciseMethodViewController {
-                destinationVC.type = "run"
+                destinationVC.type = "Run"
             }
         }
         else if segue.identifier == "walk" {
             if let destinationVC = segue.destinationViewController as? ExerciseMethodViewController {
-                destinationVC.type = "walk"
+                destinationVC.type = "Walk"
             }
         }
         else if segue.identifier == "swim" {
             if let destinationVC = segue.destinationViewController as? ExerciseMethodViewController {
-                destinationVC.type = "swim"
+                destinationVC.type = "Swim"
             }
         }
         if segue.identifier == "bike" {
             if let destinationVC = segue.destinationViewController as? ExerciseMethodViewController {
-                destinationVC.type = "bike"
+                destinationVC.type = "Bike"
             }
         }
     }

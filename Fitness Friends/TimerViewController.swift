@@ -74,15 +74,16 @@ class TimerViewController: UIViewController {
             pauseResume.setBackgroundImage(UIImage(named: "ResumeButton"), forState: .Normal)
         }
         else {
-            timer.fire()
+             timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
             pauseResume.setBackgroundImage(UIImage(named: "PauseButton"), forState: .Normal)
         }
     }
-    
+
     //Will display a pop up window with an option to collect the coins and continue, or tweet about the exercise
     @IBAction func save(sender: UIButton) {
         //add coins
-        let x = mainInstance.coins.addCoins(type, minutes: Double(minutesCounter), method: "Timer")
+        let x = mainInstance.coins.addCoins(type, minutes: Double(minutesCounter + secondsCounter/60), method: "Timer")
+        timer.invalidate()
         
         //present alert
         let saveAlert = UIAlertController(title: "Congratulations!", message: "You have earned \(x) coins!", preferredStyle: .Alert)
@@ -99,6 +100,7 @@ class TimerViewController: UIViewController {
         saveAlert.addAction(tweetAction)
         self.presentViewController(saveAlert, animated: true, completion: nil)
     }
+
 }
     
 

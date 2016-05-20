@@ -88,14 +88,16 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="cat" destination="d9S-3E-Lyy" id="Svv-gr-gw6"/>
                         <outlet property="coinsEarned" destination="4sK-lI-uXw" id="Ylx-rt-CCF"/>
+                        <outlet property="dog" destination="aqe-7R-3cD" id="uTZ-Kd-r1U"/>
                         <outlet property="milesTravelled" destination="sDY-U8-rFZ" id="ZxA-lr-HU8"/>
                         <outlet property="minutesExercised" destination="BJb-ec-BvC" id="oWK-YE-mQD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bFP-Cs-7ma" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1781" y="-2610"/>
+            <point key="canvasLocation" x="-1573" y="-2506"/>
         </scene>
         <!--Our Mission-->
         <scene sceneID="rie-Ci-DCW">
@@ -126,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oz3-fj-JkO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1969" y="-1258"/>
+            <point key="canvasLocation" x="-1573" y="-1678"/>
         </scene>
         <!--Home-->
         <scene sceneID="tXr-a1-R10">
@@ -462,7 +464,7 @@
                                 <rect key="frame" x="67" y="288" width="280" height="77"/>
                                 <state key="normal" backgroundImage="PauseButton"/>
                                 <connections>
-                                    <action selector="pauseOrResumeTimer:" destination="4zE-kW-P6j" eventType="touchUpInside" id="kcL-fu-9Zz"/>
+                                    <action selector="pauseResumeTimer:" destination="4zE-kW-P6j" eventType="touchUpInside" id="cDN-fO-cxv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8a-cC-vK5">
@@ -615,7 +617,7 @@
                                 <rect key="frame" x="64" y="352" width="287" height="78"/>
                                 <state key="normal" backgroundImage="PauseButton2"/>
                                 <connections>
-                                    <action selector="pauseResumeButton:" destination="ly7-GE-cdO" eventType="touchUpInside" id="ws6-Xl-8Iv"/>
+                                    <action selector="pauseResumeTimer:" destination="ly7-GE-cdO" eventType="touchUpInside" id="Z9N-P2-Pmo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRW-xx-ShI">
@@ -668,6 +670,7 @@
                     <connections>
                         <outlet property="distanceLabel" destination="1iU-1j-4w2" id="2wr-jS-ij6"/>
                         <outlet property="minutesLabel" destination="hdo-1y-Dd8" id="SNd-8G-jY4"/>
+                        <outlet property="pauseResume" destination="kGi-w5-Hpl" id="rld-A7-Fg2"/>
                         <outlet property="secondsLabel" destination="zUX-cR-K8R" id="X7i-J1-6dh"/>
                     </connections>
                 </viewController>
@@ -780,9 +783,9 @@
         <image name="statsHeader" width="164" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XTg-e9-FOi"/>
-        <segue reference="06O-FN-jff"/>
-        <segue reference="hN7-V7-VeY"/>
         <segue reference="omi-uq-KGT"/>
+        <segue reference="hN7-V7-VeY"/>
+        <segue reference="06O-FN-jff"/>
+        <segue reference="Wfb-14-DbH"/>
     </inferredMetricsTieBreakers>
 </document>
