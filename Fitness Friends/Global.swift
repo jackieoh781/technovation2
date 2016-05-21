@@ -12,9 +12,14 @@ class Main {
     var coins = Coins()
     var items = Store()
     var name = ""
+    var exercise = ""
     
     init(name:String) {
         self.name = name
+    }
+    
+    func setExercise(x:String) {
+        exercise = x
     }
 }
 

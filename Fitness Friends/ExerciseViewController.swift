@@ -9,8 +9,6 @@
 import UIKit
 
 class ExerciseViewController: UIViewController {
-    
-    var exerciseType = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,35 +21,32 @@ class ExerciseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        
-        // Pass the selected object to the new view controller.
-        if segue.identifier == "run" {
-            if let destinationVC = segue.destinationViewController as? ExerciseMethodViewController {
-                destinationVC.type = "Run"
-            }
-        }
-        else if segue.identifier == "walk" {
-            if let destinationVC = segue.destinationViewController as? ExerciseMethodViewController {
-                destinationVC.type = "Walk"
-            }
-        }
-        else if segue.identifier == "swim" {
-            if let destinationVC = segue.destinationViewController as? ExerciseMethodViewController {
-                destinationVC.type = "Swim"
-            }
-        }
-        if segue.identifier == "bike" {
-            if let destinationVC = segue.destinationViewController as? ExerciseMethodViewController {
-                destinationVC.type = "Bike"
-            }
-        }
+    //MARK: Actions
+    @IBAction func run(sender: UIButton) {
+        mainInstance.setExercise("Run")
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("Exercise Methods") as! ExerciseMethodViewController
+        self.presentViewController(nextViewController, animated:true, completion:nil)
     }
     
+    @IBAction func walk(sender: UIButton) {
+        mainInstance.setExercise("Walk")
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("Exercise Methods") as! ExerciseMethodViewController
+        self.presentViewController(nextViewController, animated:true, completion:nil)
+    }
+    
+    @IBAction func bike(sender: UIButton) {
+        mainInstance.setExercise("Bike")
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("Exercise Methods") as! ExerciseMethodViewController
+        self.presentViewController(nextViewController, animated:true, completion:nil)
+    }
+    
+    @IBAction func swim(sender: UIButton) {
+        mainInstance.setExercise("Swim")
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("Exercise Methods") as! ExerciseMethodViewController
+        self.presentViewController(nextViewController, animated:true, completion:nil)
+    }
 }

@@ -9,8 +9,6 @@
 import UIKit
 
 class ExerciseMethodViewController: UIViewController {
-
-    var type = ""
     var x = Coins()
     var value = 0.0
     
@@ -18,44 +16,25 @@ class ExerciseMethodViewController: UIViewController {
         super.viewDidLoad()
         
         /*
-        let image: UIImage = UIImage(named: "RunHeader")!
-        header = UIImageView(image: image)
-        self.view.addSubview(header!)
-         */
-        //move this stuff to the method that loads before screen is displayed
-        
-        value = x.getExerciseValue(type)
+        if mainInstance.exercise == "Run" {
+            header.image = UIImage(named: "RunHeader")
+        }
+        else if mainInstance.exercise == "Walk" {
+            header.image = UIImage(named: "WalkHeader")
+        }
+        else if mainInstance.exercise == "Bike" {
+            header.image = UIImage(named: "BikeHeader")
+        }
+        else if mainInstance.exercise == "Swim" {
+            header.image = UIImage(named: "SwimHeader")
+        }
+        */
 
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        
-        if segue.identifier == "gpsSegue" {
-            if let destinationVC = segue.destinationViewController as? GPSViewController {
-                destinationVC.type = type
-            }
-        }
-        else if segue.identifier == "timerSegue" {
-            if let destinationVC = segue.destinationViewController as? TimerViewController {
-                destinationVC.type = type
-            }
-        }
-        else if segue.identifier == "logSegue" {
-            if let destinationVC = segue.destinationViewController as? LogViewController {
-                destinationVC.type = type
-            }
-        }
     }
     
     //MARK: Outlets

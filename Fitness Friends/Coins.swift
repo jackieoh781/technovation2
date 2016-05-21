@@ -35,7 +35,6 @@ class Coins {
         else if exerciseType == "Bike" {
             coinRate = 35.4
         }
-            
         else if exerciseType == "Swim" {
             coinRate = swimValue
         }

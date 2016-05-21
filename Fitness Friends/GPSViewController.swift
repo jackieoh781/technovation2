@@ -57,7 +57,6 @@ class GPSViewController: UIViewController {
             startLocation = lastLocation
             traveledDistance += distance
         }
-        print("This is working")
     }
     
     func timerAction() {
@@ -83,17 +82,6 @@ class GPSViewController: UIViewController {
         distanceLabel.text = "\(round(traveledDistance*1000/1000))"
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-        
-        
     //MARK: Outlets
 
     @IBOutlet weak var minutesLabel: UILabel!
@@ -114,12 +102,13 @@ class GPSViewController: UIViewController {
             timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
             pauseResume.setBackgroundImage(UIImage(named: "PauseButton2"), forState: .Normal)
         }
+        print("\(type)")
     }
     
     //Will display a pop up window with an option to collect the coins and continue, or tweet about the exercise
     @IBAction func save(sender: UIButton) {
         //add coins
-        let coinsEarned = mainInstance.coins.addCoins(type, minutes: Double(minutesCounter), method: "GPS")
+        let coinsEarned = mainInstance.coins.addCoins(mainInstance.exercise, minutes: Double(minutesCounter + secondsCounter/60), method: "GPS")
         self.locationManager.stopUpdatingLocation()
         timer.invalidate()
         
@@ -127,15 +116,16 @@ class GPSViewController: UIViewController {
         let saveAlert = UIAlertController(title: "Congratulations!", message: "You have earned \(coinsEarned) coins!", preferredStyle: .Alert)
         let continueAction = UIAlertAction(title: "Collect and continue", style: .Default) { (action:UIAlertAction!) in
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            
             let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("My Room") as! RoomViewController
             self.presentViewController(nextViewController, animated:true, completion:nil)
         }
         saveAlert.addAction(continueAction)
+        /*
         let tweetAction = UIAlertAction(title: "Tweet about it!", style: .Default) { (action:UIAlertAction!) in
             print("Okay!")
         }
         saveAlert.addAction(tweetAction)
+        */
         self.presentViewController(saveAlert, animated: true, completion: nil)
         }
 

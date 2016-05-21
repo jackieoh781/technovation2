@@ -49,16 +49,6 @@ class TimerViewController: UIViewController {
         minutesLabel.text = "\(minutesCounter)"
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     //MARK: Outlets
     @IBOutlet weak var minutesLabel: UILabel!
     @IBOutlet weak var secondsLabel: UILabel!
@@ -82,7 +72,7 @@ class TimerViewController: UIViewController {
     //Will display a pop up window with an option to collect the coins and continue, or tweet about the exercise
     @IBAction func save(sender: UIButton) {
         //add coins
-        let x = mainInstance.coins.addCoins(type, minutes: Double(minutesCounter + secondsCounter/60), method: "Timer")
+        let x = mainInstance.coins.addCoins(mainInstance.exercise, minutes: Double(minutesCounter + secondsCounter/60), method: "Timer")
         timer.invalidate()
         
         //present alert
@@ -94,10 +84,12 @@ class TimerViewController: UIViewController {
             self.presentViewController(nextViewController, animated:true, completion:nil)
         }
         saveAlert.addAction(continueAction)
+        /*
         let tweetAction = UIAlertAction(title: "Tweet about it!", style: .Default) { (action:UIAlertAction!) in
             print("Okay!");
         }
         saveAlert.addAction(tweetAction)
+        */
         self.presentViewController(saveAlert, animated: true, completion: nil)
     }
 
