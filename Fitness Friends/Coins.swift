@@ -9,16 +9,6 @@
 import Foundation
 
 class Coins {
-    //sets coin amounts for each exercise
-    let runValue = 59.0
-    let walkValue = 17.7
-    let bikeValue = 35.4
-    let swimValue = 41.3
-    let soccerValue = 41.3
-    let danceValue = 41.3
-    let gymnasticsValue = 23.6
-    let basketballValue = 35.4
-    
     var totalCoins = 0.0
     var totalCoinsEarned = 0.0
     var totalMinutesExercised = 0.0
@@ -36,33 +26,33 @@ class Coins {
             coinRate = 35.4
         }
         else if exerciseType == "Swim" {
-            coinRate = swimValue
+            coinRate = 41.3
         }
             
         else if exerciseType == "Soccer" {
-            coinRate = soccerValue
+            coinRate = 41.3
         }
             
         else if exerciseType == "Dance" {
-            coinRate = danceValue
+            coinRate = 41.3
         }
             
         else if exerciseType == "Gymnastics" {
-            coinRate = gymnasticsValue
+            coinRate = 23.6
         }
             
         else if exerciseType == "Basketball" {
-            coinRate = basketballValue
+            coinRate = 35.4
         }
         
         if method == "GPS" {
-            return coinRate * minutes * 1.5
+            return coinRate * minutes/60 * 1.5
         }
         else if method == "Timer" {
-            return coinRate * minutes
+            return coinRate * minutes/60
         }
         else {
-            return coinRate * minutes * 0.75
+            return coinRate * minutes/60 * 0.75
         }
     }
     
@@ -86,32 +76,5 @@ class Coins {
     
     func pay(itemCost: Double) {
         totalCoins -= itemCost
-    }
-    
-    func getExerciseValue(type: String) -> Double {
-        if type == "run" {
-            return runValue
-        }
-        else if type == "walk" {
-            return walkValue
-        }
-        else if type == "swim" {
-            return swimValue
-        }
-        else if type == "bike" {
-            return bikeValue
-        }
-        else if type == "soccer" {
-            return soccerValue
-        }
-        else if type == "dance" {
-            return danceValue
-        }
-        else if type == "basketball" {
-            return basketballValue
-        }
-        else {
-            return gymnasticsValue
-        }
     }
 }

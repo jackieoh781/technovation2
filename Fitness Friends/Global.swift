@@ -13,6 +13,7 @@ class Main {
     var items = Store()
     var name = ""
     var exercise = ""
+    var miles = 0.0
     
     init(name:String) {
         self.name = name

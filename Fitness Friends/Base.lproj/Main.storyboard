@@ -230,7 +230,7 @@
                                 <rect key="frame" x="266" y="596" width="101" height="63"/>
                                 <state key="normal" backgroundImage="ShopButton"/>
                                 <connections>
-                                    <segue destination="UqC-SC-ERC" kind="show" id="BX3-3j-wj4"/>
+                                    <segue destination="UqC-SC-ERC" kind="show" id="M39-Cs-fbH"/>
                                 </connections>
                             </button>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goldenretriever" translatesAutoresizingMaskIntoConstraints="NO" id="fO6-m3-W19">
@@ -275,7 +275,7 @@
         <!--Store-->
         <scene sceneID="GJT-YO-9iC">
             <objects>
-                <viewController title="Store" id="UqC-SC-ERC" customClass="StoreViewController" customModule="Fitness_Friends" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="StoreAViewController" storyboardIdentifier="StoreAViewController" title="Store" id="UqC-SC-ERC" customClass="StoreAViewController" customModule="Fitness_Friends" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pls-L5-Z4L"/>
                         <viewControllerLayoutGuide type="bottom" id="iuD-0Q-j4M"/>
@@ -284,69 +284,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgL-0r-lUT" userLabel="buyCollar">
-                                <rect key="frame" x="25" y="152" width="136" height="140"/>
-                                <state key="normal" backgroundImage="collar store"/>
-                                <connections>
-                                    <action selector="buyCollar:" destination="UqC-SC-ERC" eventType="touchUpInside" id="VkU-53-8YF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psP-8y-wLg" userLabel="buyCouch">
-                                <rect key="frame" x="203" y="344" width="146" height="141"/>
-                                <state key="normal" backgroundImage="couch store"/>
-                                <connections>
-                                    <action selector="buyCouch:" destination="UqC-SC-ERC" eventType="touchUpInside" id="X1b-vU-42I"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoi-Iz-ilf" userLabel="buyFlowerCrown">
-                                <rect key="frame" x="203" y="152" width="146" height="142"/>
-                                <state key="normal" backgroundImage="flowercrown store"/>
-                                <connections>
-                                    <action selector="buyFlowercrown:" destination="UqC-SC-ERC" eventType="touchUpInside" id="nfH-bc-6x9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zU8-jH-ebi" userLabel="buyClock">
-                                <rect key="frame" x="20" y="345" width="141" height="140"/>
-                                <state key="normal" backgroundImage="clock store"/>
-                                <connections>
-                                    <action selector="buyClock:" destination="UqC-SC-ERC" eventType="touchUpInside" id="khx-l2-LFh"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="StoreHeader" translatesAutoresizingMaskIntoConstraints="NO" id="zph-JN-j90">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="123"/>
                             </imageView>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kZR-61-WOf">
-                                <rect key="frame" x="69" y="500" width="51" height="31"/>
-                                <connections>
-                                    <action selector="clockSwitch:" destination="UqC-SC-ERC" eventType="valueChanged" id="1Sx-Nn-vz6"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lKp-TO-8ex">
-                                <rect key="frame" x="258" y="500" width="51" height="31"/>
-                                <connections>
-                                    <action selector="couchSwitch:" destination="UqC-SC-ERC" eventType="valueChanged" id="hbN-9S-c39"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Q5G-AH-N6H">
-                                <rect key="frame" x="253" y="300" width="51" height="31"/>
-                                <connections>
-                                    <action selector="flowercrownSwitch:" destination="UqC-SC-ERC" eventType="valueChanged" id="BP5-mv-GC9"/>
-                                </connections>
-                            </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ktx-lh-jER">
                                 <rect key="frame" x="6" y="587" width="68" height="55"/>
                                 <state key="normal" backgroundImage="BackButton-1"/>
                                 <connections>
-                                    <segue destination="N4c-S8-EC2" kind="show" id="06O-FN-jff"/>
+                                    <segue destination="N4c-S8-EC2" kind="show" id="ioS-xu-NfH"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k32-G7-3pa">
-                                <rect key="frame" x="69" y="300" width="51" height="31"/>
-                                <accessibility key="accessibilityConfiguration" identifier="collarSwitch" label="collarSwitch"/>
-                                <connections>
-                                    <action selector="collarSwitch:" destination="UqC-SC-ERC" eventType="valueChanged" id="N3b-Q0-Rfs"/>
-                                </connections>
-                            </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gno-XU-gUJ">
                                 <rect key="frame" x="82" y="593" width="108" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -365,6 +312,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="boN-t7-rKG">
+                                <rect key="frame" x="0.0" y="131" width="375" height="437"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <connections>
+                                    <segue destination="iRK-7L-o17" kind="embed" id="jyx-5L-FwX"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -383,7 +337,408 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tgo-yg-fcu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-895.5" y="-471.5"/>
+            <point key="canvasLocation" x="-2897.5" y="-156.5"/>
+        </scene>
+        <!--Store View Controller-->
+        <scene sceneID="Hpc-U4-zkV">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="eU2-Ig-k83" customClass="StoreViewController" customModule="Fitness_Friends" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DOu-nK-pJS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1360" y="-799"/>
+        </scene>
+        <!--StoreA1 View Controller-->
+        <scene sceneID="qJE-tx-DFc">
+            <objects>
+                <viewController id="TKQ-WX-7c6" customClass="StoreA1ViewController" customModule="Fitness_Friends" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2QI-hR-W7t"/>
+                        <viewControllerLayoutGuide type="bottom" id="2me-dL-y08"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OiE-iU-0Iw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zU8-jH-ebi" userLabel="buyClock">
+                                <rect key="frame" x="31" y="262" width="141" height="140"/>
+                                <state key="normal" backgroundImage="clock store"/>
+                                <connections>
+                                    <action selector="buyClock:" destination="UqC-SC-ERC" eventType="touchUpInside" id="khx-l2-LFh"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kZR-61-WOf">
+                                <rect key="frame" x="77" y="417" width="51" height="31"/>
+                                <connections>
+                                    <action selector="clockSwitch:" destination="UqC-SC-ERC" eventType="valueChanged" id="1Sx-Nn-vz6"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psP-8y-wLg" userLabel="buyCouch">
+                                <rect key="frame" x="203" y="261" width="146" height="141"/>
+                                <state key="normal" backgroundImage="couch store"/>
+                                <connections>
+                                    <action selector="buyCouch:" destination="UqC-SC-ERC" eventType="touchUpInside" id="X1b-vU-42I"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lKp-TO-8ex">
+                                <rect key="frame" x="260" y="417" width="51" height="31"/>
+                                <connections>
+                                    <action selector="couchSwitch:" destination="UqC-SC-ERC" eventType="valueChanged" id="hbN-9S-c39"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgL-0r-lUT" userLabel="buyCollar">
+                                <rect key="frame" x="25" y="35" width="136" height="140"/>
+                                <state key="normal" backgroundImage="collar store"/>
+                                <connections>
+                                    <action selector="buyCollar:" destination="UqC-SC-ERC" eventType="touchUpInside" id="VkU-53-8YF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoi-Iz-ilf" userLabel="buyFlowerCrown">
+                                <rect key="frame" x="203" y="35" width="146" height="140"/>
+                                <state key="normal" backgroundImage="flowercrown store"/>
+                                <connections>
+                                    <action selector="buyFlowercrown:" destination="UqC-SC-ERC" eventType="touchUpInside" id="nfH-bc-6x9"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Q5G-AH-N6H">
+                                <rect key="frame" x="260" y="195" width="51" height="31"/>
+                                <connections>
+                                    <action selector="flowercrownSwitch:" destination="UqC-SC-ERC" eventType="valueChanged" id="BP5-mv-GC9"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k32-G7-3pa">
+                                <rect key="frame" x="69" y="195" width="51" height="31"/>
+                                <accessibility key="accessibilityConfiguration" identifier="collarSwitch" label="collarSwitch"/>
+                                <connections>
+                                    <action selector="collarSwitch:" destination="UqC-SC-ERC" eventType="valueChanged" id="N3b-Q0-Rfs"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bzz-LQ-iCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2427.5" y="-147.5"/>
+        </scene>
+        <!--StoreB View Controller-->
+        <scene sceneID="qez-cZ-BqO">
+            <objects>
+                <viewController restorationIdentifier="StoreBViewController" storyboardIdentifier="StoreBViewController" id="iRK-7L-o17" customClass="StoreBViewController" customModule="Fitness_Friends" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aUD-Rg-83c"/>
+                        <viewControllerLayoutGuide type="bottom" id="NI4-B1-VEI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hN3-Vh-USh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="agh-B6-Bov">
+                                <rect key="frame" x="77" y="183" width="51" height="31"/>
+                                <connections>
+                                    <action selector="spikyCollarOnOff:" destination="iRK-7L-o17" eventType="valueChanged" id="DtJ-Y6-1Wq"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="l1u-QK-XbL">
+                                <rect key="frame" x="77" y="397" width="51" height="31"/>
+                                <connections>
+                                    <action selector="bejeweledCollarOnOff:" destination="iRK-7L-o17" eventType="valueChanged" id="yCU-l3-Z33"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="P4G-se-RHu">
+                                <rect key="frame" x="244" y="183" width="51" height="31"/>
+                                <connections>
+                                    <action selector="redScarfOnOff:" destination="iRK-7L-o17" eventType="valueChanged" id="oh4-55-V7I"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlf-xf-Ut7">
+                                <rect key="frame" x="28" y="28" width="146" height="146"/>
+                                <state key="normal" backgroundImage="spiky collar store"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzB-uJ-Dud">
+                                <rect key="frame" x="197" y="28" width="149" height="146"/>
+                                <state key="normal" backgroundImage="red scarf store"/>
+                                <connections>
+                                    <action selector="buyRedScarf:" destination="iRK-7L-o17" eventType="touchUpInside" id="3WV-7u-kj5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25Y-mm-KlT">
+                                <rect key="frame" x="197" y="240" width="149" height="144"/>
+                                <state key="normal" backgroundImage="green tie store"/>
+                                <connections>
+                                    <action selector="buyGreenTie:" destination="iRK-7L-o17" eventType="touchUpInside" id="1Y1-ti-PUy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5d-wv-qpi">
+                                <rect key="frame" x="28" y="240" width="146" height="144"/>
+                                <state key="normal" backgroundImage="bejeweled collar store"/>
+                                <connections>
+                                    <action selector="buyBejeweledCollar:" destination="iRK-7L-o17" eventType="touchUpInside" id="40t-yB-zqr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kME-O5-lnZ">
+                                <rect key="frame" x="28" y="28" width="146" height="146"/>
+                                <state key="normal" backgroundImage="spiky collar store"/>
+                                <connections>
+                                    <action selector="buySpikyCollar:" destination="iRK-7L-o17" eventType="touchUpInside" id="zAo-3B-hg7"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2QD-Lv-xWd">
+                                <rect key="frame" x="247" y="397" width="51" height="31"/>
+                                <connections>
+                                    <action selector="greenTieOnOff:" destination="iRK-7L-o17" eventType="valueChanged" id="h0P-wj-saC"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="500" height="600"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="bejeweledCollar" destination="b5d-wv-qpi" id="A3F-su-0OC"/>
+                        <outlet property="bejeweledCollarSwitch" destination="l1u-QK-XbL" id="vHe-VJ-8zd"/>
+                        <outlet property="greenTie" destination="25Y-mm-KlT" id="Eze-cx-kL3"/>
+                        <outlet property="greenTieSwitch" destination="2QD-Lv-xWd" id="knG-Y9-tM3"/>
+                        <outlet property="redScarf" destination="jzB-uJ-Dud" id="rw8-Xg-2ue"/>
+                        <outlet property="redScarfSwitch" destination="P4G-se-RHu" id="zof-pG-pdD"/>
+                        <outlet property="spikyCollar" destination="mlf-xf-Ut7" id="6YB-GU-qox"/>
+                        <outlet property="spikyCollarSwitch" destination="agh-B6-Bov" id="QBq-Ar-9zR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NLl-IO-VWg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1967.5" y="-135.5"/>
+        </scene>
+        <!--StoreC View Controller-->
+        <scene sceneID="OAY-5B-7do">
+            <objects>
+                <viewController restorationIdentifier="StoreCViewController" storyboardIdentifier="StoreCViewController" id="LoY-a8-SXB" customClass="StoreCViewController" customModule="Fitness_Friends" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vPB-fI-IXZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="b9P-a4-KH4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rgx-3T-gOe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MmN-Kz-b7B">
+                                <rect key="frame" x="76" y="398" width="51" height="31"/>
+                                <connections>
+                                    <action selector="legwarmersOnOff:" destination="LoY-a8-SXB" eventType="valueChanged" id="a2o-ea-oxS"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="T3Y-l5-w5A">
+                                <rect key="frame" x="249" y="398" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3sq-sh-idR">
+                                <rect key="frame" x="249" y="183" width="51" height="31"/>
+                                <connections>
+                                    <action selector="braceletsOnOff:" destination="LoY-a8-SXB" eventType="valueChanged" id="ke8-Ej-dt0"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAB-Vc-saY">
+                                <rect key="frame" x="27" y="28" width="146" height="145"/>
+                                <state key="normal" backgroundImage="pearl necklace store"/>
+                                <connections>
+                                    <action selector="buyNecklace:" destination="LoY-a8-SXB" eventType="touchUpInside" id="iaz-22-huo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qni-L7-P5p">
+                                <rect key="frame" x="200" y="28" width="147" height="147"/>
+                                <state key="normal" backgroundImage="bracelets store"/>
+                                <connections>
+                                    <action selector="buyBracelets:" destination="LoY-a8-SXB" eventType="touchUpInside" id="XPi-L2-3vd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2y5-ME-YLi">
+                                <rect key="frame" x="201" y="234" width="146" height="146"/>
+                                <state key="normal" backgroundImage="daisy store"/>
+                                <connections>
+                                    <action selector="buyDaisy:" destination="LoY-a8-SXB" eventType="touchUpInside" id="5sp-fw-ny5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMg-ZR-h1Z">
+                                <rect key="frame" x="27" y="234" width="146" height="146"/>
+                                <state key="normal" backgroundImage="legwarmers store"/>
+                                <connections>
+                                    <action selector="buyLegwarmers:" destination="LoY-a8-SXB" eventType="touchUpInside" id="cJa-la-7Ar"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x7i-Y8-SiJ">
+                                <rect key="frame" x="249" y="398" width="51" height="31"/>
+                                <connections>
+                                    <action selector="daisyOnOff:" destination="LoY-a8-SXB" eventType="valueChanged" id="ZsS-TI-gmi"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lvh-q1-dZg">
+                                <rect key="frame" x="76" y="181" width="51" height="31"/>
+                                <connections>
+                                    <action selector="necklaceOnOff:" destination="LoY-a8-SXB" eventType="valueChanged" id="Hci-BL-tzl"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="bracelets" destination="Qni-L7-P5p" id="1a7-bv-WuN"/>
+                        <outlet property="braceletsSwitch" destination="3sq-sh-idR" id="VEh-4u-hot"/>
+                        <outlet property="daisy" destination="2y5-ME-YLi" id="IH9-q1-war"/>
+                        <outlet property="daisySwitch" destination="T3Y-l5-w5A" id="Lrs-ng-skn"/>
+                        <outlet property="legwarmers" destination="dMg-ZR-h1Z" id="RYK-St-DLA"/>
+                        <outlet property="legwarmersSwitch" destination="MmN-Kz-b7B" id="REd-mo-aVp"/>
+                        <outlet property="necklace" destination="PAB-Vc-saY" id="Bsd-9z-wwp"/>
+                        <outlet property="necklaceSwitch" destination="Lvh-q1-dZg" id="jVy-sd-uKz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KJw-ro-Rhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1542.5" y="-135.5"/>
+        </scene>
+        <!--StoreD View Controller-->
+        <scene sceneID="AkE-W5-Hn2">
+            <objects>
+                <viewController restorationIdentifier="StoreDViewController" storyboardIdentifier="StoreDViewController" id="PvB-Q0-cIU" customClass="StoreDViewController" customModule="Fitness_Friends" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZYM-iY-tEF"/>
+                        <viewControllerLayoutGuide type="bottom" id="RyW-2S-vwt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CzU-9W-Lv1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfG-YK-iNx">
+                                <rect key="frame" x="211" y="28" width="146" height="146"/>
+                                <state key="normal" backgroundImage="flower store"/>
+                                <connections>
+                                    <action selector="buyFlowerpot:" destination="PvB-Q0-cIU" eventType="touchUpInside" id="n0K-VX-pw0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXB-L0-GZ9">
+                                <rect key="frame" x="20" y="221" width="146" height="146"/>
+                                <state key="normal" backgroundImage="flowervase store"/>
+                                <connections>
+                                    <action selector="buyFlowervase:" destination="PvB-Q0-cIU" eventType="touchUpInside" id="cNS-bp-G8f"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dbb-ap-Ev6">
+                                <rect key="frame" x="254" y="381" width="51" height="31"/>
+                                <connections>
+                                    <action selector="hibiscusOnOff:" destination="PvB-Q0-cIU" eventType="valueChanged" id="wQN-rA-AVm"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="byH-tj-Jwk">
+                                <rect key="frame" x="254" y="182" width="51" height="31"/>
+                                <connections>
+                                    <action selector="flowerpotOnOff:" destination="PvB-Q0-cIU" eventType="valueChanged" id="FAc-gl-H3h"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6NW-Uo-JNl">
+                                <rect key="frame" x="69" y="182" width="51" height="31"/>
+                                <connections>
+                                    <action selector="flowercanOnOff:" destination="PvB-Q0-cIU" eventType="valueChanged" id="C6v-bv-Tjh"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZg-wT-xzv">
+                                <rect key="frame" x="20" y="28" width="146" height="146"/>
+                                <state key="normal" backgroundImage="Flower can store"/>
+                                <connections>
+                                    <action selector="buyFlowercan:" destination="PvB-Q0-cIU" eventType="touchUpInside" id="sx1-3c-FPn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVm-nv-10g">
+                                <rect key="frame" x="211" y="221" width="146" height="146"/>
+                                <state key="normal" backgroundImage="hibiscus store"/>
+                                <connections>
+                                    <action selector="buyHibiscus:" destination="PvB-Q0-cIU" eventType="touchUpInside" id="t13-6Q-56K"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lP8-rk-5e3">
+                                <rect key="frame" x="69" y="381" width="51" height="31"/>
+                                <connections>
+                                    <action selector="flowervaseOnOff:" destination="PvB-Q0-cIU" eventType="valueChanged" id="Je2-Cw-ncT"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="flowercan" destination="jZg-wT-xzv" id="rSd-zQ-RRF"/>
+                        <outlet property="flowercanSwitch" destination="6NW-Uo-JNl" id="JAe-qt-wKT"/>
+                        <outlet property="flowerpot" destination="HfG-YK-iNx" id="63W-6d-awj"/>
+                        <outlet property="flowerpotSwitch" destination="byH-tj-Jwk" id="ADW-yY-1lJ"/>
+                        <outlet property="flowervase" destination="mXB-L0-GZ9" id="QeZ-Tg-VNo"/>
+                        <outlet property="flowervaseSwitch" destination="lP8-rk-5e3" id="4T1-C3-XaJ"/>
+                        <outlet property="hibiscus" destination="GVm-nv-10g" id="bc8-cH-ErL"/>
+                        <outlet property="hibiscusSwitch" destination="dbb-ap-Ev6" id="B6O-fc-9wm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7LA-Kk-M9J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1136.5" y="-135.5"/>
+        </scene>
+        <!--StoreE View Controller-->
+        <scene sceneID="lWt-jg-htD">
+            <objects>
+                <viewController restorationIdentifier="StoreEViewController" storyboardIdentifier="StoreEViewController" id="dio-XJ-IzO" customClass="StoreEViewController" customModule="Fitness_Friends" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uTY-Uh-fiC"/>
+                        <viewControllerLayoutGuide type="bottom" id="R9t-3G-zYE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PuS-rc-kcz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWD-44-2M0">
+                                <rect key="frame" x="29" y="28" width="145" height="147"/>
+                                <state key="normal" backgroundImage="mountain store"/>
+                                <connections>
+                                    <action selector="buyMountain:" destination="dio-XJ-IzO" eventType="touchUpInside" id="o14-Nq-oER"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucI-iY-UJm">
+                                <rect key="frame" x="207" y="28" width="139" height="146"/>
+                                <state key="normal" backgroundImage="table store"/>
+                                <connections>
+                                    <action selector="buyTable:" destination="dio-XJ-IzO" eventType="touchUpInside" id="z5G-va-eac"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="R0R-SU-ZYl">
+                                <rect key="frame" x="252" y="191" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wyq-pv-cvZ">
+                                <rect key="frame" x="77" y="389" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20Z-Lo-pud">
+                                <rect key="frame" x="29" y="236" width="145" height="145"/>
+                                <state key="normal" backgroundImage="dogcard store"/>
+                                <connections>
+                                    <action selector="buyDogCard:" destination="dio-XJ-IzO" eventType="touchUpInside" id="3f7-vc-P8E"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2CR-yL-PjM">
+                                <rect key="frame" x="77" y="191" width="51" height="31"/>
+                                <connections>
+                                    <action selector="mountainSwitch:" destination="dio-XJ-IzO" eventType="valueChanged" id="2mT-XE-lfu"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="dogCard" destination="20Z-Lo-pud" id="Xm8-ye-2du"/>
+                        <outlet property="dogCardSwitch" destination="wyq-pv-cvZ" id="0kn-RV-h2X"/>
+                        <outlet property="mountain" destination="JWD-44-2M0" id="hP1-DA-LHh"/>
+                        <outlet property="mountainSwitch" destination="2CR-yL-PjM" id="Pud-Pj-2CO"/>
+                        <outlet property="table" destination="ucI-iY-UJm" id="cb1-BR-s7e"/>
+                        <outlet property="tableSwitch" destination="R0R-SU-ZYl" id="2Xz-fl-M7F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tUt-2K-U03" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-735.5" y="-135.5"/>
         </scene>
         <!--TrackingMethod-->
         <scene sceneID="3AU-im-Rr7">
@@ -399,9 +754,6 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pawPrintHeaders" translatesAutoresizingMaskIntoConstraints="NO" id="mbM-Ba-T7l">
                                 <rect key="frame" x="0.0" y="13" width="375" height="107"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aVd-7t-R8e">
-                                <rect key="frame" x="107" y="3" width="161" height="128"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLe-qQ-nur" userLabel="trackDistance">
                                 <rect key="frame" x="50" y="188" width="275" height="88"/>
@@ -440,9 +792,6 @@
                         <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="header" destination="aVd-7t-R8e" id="e95-dG-Jct"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOx-Ts-AoT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -507,7 +856,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m29-N8-vfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="244" y="-477"/>
+            <point key="canvasLocation" x="207.5" y="-553.5"/>
         </scene>
         <!--Log-->
         <scene sceneID="730-2j-QmH">
@@ -603,7 +952,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDh-FM-xZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="787" y="-512"/>
+            <point key="canvasLocation" x="610.5" y="-553.5"/>
         </scene>
         <!--GPSTracker-->
         <scene sceneID="Wsj-JU-6O5">
@@ -680,7 +1029,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6C-W1-cnp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-339" y="-495"/>
+            <point key="canvasLocation" x="-199.5" y="-553.5"/>
         </scene>
         <!--Exercise-->
         <scene sceneID="HKy-cQ-21r">
@@ -752,6 +1101,7 @@
         <image name="DistanceOfExercise" width="470" height="148"/>
         <image name="Exercise" width="306" height="104"/>
         <image name="ExerciseButton2" width="146" height="86"/>
+        <image name="Flower can store" width="100" height="100"/>
         <image name="LengthofExercise" width="470" height="136"/>
         <image name="MilesBackground" width="286" height="142"/>
         <image name="Mission" width="308" height="108"/>
@@ -773,22 +1123,36 @@
         <image name="Swim" width="228" height="196"/>
         <image name="TimeBackground" width="256" height="140"/>
         <image name="Walk" width="216" height="176"/>
+        <image name="bejeweled collar store" width="100" height="100"/>
+        <image name="bracelets store" width="100" height="100"/>
         <image name="cat1-2" width="139" height="182"/>
         <image name="catButton" width="100" height="62"/>
         <image name="clock store" width="100" height="100"/>
         <image name="collar store" width="100" height="100"/>
         <image name="couch store" width="100" height="100"/>
+        <image name="daisy store" width="100" height="100"/>
         <image name="dogButton" width="100" height="62"/>
+        <image name="dogcard store" width="100" height="100"/>
+        <image name="flower store" width="100" height="100"/>
         <image name="flowercrown store" width="100" height="100"/>
+        <image name="flowervase store" width="100" height="100"/>
         <image name="goldenretriever" width="139" height="182"/>
+        <image name="green tie store" width="100" height="100"/>
+        <image name="hibiscus store" width="100" height="100"/>
         <image name="homeHeader" width="563" height="266"/>
         <image name="homePawPrints" width="125" height="410"/>
+        <image name="legwarmers store" width="100" height="100"/>
+        <image name="mountain store" width="100" height="100"/>
         <image name="pawPrintHeaders" width="518" height="144"/>
+        <image name="pearl necklace store" width="100" height="100"/>
+        <image name="red scarf store" width="100" height="100"/>
+        <image name="spiky collar store" width="100" height="100"/>
         <image name="statsHeader" width="164" height="42"/>
+        <image name="table store" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8ul-sv-2oA"/>
-        <segue reference="XdX-9t-0OK"/>
-        <segue reference="06O-FN-jff"/>
+        <segue reference="XTg-e9-FOi"/>
+        <segue reference="ioS-xu-NfH"/>
+        <segue reference="SMp-Xq-bO6"/>
     </inferredMetricsTieBreakers>
 </document>

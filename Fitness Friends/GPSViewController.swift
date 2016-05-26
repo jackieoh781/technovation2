@@ -22,7 +22,7 @@ class GPSViewController: UIViewController {
     var value = 0.0
 
     
-    //GPS tracking variables
+    //location tracking variables
     var startLocation:CLLocation!
     var lastLocation: CLLocation!
     var traveledDistance:Double = 0
@@ -56,7 +56,9 @@ class GPSViewController: UIViewController {
             let distance = startLocation.distanceFromLocation(lastLocation)
             startLocation = lastLocation
             traveledDistance += distance
+            mainInstance.miles += distance
         }
+        print("working")
     }
     
     func timerAction() {

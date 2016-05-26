@@ -14,24 +14,24 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleAspectFill" semanticContentAttribute="forceRightToLeft" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goldenretriever" translatesAutoresizingMaskIntoConstraints="NO" id="4oY-dx-cni">
-                                <rect key="frame" x="87" y="393" width="110" height="128"/>
+                                <rect key="frame" x="60" y="393" width="110" height="128"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cat1-2" translatesAutoresizingMaskIntoConstraints="NO" id="qiV-eK-wiF">
-                                <rect key="frame" x="228" y="393" width="112" height="128"/>
+                                <rect key="frame" x="201" y="393" width="112" height="128"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeHeader" translatesAutoresizingMaskIntoConstraints="NO" id="UmM-Ub-WOJ">
-                                <rect key="frame" x="5" y="164" width="404" height="221"/>
+                                <rect key="frame" x="-22" y="164" width="404" height="221"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <rect key="contentStretch" x="0.0" y="0.34999999999999998" width="1" height="1"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

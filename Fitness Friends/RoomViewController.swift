@@ -11,6 +11,11 @@ import UIKit
 class RoomViewController: UIViewController {
 
     var location = CGPoint(x: 0, y: 0)
+    var animalLocation = CGPoint(x: 0, y: 0)
+    var collarLocation = CGPoint(x: 0, y: 0)
+    var flowercrownLocation = CGPoint(x: 0, y: 0)
+    var clockLocation = CGPoint(x: 0, y: 0)
+    var couchLocation = CGPoint(x: 0, y: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,26 +23,32 @@ class RoomViewController: UIViewController {
         if mainInstance.items.isItemOn("Collar") {
             //place item on screen
             collarImage.image = UIImage(named: "collar on animal")
+            collarImage.center = collarLocation
         }
         if mainInstance.items.isItemOn("Flowercrown") {
             //place item on screen
             flowercrownImage.image = UIImage(named: "flowercrown on animal")
+            flowercrownImage.center = flowercrownLocation
         }
         if mainInstance.items.isItemOn("Clock") {
             //place item on screen
             clockImage.image = UIImage(named: "clock")
+            clockImage.center = clockLocation
             self.view.insertSubview(clockImage, atIndex: 1)
         }
         if mainInstance.items.isItemOn("Couch") {
             //place item on screen
             couchImage.image = UIImage(named: "couch in room")
             self.view.insertSubview(couchImage, atIndex: 2)
+            couchImage.center = couchLocation
         }
         if mainInstance.items.pet == "Cat" {
             animal.image = UIImage(named:"cat1-2")
+            animal.center = animalLocation
         }
         if mainInstance.items.pet == "Dog" {
             animal.image = UIImage(named:"goldenretriever")
+            animal.center = animalLocation
         }
     }
 
@@ -52,24 +63,29 @@ class RoomViewController: UIViewController {
             if(CGRectContainsPoint(animal.frame, location))
             {
                 animal.center = location
+                animalLocation = location
             }
             if(CGRectContainsPoint(collarImage.frame, location))
             {
                 collarImage.center = location
+                collarLocation = location
                 self.view.bringSubviewToFront(collarImage)
             }
             if(CGRectContainsPoint(flowercrownImage.frame, location))
             {
                 flowercrownImage.center = location
+                flowercrownLocation = location
                 self.view.bringSubviewToFront(flowercrownImage)
             }
             if(CGRectContainsPoint(clockImage.frame, location))
             {
                 clockImage.center = location
+                clockLocation = location
             }
             if(CGRectContainsPoint(couchImage.frame, location))
             {
                 couchImage.center = location
+                couchLocation = location
             }
         }
     }
@@ -83,22 +99,3 @@ class RoomViewController: UIViewController {
     
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

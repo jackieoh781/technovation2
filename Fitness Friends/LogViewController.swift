@@ -35,6 +35,7 @@ class LogViewController: UIViewController {
     @IBOutlet weak var milesStepperOutlet: UIStepper!
     
 
+    //MARK: Actions
     @IBAction func timeStepper(sender: UIStepper) {
         x = timeStepperOutlet.value
         minutesLabel.text = "\((Int)(x % 60))"
