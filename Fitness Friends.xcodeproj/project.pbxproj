@@ -15,7 +15,7 @@
 		F46267321CF4FAC50005E024 /* StoreCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46267311CF4FAC50005E024 /* StoreCViewController.swift */; };
 		F46267341CF5013D0005E024 /* StoreDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46267331CF5013D0005E024 /* StoreDViewController.swift */; };
 		F46267361CF5DF2B0005E024 /* StoreEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46267351CF5DF2B0005E024 /* StoreEViewController.swift */; };
-		F46267381CF7824B0005E024 /* StoreA1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46267371CF7824B0005E024 /* StoreA1ViewController.swift */; };
+		F462673A1CF788C90005E024 /* StoreA1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46267391CF788C90005E024 /* StoreA1ViewController.swift */; };
 		F483369D1CE4E9C400CED334 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483369C1CE4E9C400CED334 /* LogViewController.swift */; };
 		F483369F1CE4FAA600CED334 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483369E1CE4FAA600CED334 /* ExerciseViewController.swift */; };
 		F48336A11CE4FD4B00CED334 /* ExerciseMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48336A01CE4FD4B00CED334 /* ExerciseMethodViewController.swift */; };
@@ -60,7 +60,7 @@
 		F46267311CF4FAC50005E024 /* StoreCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCViewController.swift; sourceTree = "<group>"; };
 		F46267331CF5013D0005E024 /* StoreDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreDViewController.swift; sourceTree = "<group>"; };
 		F46267351CF5DF2B0005E024 /* StoreEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreEViewController.swift; sourceTree = "<group>"; };
-		F46267371CF7824B0005E024 /* StoreA1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreA1ViewController.swift; sourceTree = "<group>"; };
+		F46267391CF788C90005E024 /* StoreA1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreA1ViewController.swift; sourceTree = "<group>"; };
 		F483369C1CE4E9C400CED334 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		F483369E1CE4FAA600CED334 /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		F48336A01CE4FD4B00CED334 /* ExerciseMethodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseMethodViewController.swift; sourceTree = "<group>"; };
@@ -141,9 +141,9 @@
 				F4DF452C1CDB929000826CEB /* GameViewController.swift */,
 				F43CC5191CE0D793008D1A83 /* Assets.xcassets */,
 				F4DF452E1CDB929000826CEB /* Main.storyboard */,
+				F46267391CF788C90005E024 /* StoreA1ViewController.swift */,
 				F462672D1CF37B700005E024 /* StoreViewController.swift */,
 				F48336A21CE5024E00CED334 /* StoreAViewController.swift */,
-				F46267371CF7824B0005E024 /* StoreA1ViewController.swift */,
 				F462672F1CF4CC3A0005E024 /* StoreBViewController.swift */,
 				F46267311CF4FAC50005E024 /* StoreCViewController.swift */,
 				F46267331CF5013D0005E024 /* StoreDViewController.swift */,
@@ -320,7 +320,7 @@
 				F4FD9AAC1CE91F2D00BBA331 /* GPSViewController.swift in Sources */,
 				F48336A11CE4FD4B00CED334 /* ExerciseMethodViewController.swift in Sources */,
 				F46267301CF4CC3A0005E024 /* StoreBViewController.swift in Sources */,
-				F46267381CF7824B0005E024 /* StoreA1ViewController.swift in Sources */,
+				F462673A1CF788C90005E024 /* StoreA1ViewController.swift in Sources */,
 				F4FD9AB01CE9238900BBA331 /* RoomViewController.swift in Sources */,
 				F483369F1CE4FAA600CED334 /* ExerciseViewController.swift in Sources */,
 				F462672E1CF37B700005E024 /* StoreViewController.swift in Sources */,

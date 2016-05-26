@@ -97,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bFP-Cs-7ma" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1592.5" y="-2560.5"/>
+            <point key="canvasLocation" x="-1632.5" y="-2464.5"/>
         </scene>
         <!--Our Mission-->
         <scene sceneID="rie-Ci-DCW">
@@ -128,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oz3-fj-JkO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1573.5" y="-1678.5"/>
+            <point key="canvasLocation" x="-2229.5" y="-2454.5"/>
         </scene>
         <!--Home-->
         <scene sceneID="tXr-a1-R10">
@@ -138,7 +138,7 @@
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
                     </layoutGuides>
-                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -195,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-879.5" y="-2560.5"/>
+            <point key="canvasLocation" x="-791.5" y="-3274.5"/>
         </scene>
         <!--My Room-->
         <scene sceneID="253-Yi-duw">
@@ -210,7 +210,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SamplePetsscreencropped" translatesAutoresizingMaskIntoConstraints="NO" id="uEz-WD-gzX">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="381" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dL9-Je-9gk">
                                 <rect key="frame" x="129" y="596" width="101" height="62"/>
@@ -230,7 +230,7 @@
                                 <rect key="frame" x="266" y="596" width="101" height="63"/>
                                 <state key="normal" backgroundImage="ShopButton"/>
                                 <connections>
-                                    <segue destination="UqC-SC-ERC" kind="show" id="M39-Cs-fbH"/>
+                                    <segue destination="UqC-SC-ERC" kind="show" id="Qi4-yH-g1v"/>
                                 </connections>
                             </button>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goldenretriever" translatesAutoresizingMaskIntoConstraints="NO" id="fO6-m3-W19">
@@ -270,7 +270,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HP8-qp-CIC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="uvx-dN-ss6"/>
             </objects>
-            <point key="canvasLocation" x="-801.5" y="-1503.5"/>
+            <point key="canvasLocation" x="-813.5" y="-2431.5"/>
         </scene>
         <!--Store-->
         <scene sceneID="GJT-YO-9iC">
@@ -316,7 +316,7 @@
                                 <rect key="frame" x="0.0" y="131" width="375" height="437"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <connections>
-                                    <segue destination="iRK-7L-o17" kind="embed" id="jyx-5L-FwX"/>
+                                    <segue destination="eU2-Ig-k83" kind="embed" id="Z3h-Cf-o35"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -324,20 +324,12 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="clockButton" destination="zU8-jH-ebi" id="LoR-MY-w47"/>
-                        <outlet property="clockSwitch1" destination="kZR-61-WOf" id="AkK-4I-jwf"/>
                         <outlet property="coinsLabel" destination="bPa-RI-4nO" id="pAp-ED-1iI"/>
-                        <outlet property="collarButton" destination="HgL-0r-lUT" id="c0E-U9-UMa"/>
-                        <outlet property="collarSwitch1" destination="k32-G7-3pa" id="Xkw-1x-2bF"/>
-                        <outlet property="couchButton" destination="psP-8y-wLg" id="884-p2-fsp"/>
-                        <outlet property="couchSwitch1" destination="lKp-TO-8ex" id="vqr-AR-XPK"/>
-                        <outlet property="flowercrownButton" destination="uoi-Iz-ilf" id="LNe-KD-Jax"/>
-                        <outlet property="flowercrownSwitch1" destination="Q5G-AH-N6H" id="Xmd-x0-7e5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tgo-yg-fcu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2897.5" y="-156.5"/>
+            <point key="canvasLocation" x="-2495.5" y="-1427.5"/>
         </scene>
         <!--Store View Controller-->
         <scene sceneID="Hpc-U4-zkV">
@@ -345,12 +337,12 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="eU2-Ig-k83" customClass="StoreViewController" customModule="Fitness_Friends" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DOu-nK-pJS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1360" y="-799"/>
+            <point key="canvasLocation" x="-2041.5" y="-1554.5"/>
         </scene>
         <!--StoreA1 View Controller-->
         <scene sceneID="qJE-tx-DFc">
             <objects>
-                <viewController id="TKQ-WX-7c6" customClass="StoreA1ViewController" customModule="Fitness_Friends" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="StoreA1ViewController" storyboardIdentifier="StoreA1ViewController" id="TKQ-WX-7c6" customClass="StoreA1ViewController" customModule="Fitness_Friends" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2QI-hR-W7t"/>
                         <viewControllerLayoutGuide type="bottom" id="2me-dL-y08"/>
@@ -360,66 +352,76 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zU8-jH-ebi" userLabel="buyClock">
-                                <rect key="frame" x="31" y="262" width="141" height="140"/>
+                                <rect key="frame" x="31" y="247" width="141" height="140"/>
                                 <state key="normal" backgroundImage="clock store"/>
                                 <connections>
-                                    <action selector="buyClock:" destination="UqC-SC-ERC" eventType="touchUpInside" id="khx-l2-LFh"/>
+                                    <action selector="buyClock:" destination="TKQ-WX-7c6" eventType="touchUpInside" id="mg7-69-UmZ"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kZR-61-WOf">
-                                <rect key="frame" x="77" y="417" width="51" height="31"/>
+                                <rect key="frame" x="77" y="402" width="51" height="31"/>
                                 <connections>
-                                    <action selector="clockSwitch:" destination="UqC-SC-ERC" eventType="valueChanged" id="1Sx-Nn-vz6"/>
+                                    <action selector="clockSwitch:" destination="TKQ-WX-7c6" eventType="valueChanged" id="N2i-af-uby"/>
                                 </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psP-8y-wLg" userLabel="buyCouch">
-                                <rect key="frame" x="203" y="261" width="146" height="141"/>
+                                <rect key="frame" x="203" y="246" width="146" height="141"/>
                                 <state key="normal" backgroundImage="couch store"/>
                                 <connections>
-                                    <action selector="buyCouch:" destination="UqC-SC-ERC" eventType="touchUpInside" id="X1b-vU-42I"/>
+                                    <action selector="buyCouch:" destination="TKQ-WX-7c6" eventType="touchUpInside" id="Qax-cx-HZ2"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lKp-TO-8ex">
-                                <rect key="frame" x="260" y="417" width="51" height="31"/>
-                                <connections>
-                                    <action selector="couchSwitch:" destination="UqC-SC-ERC" eventType="valueChanged" id="hbN-9S-c39"/>
-                                </connections>
-                            </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgL-0r-lUT" userLabel="buyCollar">
-                                <rect key="frame" x="25" y="35" width="136" height="140"/>
+                                <rect key="frame" x="25" y="20" width="136" height="140"/>
                                 <state key="normal" backgroundImage="collar store"/>
                                 <connections>
-                                    <action selector="buyCollar:" destination="UqC-SC-ERC" eventType="touchUpInside" id="VkU-53-8YF"/>
+                                    <action selector="buyCollar:" destination="TKQ-WX-7c6" eventType="touchUpInside" id="mCG-i5-DeB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoi-Iz-ilf" userLabel="buyFlowerCrown">
-                                <rect key="frame" x="203" y="35" width="146" height="140"/>
+                                <rect key="frame" x="203" y="20" width="146" height="140"/>
                                 <state key="normal" backgroundImage="flowercrown store"/>
                                 <connections>
-                                    <action selector="buyFlowercrown:" destination="UqC-SC-ERC" eventType="touchUpInside" id="nfH-bc-6x9"/>
+                                    <action selector="buyFlowercrown:" destination="TKQ-WX-7c6" eventType="touchUpInside" id="QUq-UV-ZmY"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Q5G-AH-N6H">
-                                <rect key="frame" x="260" y="195" width="51" height="31"/>
+                                <rect key="frame" x="260" y="180" width="51" height="31"/>
                                 <connections>
-                                    <action selector="flowercrownSwitch:" destination="UqC-SC-ERC" eventType="valueChanged" id="BP5-mv-GC9"/>
+                                    <action selector="flowercrownSwitch:" destination="TKQ-WX-7c6" eventType="valueChanged" id="0qG-nR-1Oo"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k32-G7-3pa">
-                                <rect key="frame" x="69" y="195" width="51" height="31"/>
+                                <rect key="frame" x="69" y="180" width="51" height="31"/>
                                 <accessibility key="accessibilityConfiguration" identifier="collarSwitch" label="collarSwitch"/>
                                 <connections>
-                                    <action selector="collarSwitch:" destination="UqC-SC-ERC" eventType="valueChanged" id="N3b-Q0-Rfs"/>
+                                    <action selector="collarSwitch:" destination="TKQ-WX-7c6" eventType="valueChanged" id="daA-Md-Q3F"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lKp-TO-8ex">
+                                <rect key="frame" x="260" y="402" width="51" height="31"/>
+                                <connections>
+                                    <action selector="couchSwitch:" destination="TKQ-WX-7c6" eventType="valueChanged" id="WDO-46-8iK"/>
                                 </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="clockButton" destination="zU8-jH-ebi" id="HlV-zE-5gY"/>
+                        <outlet property="clockSwitch1" destination="kZR-61-WOf" id="FOp-YV-ftt"/>
+                        <outlet property="collarButton" destination="HgL-0r-lUT" id="Shd-iY-P7C"/>
+                        <outlet property="collarSwitch1" destination="k32-G7-3pa" id="iRj-Mh-4OC"/>
+                        <outlet property="couchButton" destination="psP-8y-wLg" id="ZCK-Zn-z7u"/>
+                        <outlet property="couchSwitch1" destination="lKp-TO-8ex" id="Han-ei-UxZ"/>
+                        <outlet property="flowercrownButton" destination="uoi-Iz-ilf" id="Vhh-3D-oCy"/>
+                        <outlet property="flowercrownSwitch1" destination="Q5G-AH-N6H" id="bfW-ad-qLv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bzz-LQ-iCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2427.5" y="-147.5"/>
+            <point key="canvasLocation" x="-2495.5" y="-723.5"/>
         </scene>
         <!--StoreB View Controller-->
         <scene sceneID="qez-cZ-BqO">
@@ -507,7 +509,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLl-IO-VWg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1967.5" y="-135.5"/>
+            <point key="canvasLocation" x="-2086.5" y="-723.5"/>
         </scene>
         <!--StoreC View Controller-->
         <scene sceneID="OAY-5B-7do">
@@ -593,7 +595,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KJw-ro-Rhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1542.5" y="-135.5"/>
+            <point key="canvasLocation" x="-1654.5" y="-711.5"/>
         </scene>
         <!--StoreD View Controller-->
         <scene sceneID="AkE-W5-Hn2">
@@ -676,7 +678,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7LA-Kk-M9J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1136.5" y="-135.5"/>
+            <point key="canvasLocation" x="-1248.5" y="-711.5"/>
         </scene>
         <!--StoreE View Controller-->
         <scene sceneID="lWt-jg-htD">
@@ -738,7 +740,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tUt-2K-U03" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-735.5" y="-135.5"/>
+            <point key="canvasLocation" x="-847.5" y="-711.5"/>
         </scene>
         <!--TrackingMethod-->
         <scene sceneID="3AU-im-Rr7">
@@ -795,7 +797,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOx-Ts-AoT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="190.5" y="-1482.5"/>
+            <point key="canvasLocation" x="366.5" y="-1482.5"/>
         </scene>
         <!--Timer-->
         <scene sceneID="T3Z-aT-W7d">
@@ -856,7 +858,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m29-N8-vfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="207.5" y="-553.5"/>
+            <point key="canvasLocation" x="383.5" y="-553.5"/>
         </scene>
         <!--Log-->
         <scene sceneID="730-2j-QmH">
@@ -952,7 +954,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDh-FM-xZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="610.5" y="-553.5"/>
+            <point key="canvasLocation" x="786.5" y="-553.5"/>
         </scene>
         <!--GPSTracker-->
         <scene sceneID="Wsj-JU-6O5">
@@ -1029,7 +1031,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6C-W1-cnp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-199.5" y="-553.5"/>
+            <point key="canvasLocation" x="-23.5" y="-553.5"/>
         </scene>
         <!--Exercise-->
         <scene sceneID="HKy-cQ-21r">
@@ -1092,7 +1094,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHd-aP-4bM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="165.5" y="-2560.5"/>
+            <point key="canvasLocation" x="341.5" y="-2464.5"/>
         </scene>
     </scenes>
     <resources>
@@ -1151,8 +1153,8 @@
         <image name="table store" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XTg-e9-FOi"/>
-        <segue reference="ioS-xu-NfH"/>
         <segue reference="SMp-Xq-bO6"/>
+        <segue reference="7nd-Os-leg"/>
+        <segue reference="ioS-xu-NfH"/>
     </inferredMetricsTieBreakers>
 </document>
