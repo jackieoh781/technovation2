@@ -10,38 +10,38 @@ import UIKit
 
 class StoreBViewController: UIViewController {
 
-    var spikyCounter = 0
+    var necklaceCounter = 0
     var scarfCounter = 0
-    var bejeweledCounter = 0
-    var tieCounter = 0
+    var daisyCounter = 0
+    var hibiscusCounter = 0
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if mainInstance.items.hasItem("Spiky Collar") {
-            self.spikyCollarSwitch.enabled = true
+        if mainInstance.items.hasItem("Necklace") {
+            self.necklaceSwitch.enabled = true
         }
         if mainInstance.items.hasItem("Red Scarf") {
             self.redScarfSwitch.enabled = true
         }
-        if mainInstance.items.hasItem("Bejeweled Collar") {
-            self.bejeweledCollarSwitch.enabled = true
+        if mainInstance.items.hasItem("Daisy") {
+            self.daisySwitch.enabled = true
         }
-        if mainInstance.items.hasItem("Green Tie") {
-            self.greenTieSwitch.enabled = true
+        if mainInstance.items.hasItem("Hibiscus") {
+            self.hibiscusSwitch.enabled = true
         }
         
-        if mainInstance.items.isItemOn("Spiky Collar") {
-            self.spikyCollarSwitch.setOn(true, animated: true)
+        if mainInstance.items.isItemOn("Necklace") {
+            self.necklaceSwitch.setOn(true, animated: true)
         }
         if mainInstance.items.isItemOn("Red Scarf") {
             self.redScarfSwitch.setOn(true, animated: true)
         }
-        if mainInstance.items.isItemOn("Bejeweled Collar") {
-            self.bejeweledCollarSwitch.setOn(true, animated: true)
+        if mainInstance.items.isItemOn("Daisy") {
+            self.daisySwitch.setOn(true, animated: true)
         }
-        if mainInstance.items.isItemOn("Green Tie") {
-            self.greenTieSwitch.setOn(true, animated: true)
+        if mainInstance.items.isItemOn("Hibiscus") {
+            self.hibiscusSwitch.setOn(true, animated: true)
         }
     }
 
@@ -52,28 +52,27 @@ class StoreBViewController: UIViewController {
     
     
     //MARK: Outlets
-    @IBOutlet weak var spikyCollar: UIButton!
+
+    @IBOutlet weak var necklace: UIButton!
     @IBOutlet weak var redScarf: UIButton!
-    @IBOutlet weak var bejeweledCollar: UIButton!
-    @IBOutlet weak var greenTie: UIButton!
+    @IBOutlet weak var daisy: UIButton!
+    @IBOutlet weak var hibiscus: UIButton!
     
-    @IBOutlet weak var spikyCollarSwitch: UISwitch!
+    @IBOutlet weak var necklaceSwitch: UISwitch!
     @IBOutlet weak var redScarfSwitch: UISwitch!
-    @IBOutlet weak var bejeweledCollarSwitch: UISwitch!
-    @IBOutlet weak var greenTieSwitch: UISwitch!
-    
-    
+    @IBOutlet weak var daisySwitch: UISwitch!
+    @IBOutlet weak var hibiscusSwitch: UISwitch!
     
     //MARK: Actions
     
-    @IBAction func buySpikyCollar(sender: UIButton) {
-        let alert = UIAlertController(title: "Buy Spiky Collar", message: "This collar has some fierce spikes on it! Do you want to buy it?", preferredStyle: .Alert)
+    @IBAction func buyNecklace(sender: UIButton) {
+        let alert = UIAlertController(title: "Buy Pearl Necklace", message: "A pearl necklace! How pretty! Do you want to buy it?", preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
             if mainInstance.coins.canPay(75.0) {
                 mainInstance.coins.pay(75.0)
-                mainInstance.items.buyItem("Spiky Collar", price: 75.0)
-                self.spikyCollarSwitch.enabled = true
-                self.spikyCollar.enabled = false
+                mainInstance.items.buyItem("Necklace", price: 75.0)
+                self.necklaceSwitch.enabled = true
+                self.necklace.enabled = false
             }
             else {
                 let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
@@ -116,14 +115,14 @@ class StoreBViewController: UIViewController {
         alert.addAction(cancelAction)
         self.presentViewController(alert, animated: true, completion: nil)
     }
-    @IBAction func buyBejeweledCollar(sender: UIButton) {
-        let alert = UIAlertController(title: "Buy Bejeweled Collar", message: "It looks like this collar has jewels on it! Do you want to buy it?", preferredStyle: .Alert)
+    @IBAction func buyDaisy(sender: UIButton) {
+        let alert = UIAlertController(title: "Buy Daisy", message: "What a pretty daisy! Do you want to buy it?", preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
-            if mainInstance.coins.canPay(75.0) {
-                mainInstance.coins.pay(75.0)
-                mainInstance.items.buyItem("Bejeweled Collar", price: 75.0)
-                self.bejeweledCollarSwitch.enabled = true
-                self.bejeweledCollar.enabled = false
+            if mainInstance.coins.canPay(50.0) {
+                mainInstance.coins.pay(50.0)
+                mainInstance.items.buyItem("Daisy", price: 100.0)
+                self.daisySwitch.enabled = true
+                self.daisy.enabled = false
             }
             else {
                 let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
@@ -141,14 +140,14 @@ class StoreBViewController: UIViewController {
         alert.addAction(cancelAction)
         self.presentViewController(alert, animated: true, completion: nil)
     }
-    @IBAction func buyGreenTie(sender: UIButton) {
-        let alert = UIAlertController(title: "Buy Green Tie", message: "It's a tie! How snazzy! Do you want to buy it?", preferredStyle: .Alert)
+    @IBAction func buyHibiscus(sender: UIButton) {
+        let alert = UIAlertController(title: "Buy a Hibiscus", message: "What a snazzy flower! Do you want to buy it?", preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
-            if mainInstance.coins.canPay(50.0) {
-                mainInstance.coins.pay(50.0)
-                mainInstance.items.buyItem("Green Tie", price: 50.0)
-                self.greenTieSwitch.enabled = true
-                self.greenTie.enabled = false
+            if mainInstance.coins.canPay(75.0) {
+                mainInstance.coins.pay(75.0)
+                mainInstance.items.buyItem("Hibiscus", price: 75.0)
+                self.hibiscusSwitch.enabled = true
+                self.hibiscusSwitch.enabled = false
             }
             else {
                 let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
@@ -167,13 +166,13 @@ class StoreBViewController: UIViewController {
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-    @IBAction func spikyCollarOnOff(sender: UISwitch) {
-        spikyCounter += 1
-        if spikyCounter % 2 == 1 {
-            mainInstance.items.itemOn("Spiky Collar")
+    @IBAction func necklaceOnOff(sender: UISwitch) {
+        necklaceCounter += 1
+        if necklaceCounter % 2 == 1 {
+            mainInstance.items.itemOn("Necklace")
         }
         else {
-            mainInstance.items.itemOff("Spiky Collar")
+            mainInstance.items.itemOff("Necklace")
         }
     }
     @IBAction func redScarfOnOff(sender: UISwitch) {
@@ -185,22 +184,22 @@ class StoreBViewController: UIViewController {
             mainInstance.items.itemOff("Red Scarf")
         }
     }
-    @IBAction func bejeweledCollarOnOff(sender: UISwitch) {
-        bejeweledCounter += 1
-        if bejeweledCounter % 2 == 1 {
-            mainInstance.items.itemOn("Bejeweled Collar")
+    @IBAction func daisyOnOff(sender: UISwitch) {
+        daisyCounter += 1
+        if daisyCounter % 2 == 1 {
+            mainInstance.items.itemOn("Daisy")
         }
         else {
-            mainInstance.items.itemOff("Bejeweled Collar")
+            mainInstance.items.itemOff("Daisy")
         }
     }
-    @IBAction func greenTieOnOff(sender: UISwitch) {
-        tieCounter += 1
-        if tieCounter % 2 == 1 {
-            mainInstance.items.itemOn("Clock")
+    @IBAction func hibiscusOnOff(sender: UISwitch) {
+        hibiscusCounter += 1
+        if hibiscusCounter % 2 == 1 {
+            mainInstance.items.itemOn("Hibiscus")
         }
         else {
-            mainInstance.items.itemOff("Clock")
+            mainInstance.items.itemOff("Hibiscus")
         }
     }
 }

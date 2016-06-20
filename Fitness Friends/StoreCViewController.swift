@@ -10,7 +10,7 @@ import UIKit
 
 class StoreCViewController: UIViewController {
     
-    var necklaceCounter = 0
+    var flowercrownCounter = 0
     var braceletsCounter = 0
     var legwarmersCounter = 0
     var daisyCounter = 0
@@ -18,8 +18,8 @@ class StoreCViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if mainInstance.items.hasItem("Pearl Necklace") {
-            self.necklaceSwitch.enabled = true
+        if mainInstance.items.hasItem("Flowercrown") {
+            self.flowercrownSwitch.enabled = true
         }
         if mainInstance.items.hasItem("Bracelets") {
             self.braceletsSwitch.enabled = true
@@ -31,8 +31,8 @@ class StoreCViewController: UIViewController {
             self.daisySwitch.enabled = true
         }
         
-        if mainInstance.items.isItemOn("Pearl Necklace") {
-            self.necklaceSwitch.setOn(true, animated: true)
+        if mainInstance.items.isItemOn("Flowercrown") {
+            self.flowercrownSwitch.setOn(true, animated: true)
         }
         if mainInstance.items.isItemOn("Bracelets") {
             self.braceletsSwitch.setOn(true, animated: true)
@@ -51,25 +51,27 @@ class StoreCViewController: UIViewController {
     }
     
     //MARK: Outlets
-    @IBOutlet weak var necklace: UIButton!
+    
+    @IBOutlet weak var flowercrown: UIButton!
     @IBOutlet weak var bracelets: UIButton!
     @IBOutlet weak var legwarmers: UIButton!
     @IBOutlet weak var daisy: UIButton!
     
-    @IBOutlet weak var necklaceSwitch: UISwitch!
+    @IBOutlet weak var flowercrownSwitch: UISwitch!
     @IBOutlet weak var braceletsSwitch: UISwitch!
     @IBOutlet weak var legwarmersSwitch: UISwitch!
     @IBOutlet weak var daisySwitch: UISwitch!
     
     //MARK: Actions
-    @IBAction func buyNecklace(sender: UIButton) {
-        let alert = UIAlertController(title: "Buy Pearl Necklace", message: "A pearl necklace! How pretty! Do you want to buy it?", preferredStyle: .Alert)
+
+    @IBAction func buyFlowercrown(sender: UIButton) {
+        let alert = UIAlertController(title: "Buy Flowercrown", message: "A flower crown to embrace your inner flower child. Do you want to buy it?", preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
             if mainInstance.coins.canPay(75.0) {
                 mainInstance.coins.pay(75.0)
                 mainInstance.items.buyItem("Pearl Necklace", price: 75.0)
-                self.necklaceSwitch.enabled = true
-                self.necklace.enabled = false
+                self.flowercrownSwitch.enabled = true
+                self.flowercrown.enabled = false
             }
             else {
                 let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
@@ -162,10 +164,10 @@ class StoreCViewController: UIViewController {
         alert.addAction(cancelAction)
         self.presentViewController(alert, animated: true, completion: nil)
     }
-    
-    @IBAction func necklaceOnOff(sender: UISwitch) {
-        necklaceCounter += 1
-        if necklaceCounter % 2 == 1 {
+
+    @IBAction func flowercrownOnOff(sender: UISwitch) {
+        flowercrownCounter += 1
+        if flowercrownCounter % 2 == 1 {
             mainInstance.items.itemOn("Pearl Necklace")
         }
         else {

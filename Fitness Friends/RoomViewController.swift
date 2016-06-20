@@ -22,13 +22,13 @@ class RoomViewController: UIViewController {
         
         if mainInstance.items.isItemOn("Collar") {
             //place item on screen
-            collarImage.image = UIImage(named: "collar on animal")
-            collarImage.center = collarLocation
+            neck.image = UIImage(named: "collar on animal")
+            neck.center = collarLocation
         }
         if mainInstance.items.isItemOn("Flowercrown") {
             //place item on screen
-            flowercrownImage.image = UIImage(named: "flowercrown on animal")
-            flowercrownImage.center = flowercrownLocation
+            head.image = UIImage(named: "flowercrown on animal")
+            head.center = flowercrownLocation
         }
         if mainInstance.items.isItemOn("Clock") {
             //place item on screen
@@ -41,6 +41,11 @@ class RoomViewController: UIViewController {
             couchImage.image = UIImage(named: "couch in room")
             self.view.insertSubview(couchImage, atIndex: 2)
             couchImage.center = couchLocation
+        }
+        if mainInstance.items.isItemOn("Spiky Collar") {
+            //place item on screen
+            neck.image = UIImage(named: "spiky collar on animal")
+            neck.center = collarLocation
         }
         if mainInstance.items.pet == "Cat" {
             animal.image = UIImage(named:"cat1-2")
@@ -65,17 +70,17 @@ class RoomViewController: UIViewController {
                 animal.center = location
                 animalLocation = location
             }
-            if(CGRectContainsPoint(collarImage.frame, location))
+            if(CGRectContainsPoint(neck.frame, location))
             {
-                collarImage.center = location
+                neck.center = location
                 collarLocation = location
-                self.view.bringSubviewToFront(collarImage)
+                self.view.bringSubviewToFront(neck)
             }
-            if(CGRectContainsPoint(flowercrownImage.frame, location))
+            if(CGRectContainsPoint(head.frame, location))
             {
-                flowercrownImage.center = location
+                head.center = location
                 flowercrownLocation = location
-                self.view.bringSubviewToFront(flowercrownImage)
+                self.view.bringSubviewToFront(head)
             }
             if(CGRectContainsPoint(clockImage.frame, location))
             {
@@ -92,8 +97,8 @@ class RoomViewController: UIViewController {
     
     //MARK: Outlets
     @IBOutlet weak var animal: UIImageView!
-    @IBOutlet weak var collarImage: UIImageView!
-    @IBOutlet weak var flowercrownImage: UIImageView!
+    @IBOutlet weak var head: UIImageView!
+    @IBOutlet weak var neck: UIImageView!
     @IBOutlet weak var clockImage: UIImageView!
     @IBOutlet weak var couchImage: UIImageView!
     

@@ -12,6 +12,9 @@ class Store {
     
     var itemsOwned = [String]()
     var itemsOn = Set<String>()
+    var head = ["Flowercrown", "Daisy", "Hibiscus"]
+    var neck = ["Collar", "Spiky Collar", "Bejeweled Collar", "Red Scarf", "Green Tie",]
+    var legs = ""
     var pet = "Dog"
     var totalCoinsSpent = 0.0
     
