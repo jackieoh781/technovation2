@@ -147,7 +147,7 @@ class StoreBViewController: UIViewController {
                 mainInstance.coins.pay(75.0)
                 mainInstance.items.buyItem("Hibiscus", price: 75.0)
                 self.hibiscusSwitch.enabled = true
-                self.hibiscusSwitch.enabled = false
+                self.hibiscus.enabled = false
             }
             else {
                 let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)

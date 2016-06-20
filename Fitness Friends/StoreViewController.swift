@@ -14,8 +14,7 @@ class StoreViewController: UIPageViewController {
         return [self.newStoreViewController("A1"),
                 self.newStoreViewController("B"),
                 self.newStoreViewController("C"),
-                self.newStoreViewController("D"),
-                self.newStoreViewController("E")]
+                self.newStoreViewController("D")]
     }()
     
     private func newStoreViewController(letter: String) -> UIViewController {

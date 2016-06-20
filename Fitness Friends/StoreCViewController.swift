@@ -11,9 +11,9 @@ import UIKit
 class StoreCViewController: UIViewController {
     
     var flowercrownCounter = 0
-    var braceletsCounter = 0
-    var legwarmersCounter = 0
-    var daisyCounter = 0
+    var flowercanCounter = 0
+    var flowerpotCounter = 0
+    var flowervaseCounter = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,27 +21,27 @@ class StoreCViewController: UIViewController {
         if mainInstance.items.hasItem("Flowercrown") {
             self.flowercrownSwitch.enabled = true
         }
-        if mainInstance.items.hasItem("Bracelets") {
-            self.braceletsSwitch.enabled = true
+        if mainInstance.items.hasItem("Flowercan") {
+            self.flowercanSwitch.enabled = true
         }
-        if mainInstance.items.hasItem("Legwarmers") {
-            self.legwarmersSwitch.enabled = true
+        if mainInstance.items.hasItem("Flowerpot") {
+            self.flowerpotSwitch.enabled = true
         }
-        if mainInstance.items.hasItem("Daisy") {
-            self.daisySwitch.enabled = true
+        if mainInstance.items.hasItem("Flowervase") {
+            self.flowervaseSwitch.enabled = true
         }
         
         if mainInstance.items.isItemOn("Flowercrown") {
             self.flowercrownSwitch.setOn(true, animated: true)
         }
-        if mainInstance.items.isItemOn("Bracelets") {
-            self.braceletsSwitch.setOn(true, animated: true)
+        if mainInstance.items.isItemOn("Flowercan") {
+            self.flowercanSwitch.setOn(true, animated: true)
         }
-        if mainInstance.items.isItemOn("Legwarmers") {
-            self.legwarmersSwitch.setOn(true, animated: true)
+        if mainInstance.items.isItemOn("Flowerpot") {
+            self.flowerpotSwitch.setOn(true, animated: true)
         }
-        if mainInstance.items.isItemOn("Daisy") {
-            self.daisySwitch.setOn(true, animated: true)
+        if mainInstance.items.isItemOn("Flowervase") {
+            self.flowervaseSwitch.setOn(true, animated: true)
         }
     }
 
@@ -53,23 +53,23 @@ class StoreCViewController: UIViewController {
     //MARK: Outlets
     
     @IBOutlet weak var flowercrown: UIButton!
-    @IBOutlet weak var bracelets: UIButton!
-    @IBOutlet weak var legwarmers: UIButton!
-    @IBOutlet weak var daisy: UIButton!
+    @IBOutlet weak var flowercan: UIButton!
+    @IBOutlet weak var flowerpot: UIButton!
+    @IBOutlet weak var flowervase: UIButton!
     
     @IBOutlet weak var flowercrownSwitch: UISwitch!
-    @IBOutlet weak var braceletsSwitch: UISwitch!
-    @IBOutlet weak var legwarmersSwitch: UISwitch!
-    @IBOutlet weak var daisySwitch: UISwitch!
+    @IBOutlet weak var flowercanSwitch: UISwitch!
+    @IBOutlet weak var flowerpotSwitch: UISwitch!
+    @IBOutlet weak var flowervaseSwitch: UISwitch!
     
     //MARK: Actions
 
     @IBAction func buyFlowercrown(sender: UIButton) {
         let alert = UIAlertController(title: "Buy Flowercrown", message: "A flower crown to embrace your inner flower child. Do you want to buy it?", preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
-            if mainInstance.coins.canPay(75.0) {
-                mainInstance.coins.pay(75.0)
-                mainInstance.items.buyItem("Pearl Necklace", price: 75.0)
+            if mainInstance.coins.canPay(175.0) {
+                mainInstance.coins.pay(175.0)
+                mainInstance.items.buyItem("Flowercrown", price: 175.0)
                 self.flowercrownSwitch.enabled = true
                 self.flowercrown.enabled = false
             }
@@ -89,14 +89,14 @@ class StoreCViewController: UIViewController {
         alert.addAction(cancelAction)
         self.presentViewController(alert, animated: true, completion: nil)
     }
-    @IBAction func buyBracelets(sender: UIButton) {
-        let alert = UIAlertController(title: "Buy Bracelets", message: "", preferredStyle: .Alert)
+    @IBAction func buyFlowercan(sender: UIButton) {
+        let alert = UIAlertController(title: "Buy a Flower in a Tin Can", message: "It's a flower in a tin can! Are you sure you want to buy it?", preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
             if mainInstance.coins.canPay(25.0) {
                 mainInstance.coins.pay(25.0)
-                mainInstance.items.buyItem("Bracelets", price: 25.0)
-                self.braceletsSwitch.enabled = true
-                self.bracelets.enabled = false
+                mainInstance.items.buyItem("Flowercan", price: 25.0)
+                self.flowercanSwitch.enabled = true
+                self.flowercan.enabled = false
             }
             else {
                 let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
@@ -114,14 +114,14 @@ class StoreCViewController: UIViewController {
         alert.addAction(cancelAction)
         self.presentViewController(alert, animated: true, completion: nil)
     }
-    @IBAction func buyLegwarmers(sender: UIButton) {
-        let alert = UIAlertController(title: "Buy Legwarmers", message: "It's a pair of legwarmers! Do you want to buy them?", preferredStyle: .Alert)
+    @IBAction func buyFlowerpot(sender: UIButton) {
+        let alert = UIAlertController(title: "Buy a Flower in a Tin Can", message: "It's a flower in a tin can! Are you sure you want to buy it?", preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
-            if mainInstance.coins.canPay(100.0) {
-                mainInstance.coins.pay(100.0)
-                mainInstance.items.buyItem("Legwarmers", price: 100.0)
-                self.legwarmersSwitch.enabled = true
-                self.legwarmers.enabled = false
+            if mainInstance.coins.canPay(25.0) {
+                mainInstance.coins.pay(25.0)
+                mainInstance.items.buyItem("Flowercan", price: 25.0)
+                self.flowerpotSwitch.enabled = true
+                self.flowerpot.enabled = false
             }
             else {
                 let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
@@ -139,14 +139,14 @@ class StoreCViewController: UIViewController {
         alert.addAction(cancelAction)
         self.presentViewController(alert, animated: true, completion: nil)
     }
-    @IBAction func buyDaisy(sender: UIButton) {
-        let alert = UIAlertController(title: "Buy Daisy", message: "What a pretty daisy! Do you want to buy it?", preferredStyle: .Alert)
+    @IBAction func buyFlowervase(sender: UIButton) {
+        let alert = UIAlertController(title: "Buy a Flowervase", message: "Wow, what a nice vase! Do you want to buy it?", preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
-            if mainInstance.coins.canPay(50.0) {
-                mainInstance.coins.pay(50.0)
-                mainInstance.items.buyItem("Daisy", price: 100.0)
-                self.daisySwitch.enabled = true
-                self.daisy.enabled = false
+            if mainInstance.coins.canPay(150.0) {
+                mainInstance.coins.pay(150.0)
+                mainInstance.items.buyItem("Flowervase", price: 150.0)
+                self.flowervaseSwitch.enabled = true
+                self.flowervase.enabled = false
             }
             else {
                 let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
@@ -164,7 +164,6 @@ class StoreCViewController: UIViewController {
         alert.addAction(cancelAction)
         self.presentViewController(alert, animated: true, completion: nil)
     }
-
     @IBAction func flowercrownOnOff(sender: UISwitch) {
         flowercrownCounter += 1
         if flowercrownCounter % 2 == 1 {
@@ -174,31 +173,32 @@ class StoreCViewController: UIViewController {
             mainInstance.items.itemOff("Pearl Necklace")
         }
     }
-    @IBAction func braceletsOnOff(sender: UISwitch) {
-        braceletsCounter += 1
-        if braceletsCounter % 2 == 1 {
-            mainInstance.items.itemOn("Bracelets")
+    @IBAction func flowercanOnOff(sender: UISwitch) {
+        flowercanCounter += 1
+        if flowercanCounter % 2 == 1 {
+            mainInstance.items.itemOn("Flowercan")
         }
         else {
-            mainInstance.items.itemOff("Bracelets")
+            mainInstance.items.itemOff("Flowercan")
         }
     }
-    @IBAction func legwarmersOnOff(sender: UISwitch) {
-        legwarmersCounter += 1
-        if legwarmersCounter % 2 == 1 {
-            mainInstance.items.itemOn("Legwarmers")
+    @IBAction func flowerpotOnOff(sender: UISwitch) {
+        flowerpotCounter += 1
+        if flowerpotCounter % 2 == 1 {
+            mainInstance.items.itemOn("Flowerpot")
         }
         else {
-            mainInstance.items.itemOff("Legwarmers")
+            mainInstance.items.itemOff("Flowerpot")
         }
     }
-    @IBAction func daisyOnOff(sender: UISwitch) {
-        daisyCounter += 1
-        if daisyCounter % 2 == 1 {
-            mainInstance.items.itemOn("Daisy")
+    @IBAction func flowervaseOnOff(sender: UISwitch) {
+        flowervaseCounter += 1
+        if flowervaseCounter % 2 == 1 {
+            mainInstance.items.itemOn("Flowervase")
         }
         else {
-            mainInstance.items.itemOff("Daisy")
+            mainInstance.items.itemOff("Flowervase")
         }
     }
+
 }

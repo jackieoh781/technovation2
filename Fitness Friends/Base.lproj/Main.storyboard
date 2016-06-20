@@ -508,7 +508,6 @@
                         <outlet property="necklaceSwitch" destination="agh-B6-Bov" id="ajG-5R-Xfa"/>
                         <outlet property="redScarf" destination="jzB-uJ-Dud" id="rw8-Xg-2ue"/>
                         <outlet property="redScarfSwitch" destination="P4G-se-RHu" id="zof-pG-pdD"/>
-                        <outlet property="spikyCollar" destination="mlf-xf-Ut7" id="6YB-GU-qox"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLl-IO-VWg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -530,7 +529,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MmN-Kz-b7B">
                                 <rect key="frame" x="76" y="398" width="51" height="31"/>
                                 <connections>
-                                    <action selector="legwarmersOnOff:" destination="LoY-a8-SXB" eventType="valueChanged" id="a2o-ea-oxS"/>
+                                    <action selector="flowerpotOnOff:" destination="LoY-a8-SXB" eventType="valueChanged" id="hDl-6T-Us4"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="T3Y-l5-w5A">
@@ -539,43 +538,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3sq-sh-idR">
                                 <rect key="frame" x="249" y="183" width="51" height="31"/>
                                 <connections>
-                                    <action selector="braceletsOnOff:" destination="LoY-a8-SXB" eventType="valueChanged" id="ke8-Ej-dt0"/>
-                                </connections>
-                            </switch>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qni-L7-P5p">
-                                <rect key="frame" x="200" y="28" width="147" height="147"/>
-                                <state key="normal" backgroundImage="bracelets store"/>
-                                <connections>
-                                    <action selector="buyBracelets:" destination="LoY-a8-SXB" eventType="touchUpInside" id="XPi-L2-3vd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2y5-ME-YLi">
-                                <rect key="frame" x="201" y="234" width="146" height="146"/>
-                                <state key="normal" backgroundImage="daisy store"/>
-                                <connections>
-                                    <action selector="buyDaisy:" destination="LoY-a8-SXB" eventType="touchUpInside" id="5sp-fw-ny5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMg-ZR-h1Z">
-                                <rect key="frame" x="27" y="234" width="146" height="146"/>
-                                <state key="normal" backgroundImage="legwarmers store"/>
-                                <connections>
-                                    <action selector="buyLegwarmers:" destination="LoY-a8-SXB" eventType="touchUpInside" id="cJa-la-7Ar"/>
-                                </connections>
-                            </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x7i-Y8-SiJ">
-                                <rect key="frame" x="249" y="398" width="51" height="31"/>
-                                <connections>
-                                    <action selector="daisyOnOff:" destination="LoY-a8-SXB" eventType="valueChanged" id="ZsS-TI-gmi"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lvh-q1-dZg">
-                                <rect key="frame" x="76" y="181" width="51" height="31"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yQD-BP-gXH">
-                                <rect key="frame" x="76" y="181" width="51" height="31"/>
-                                <connections>
-                                    <action selector="flowercrownOnOff:" destination="LoY-a8-SXB" eventType="valueChanged" id="wve-aJ-n7k"/>
+                                    <action selector="flowercanOnOff:" destination="LoY-a8-SXB" eventType="valueChanged" id="Zgb-qk-Tui"/>
                                 </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAB-Vc-saY">
@@ -585,20 +548,55 @@
                                     <action selector="buyFlowercrown:" destination="LoY-a8-SXB" eventType="touchUpInside" id="21o-Ql-x8S"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qni-L7-P5p">
+                                <rect key="frame" x="200" y="28" width="147" height="147"/>
+                                <state key="normal" backgroundImage="Flower can store"/>
+                                <connections>
+                                    <action selector="buyFlowercan:" destination="LoY-a8-SXB" eventType="touchUpInside" id="jRw-uY-mJU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2y5-ME-YLi">
+                                <rect key="frame" x="201" y="234" width="146" height="146"/>
+                                <state key="normal" backgroundImage="flowervase store"/>
+                                <connections>
+                                    <action selector="buyFlowervase:" destination="LoY-a8-SXB" eventType="touchUpInside" id="DKf-IB-BLd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMg-ZR-h1Z">
+                                <rect key="frame" x="27" y="234" width="146" height="146"/>
+                                <state key="normal" backgroundImage="flower store"/>
+                                <connections>
+                                    <action selector="buyFlowerpot:" destination="LoY-a8-SXB" eventType="touchUpInside" id="Bj7-nx-l4R"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lvh-q1-dZg">
+                                <rect key="frame" x="76" y="181" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yQD-BP-gXH">
+                                <rect key="frame" x="76" y="181" width="51" height="31"/>
+                                <connections>
+                                    <action selector="flowercrownOnOff:" destination="LoY-a8-SXB" eventType="valueChanged" id="wve-aJ-n7k"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x7i-Y8-SiJ">
+                                <rect key="frame" x="249" y="398" width="51" height="31"/>
+                                <connections>
+                                    <action selector="flowervaseOnOff:" destination="LoY-a8-SXB" eventType="valueChanged" id="KcC-kF-FaQ"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="bracelets" destination="Qni-L7-P5p" id="1a7-bv-WuN"/>
-                        <outlet property="braceletsSwitch" destination="3sq-sh-idR" id="VEh-4u-hot"/>
-                        <outlet property="daisy" destination="2y5-ME-YLi" id="IH9-q1-war"/>
-                        <outlet property="daisySwitch" destination="T3Y-l5-w5A" id="Lrs-ng-skn"/>
+                        <outlet property="flowercan" destination="Qni-L7-P5p" id="58x-HJ-YLl"/>
+                        <outlet property="flowercanSwitch" destination="3sq-sh-idR" id="aYQ-RT-rp2"/>
                         <outlet property="flowercrown" destination="PAB-Vc-saY" id="lwG-ez-R5X"/>
                         <outlet property="flowercrownSwitch" destination="yQD-BP-gXH" id="r3O-kJ-kvH"/>
-                        <outlet property="legwarmers" destination="dMg-ZR-h1Z" id="RYK-St-DLA"/>
-                        <outlet property="legwarmersSwitch" destination="MmN-Kz-b7B" id="REd-mo-aVp"/>
-                        <outlet property="necklaceSwitch" destination="Lvh-q1-dZg" id="jVy-sd-uKz"/>
+                        <outlet property="flowerpot" destination="dMg-ZR-h1Z" id="ujJ-5L-d4X"/>
+                        <outlet property="flowerpotSwitch" destination="MmN-Kz-b7B" id="6V8-zu-h5D"/>
+                        <outlet property="flowervase" destination="2y5-ME-YLi" id="QzT-25-0ui"/>
+                        <outlet property="flowervaseSwitch" destination="x7i-Y8-SiJ" id="NPc-9R-QIj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KJw-ro-Rhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -617,138 +615,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfG-YK-iNx">
-                                <rect key="frame" x="211" y="28" width="146" height="146"/>
-                                <state key="normal" backgroundImage="flower store"/>
-                                <connections>
-                                    <action selector="buyFlowerpot:" destination="PvB-Q0-cIU" eventType="touchUpInside" id="n0K-VX-pw0"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXB-L0-GZ9">
-                                <rect key="frame" x="20" y="221" width="146" height="146"/>
-                                <state key="normal" backgroundImage="flowervase store"/>
+                                <rect key="frame" x="20" y="233" width="146" height="146"/>
+                                <state key="normal" backgroundImage="clock store"/>
                                 <connections>
-                                    <action selector="buyFlowervase:" destination="PvB-Q0-cIU" eventType="touchUpInside" id="cNS-bp-G8f"/>
+                                    <action selector="buyClock:" destination="PvB-Q0-cIU" eventType="touchUpInside" id="Fdb-wy-KIg"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dbb-ap-Ev6">
-                                <rect key="frame" x="254" y="381" width="51" height="31"/>
+                                <rect key="frame" x="254" y="393" width="51" height="31"/>
                                 <connections>
-                                    <action selector="hibiscusOnOff:" destination="PvB-Q0-cIU" eventType="valueChanged" id="wQN-rA-AVm"/>
+                                    <action selector="tableOnOff:" destination="PvB-Q0-cIU" eventType="valueChanged" id="yh7-Og-zcP"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="byH-tj-Jwk">
                                 <rect key="frame" x="254" y="182" width="51" height="31"/>
                                 <connections>
-                                    <action selector="flowerpotOnOff:" destination="PvB-Q0-cIU" eventType="valueChanged" id="FAc-gl-H3h"/>
+                                    <action selector="mountainOnOff:" destination="PvB-Q0-cIU" eventType="valueChanged" id="VQv-d1-t79"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6NW-Uo-JNl">
                                 <rect key="frame" x="69" y="182" width="51" height="31"/>
                                 <connections>
-                                    <action selector="flowercanOnOff:" destination="PvB-Q0-cIU" eventType="valueChanged" id="C6v-bv-Tjh"/>
+                                    <action selector="couchOnOff:" destination="PvB-Q0-cIU" eventType="valueChanged" id="u4d-4R-QEV"/>
                                 </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZg-wT-xzv">
                                 <rect key="frame" x="20" y="28" width="146" height="146"/>
-                                <state key="normal" backgroundImage="Flower can store"/>
+                                <state key="normal" backgroundImage="couch store"/>
                                 <connections>
-                                    <action selector="buyFlowercan:" destination="PvB-Q0-cIU" eventType="touchUpInside" id="sx1-3c-FPn"/>
+                                    <action selector="buyCouch:" destination="PvB-Q0-cIU" eventType="touchUpInside" id="N55-ai-ueY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVm-nv-10g">
-                                <rect key="frame" x="211" y="221" width="146" height="146"/>
-                                <state key="normal" backgroundImage="hibiscus store"/>
+                                <rect key="frame" x="211" y="233" width="146" height="146"/>
+                                <state key="normal" backgroundImage="table store"/>
                                 <connections>
-                                    <action selector="buyHibiscus:" destination="PvB-Q0-cIU" eventType="touchUpInside" id="t13-6Q-56K"/>
+                                    <action selector="buyTable:" destination="PvB-Q0-cIU" eventType="touchUpInside" id="JFX-d2-MVG"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lP8-rk-5e3">
-                                <rect key="frame" x="69" y="381" width="51" height="31"/>
+                                <rect key="frame" x="69" y="393" width="51" height="31"/>
                                 <connections>
-                                    <action selector="flowervaseOnOff:" destination="PvB-Q0-cIU" eventType="valueChanged" id="Je2-Cw-ncT"/>
+                                    <action selector="clockOnOff:" destination="PvB-Q0-cIU" eventType="valueChanged" id="Qzi-cL-yDc"/>
                                 </connections>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfG-YK-iNx">
+                                <rect key="frame" x="211" y="28" width="146" height="146"/>
+                                <state key="normal" backgroundImage="mountain store"/>
+                                <connections>
+                                    <action selector="buyMountain:" destination="PvB-Q0-cIU" eventType="touchUpInside" id="CQ7-F8-sbD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="flowercan" destination="jZg-wT-xzv" id="rSd-zQ-RRF"/>
-                        <outlet property="flowercanSwitch" destination="6NW-Uo-JNl" id="JAe-qt-wKT"/>
-                        <outlet property="flowerpot" destination="HfG-YK-iNx" id="63W-6d-awj"/>
-                        <outlet property="flowerpotSwitch" destination="byH-tj-Jwk" id="ADW-yY-1lJ"/>
-                        <outlet property="flowervase" destination="mXB-L0-GZ9" id="QeZ-Tg-VNo"/>
-                        <outlet property="flowervaseSwitch" destination="lP8-rk-5e3" id="4T1-C3-XaJ"/>
-                        <outlet property="hibiscus" destination="GVm-nv-10g" id="bc8-cH-ErL"/>
-                        <outlet property="hibiscusSwitch" destination="dbb-ap-Ev6" id="B6O-fc-9wm"/>
+                        <outlet property="clock" destination="mXB-L0-GZ9" id="g75-qK-SGy"/>
+                        <outlet property="clockSwitch" destination="lP8-rk-5e3" id="0kG-JQ-J1i"/>
+                        <outlet property="couch" destination="jZg-wT-xzv" id="IsX-xM-a5Q"/>
+                        <outlet property="couchSwitch" destination="6NW-Uo-JNl" id="Zx9-QJ-zCw"/>
+                        <outlet property="mountain" destination="HfG-YK-iNx" id="qcG-8P-Dhk"/>
+                        <outlet property="mountainSwitch" destination="byH-tj-Jwk" id="617-D3-zuo"/>
+                        <outlet property="table" destination="GVm-nv-10g" id="vL8-cs-d9O"/>
+                        <outlet property="tableSwitch" destination="dbb-ap-Ev6" id="fNO-lc-60x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7LA-Kk-M9J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1248.5" y="-711.5"/>
-        </scene>
-        <!--StoreE View Controller-->
-        <scene sceneID="lWt-jg-htD">
-            <objects>
-                <viewController restorationIdentifier="StoreEViewController" storyboardIdentifier="StoreEViewController" id="dio-XJ-IzO" customClass="StoreEViewController" customModule="Fitness_Friends" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uTY-Uh-fiC"/>
-                        <viewControllerLayoutGuide type="bottom" id="R9t-3G-zYE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="PuS-rc-kcz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWD-44-2M0">
-                                <rect key="frame" x="29" y="28" width="145" height="147"/>
-                                <state key="normal" backgroundImage="mountain store"/>
-                                <connections>
-                                    <action selector="buyMountain:" destination="dio-XJ-IzO" eventType="touchUpInside" id="o14-Nq-oER"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucI-iY-UJm">
-                                <rect key="frame" x="207" y="28" width="139" height="146"/>
-                                <state key="normal" backgroundImage="table store"/>
-                                <connections>
-                                    <action selector="buyTable:" destination="dio-XJ-IzO" eventType="touchUpInside" id="z5G-va-eac"/>
-                                </connections>
-                            </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="R0R-SU-ZYl">
-                                <rect key="frame" x="252" y="191" width="51" height="31"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wyq-pv-cvZ">
-                                <rect key="frame" x="77" y="389" width="51" height="31"/>
-                            </switch>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20Z-Lo-pud">
-                                <rect key="frame" x="29" y="236" width="145" height="145"/>
-                                <state key="normal" backgroundImage="dogcard store"/>
-                                <connections>
-                                    <action selector="buyDogCard:" destination="dio-XJ-IzO" eventType="touchUpInside" id="3f7-vc-P8E"/>
-                                </connections>
-                            </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2CR-yL-PjM">
-                                <rect key="frame" x="77" y="191" width="51" height="31"/>
-                                <connections>
-                                    <action selector="mountainSwitch:" destination="dio-XJ-IzO" eventType="valueChanged" id="2mT-XE-lfu"/>
-                                </connections>
-                            </switch>
-                        </subviews>
-                        <color key="backgroundColor" red="0.43346120859999998" green="0.775758646" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="dogCard" destination="20Z-Lo-pud" id="Xm8-ye-2du"/>
-                        <outlet property="dogCardSwitch" destination="wyq-pv-cvZ" id="0kn-RV-h2X"/>
-                        <outlet property="mountain" destination="JWD-44-2M0" id="hP1-DA-LHh"/>
-                        <outlet property="mountainSwitch" destination="2CR-yL-PjM" id="Pud-Pj-2CO"/>
-                        <outlet property="table" destination="ucI-iY-UJm" id="cb1-BR-s7e"/>
-                        <outlet property="tableSwitch" destination="R0R-SU-ZYl" id="2Xz-fl-M7F"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tUt-2K-U03" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-847.5" y="-711.5"/>
         </scene>
         <!--TrackingMethod-->
         <scene sceneID="3AU-im-Rr7">
@@ -1134,13 +1070,13 @@
         <image name="TimeBackground" width="256" height="140"/>
         <image name="Walk" width="216" height="176"/>
         <image name="bejeweled collar store" width="100" height="100"/>
-        <image name="bracelets store" width="100" height="100"/>
         <image name="cat1-2" width="139" height="182"/>
         <image name="catButton" width="100" height="62"/>
+        <image name="clock store" width="100" height="100"/>
         <image name="collar store" width="100" height="100"/>
+        <image name="couch store" width="100" height="100"/>
         <image name="daisy store" width="100" height="100"/>
         <image name="dogButton" width="100" height="62"/>
-        <image name="dogcard store" width="100" height="100"/>
         <image name="flower store" width="100" height="100"/>
         <image name="flowercrown store" width="100" height="100"/>
         <image name="flowervase store" width="100" height="100"/>
@@ -1149,7 +1085,6 @@
         <image name="hibiscus store" width="100" height="100"/>
         <image name="homeHeader" width="563" height="266"/>
         <image name="homePawPrints" width="125" height="410"/>
-        <image name="legwarmers store" width="100" height="100"/>
         <image name="mountain store" width="100" height="100"/>
         <image name="pawPrintHeaders" width="518" height="144"/>
         <image name="pearl necklace store" width="100" height="100"/>
@@ -1159,8 +1094,8 @@
         <image name="table store" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lPb-cM-RzF"/>
-        <segue reference="XTg-e9-FOi"/>
+        <segue reference="ioS-xu-NfH"/>
         <segue reference="hN7-V7-VeY"/>
+        <segue reference="XTg-e9-FOi"/>
     </inferredMetricsTieBreakers>
 </document>
