@@ -12,9 +12,10 @@ class Store {
     
     var itemsOwned = [String]()
     var itemsOn = Set<String>()
-    var head = ["Flowercrown", "Daisy", "Hibiscus"]
-    var neck = ["Collar", "Spiky Collar", "Bejeweled Collar", "Red Scarf", "Green Tie",]
-    var legs = ""
+    var head: Set<String> = ["Flowercrown", "Daisy", "Hibiscus"]
+    var neck: Set<String> = ["Collar", "Spiky Collar", "Bejeweled Collar", "Red Scarf", "Green Tie",]
+    var headItem = ""
+    var neckItem = ""
     var pet = "Dog"
     var totalCoinsSpent = 0.0
     
@@ -25,6 +26,17 @@ class Store {
     
     func itemOn(item: String) {
         itemsOn.insert(item)
+        
+        for items in head {
+            if items == item {
+                headItem = item
+            }
+        }
+        for items in neck {
+            if items == item {
+                neckItem = item
+            }
+        }
     }
     
     func itemOff(item: String) {
@@ -52,4 +64,10 @@ class Store {
         }
         return false
     }
+    
+    /*
+    func slotFull(item:String) -> Bool {
+        
+    }
+ */
 }
