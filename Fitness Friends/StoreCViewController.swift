@@ -167,16 +167,38 @@ class StoreCViewController: UIViewController {
     @IBAction func flowercrownOnOff(sender: UISwitch) {
         flowercrownCounter += 1
         if flowercrownCounter % 2 == 1 {
-            mainInstance.items.itemOn("Pearl Necklace")
+            if mainInstance.items.slotFull("head") {
+                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one item on your pet's neck. Turn off other items to put this one on!", preferredStyle: .Alert)
+                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                    print("Okay!")
+                }
+                fullAlert.addAction(no)
+                
+                self.presentViewController(fullAlert, animated: true, completion: nil)
+            }
+            else {
+                mainInstance.items.itemOn("Flowercrown")
+            }
         }
         else {
-            mainInstance.items.itemOff("Pearl Necklace")
+            mainInstance.items.itemOff("Flowercrown")
         }
     }
     @IBAction func flowercanOnOff(sender: UISwitch) {
         flowercanCounter += 1
         if flowercanCounter % 2 == 1 {
-            mainInstance.items.itemOn("Flowercan")
+            if mainInstance.items.slotFull("flowers") {
+                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one flower item. Turn off other items to put this one on!", preferredStyle: .Alert)
+                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                    print("Okay!")
+                }
+                fullAlert.addAction(no)
+                
+                self.presentViewController(fullAlert, animated: true, completion: nil)
+            }
+            else {
+                mainInstance.items.itemOn("Flowercan")
+            }
         }
         else {
             mainInstance.items.itemOff("Flowercan")
@@ -185,7 +207,18 @@ class StoreCViewController: UIViewController {
     @IBAction func flowerpotOnOff(sender: UISwitch) {
         flowerpotCounter += 1
         if flowerpotCounter % 2 == 1 {
-            mainInstance.items.itemOn("Flowerpot")
+            if mainInstance.items.slotFull("flowers") {
+                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one flower item. Turn off other items to put this one on!", preferredStyle: .Alert)
+                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                    print("Okay!")
+                }
+                fullAlert.addAction(no)
+                
+                self.presentViewController(fullAlert, animated: true, completion: nil)
+            }
+            else {
+                mainInstance.items.itemOn("Flowerpot")
+            }
         }
         else {
             mainInstance.items.itemOff("Flowerpot")
@@ -194,7 +227,18 @@ class StoreCViewController: UIViewController {
     @IBAction func flowervaseOnOff(sender: UISwitch) {
         flowervaseCounter += 1
         if flowervaseCounter % 2 == 1 {
-            mainInstance.items.itemOn("Flowervase")
+            if mainInstance.items.slotFull("flowers") {
+                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one flower item. Turn off other items to put this one on!", preferredStyle: .Alert)
+                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                    print("Okay!")
+                }
+                fullAlert.addAction(no)
+                
+                self.presentViewController(fullAlert, animated: true, completion: nil)
+            }
+            else {
+                mainInstance.items.itemOn("Flowervase")
+            }
         }
         else {
             mainInstance.items.itemOff("Flowervase")

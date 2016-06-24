@@ -14,8 +14,10 @@ class Store {
     var itemsOn = Set<String>()
     var head: Set<String> = ["Flowercrown", "Daisy", "Hibiscus"]
     var neck: Set<String> = ["Collar", "Spiky Collar", "Bejeweled Collar", "Red Scarf", "Green Tie",]
+    var flowers: Set<String> = ["Flowercan", "Flowerpot", "Flowervase"]
     var headItem = ""
     var neckItem = ""
+    var flowerItem = ""
     var pet = "Dog"
     var totalCoinsSpent = 0.0
     
@@ -35,6 +37,11 @@ class Store {
         for items in neck {
             if items == item {
                 neckItem = item
+            }
+        }
+        for items in flowers {
+            if items == item {
+                flowerItem = item
             }
         }
     }
@@ -65,9 +72,30 @@ class Store {
         return false
     }
     
-    /*
-    func slotFull(item:String) -> Bool {
-        
+    
+    func slotFull(category:String) -> Bool {
+        if category == "head" {
+            for items in head {
+                if isItemOn(items) {
+                    return true
+                }
+            }
+        }
+        else if category == "neck" {
+            for items in neck {
+                if isItemOn(items) {
+                    return true
+                }
+            }
+        }
+        else if category == "flowers" {
+            for items in flowers {
+                if isItemOn(items) {
+                    return true
+                }
+            }
+        }
+        return false
     }
- */
+ 
 }

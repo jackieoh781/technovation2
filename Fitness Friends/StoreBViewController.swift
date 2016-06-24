@@ -169,7 +169,18 @@ class StoreBViewController: UIViewController {
     @IBAction func necklaceOnOff(sender: UISwitch) {
         necklaceCounter += 1
         if necklaceCounter % 2 == 1 {
-            mainInstance.items.itemOn("Necklace")
+            if mainInstance.items.slotFull("neck") {
+                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one item on your pet's neck. Turn off other items to put this one on!", preferredStyle: .Alert)
+                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                    print("Okay!")
+                }
+                fullAlert.addAction(no)
+                
+                self.presentViewController(fullAlert, animated: true, completion: nil)
+            }
+            else {
+                mainInstance.items.itemOn("Necklace")
+            }
         }
         else {
             mainInstance.items.itemOff("Necklace")
@@ -178,7 +189,18 @@ class StoreBViewController: UIViewController {
     @IBAction func redScarfOnOff(sender: UISwitch) {
         scarfCounter += 1
         if scarfCounter % 2 == 1 {
-            mainInstance.items.itemOn("Red Scarf")
+            if mainInstance.items.slotFull("neck") {
+                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one item on your pet's neck. Turn off other items to put this one on!", preferredStyle: .Alert)
+                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                    print("Okay!")
+                }
+                fullAlert.addAction(no)
+                
+                self.presentViewController(fullAlert, animated: true, completion: nil)
+            }
+            else {
+                mainInstance.items.itemOn("Red Scarf")
+            }
         }
         else {
             mainInstance.items.itemOff("Red Scarf")
@@ -187,7 +209,18 @@ class StoreBViewController: UIViewController {
     @IBAction func daisyOnOff(sender: UISwitch) {
         daisyCounter += 1
         if daisyCounter % 2 == 1 {
-            mainInstance.items.itemOn("Daisy")
+            if mainInstance.items.slotFull("head") {
+                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one item on your pet's neck. Turn off other items to put this one on!", preferredStyle: .Alert)
+                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                    print("Okay!")
+                }
+                fullAlert.addAction(no)
+                
+                self.presentViewController(fullAlert, animated: true, completion: nil)
+            }
+            else {
+                mainInstance.items.itemOn("Daisy")
+            }
         }
         else {
             mainInstance.items.itemOff("Daisy")
@@ -196,7 +229,18 @@ class StoreBViewController: UIViewController {
     @IBAction func hibiscusOnOff(sender: UISwitch) {
         hibiscusCounter += 1
         if hibiscusCounter % 2 == 1 {
-            mainInstance.items.itemOn("Hibiscus")
+            if mainInstance.items.slotFull("head") {
+                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one item on your pet's neck. Turn off other items to put this one on!", preferredStyle: .Alert)
+                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                    print("Okay!")
+                }
+                fullAlert.addAction(no)
+                
+                self.presentViewController(fullAlert, animated: true, completion: nil)
+            }
+            else {
+                mainInstance.items.itemOn("Hibiscus")
+            }
         }
         else {
             mainInstance.items.itemOff("Hibiscus")

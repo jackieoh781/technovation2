@@ -166,7 +166,18 @@ class StoreA1ViewController: UIViewController {
     @IBAction func collarSwitch(sender: UISwitch) {
         collarCounter += 1
         if collarCounter % 2 == 1 {
-            mainInstance.items.itemOn("Collar")
+            if mainInstance.items.slotFull("neck") {
+                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one item on your pet's neck. Turn off other items to put this one on!", preferredStyle: .Alert)
+                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                    print("Okay!")
+                }
+                fullAlert.addAction(no)
+                
+                self.presentViewController(fullAlert, animated: true, completion: nil)
+            }
+            else {
+                mainInstance.items.itemOn("Collar")
+            }
         }
         else {
             mainInstance.items.itemOff("Collar")
@@ -177,25 +188,59 @@ class StoreA1ViewController: UIViewController {
     @IBAction func greenTieSwitch(sender: UISwitch) {
         greenTieCounter += 1
         if greenTieCounter % 2 == 1 {
-            mainInstance.items.itemOn("Green Tie")
+            if mainInstance.items.slotFull("neck") {
+                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one item on your pet's neck. Turn off other items to put this one on!", preferredStyle: .Alert)
+                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                    print("Okay!")
+                }
+                fullAlert.addAction(no)
+                
+                self.presentViewController(fullAlert, animated: true, completion: nil)
+            }
+            else {
+                mainInstance.items.itemOn("Green Tie")
+            }
         }
         else {
             mainInstance.items.itemOff("Green Tie")
         }
     }
-    @IBAction func clockSwitch(sender: UISwitch) {
+    
+    @IBAction func spikyCollarSwitch(sender: UISwitch) {
         spikyCounter += 1
         if spikyCounter % 2 == 1 {
-            mainInstance.items.itemOn("Clock")
+            if mainInstance.items.slotFull("neck") {
+                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one item on your pet's neck. Turn off other items to put this one on!", preferredStyle: .Alert)
+                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                    print("Okay!")
+                }
+                fullAlert.addAction(no)
+                
+                self.presentViewController(fullAlert, animated: true, completion: nil)
+            }
+            else {
+                mainInstance.items.itemOn("Spiky Collar")
+            }
         }
         else {
-            mainInstance.items.itemOff("Clock")
+            mainInstance.items.itemOff("Spiky Collar")
         }
     }
     @IBAction func bejeweledCollarSwitch(sender: UISwitch) {
         bejeweledCollarCounter += 1
         if bejeweledCollarCounter % 2 == 1 {
-            mainInstance.items.itemOn("Bejeweled Collar")
+            if mainInstance.items.slotFull("neck") {
+                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one item on your pet's neck. Turn off other items to put this one on!", preferredStyle: .Alert)
+                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                    print("Okay!")
+                }
+                fullAlert.addAction(no)
+                
+                self.presentViewController(fullAlert, animated: true, completion: nil)
+            }
+            else {
+                mainInstance.items.itemOn("Bejeweled Collar")
+            }
         }
         else {
             mainInstance.items.itemOff("Bejeweled Collar")

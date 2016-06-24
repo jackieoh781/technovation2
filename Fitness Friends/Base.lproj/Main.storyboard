@@ -252,11 +252,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Shz-Ze-OP2">
                                 <rect key="frame" x="208" y="184" width="135" height="98"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tRo-N0-rxV">
-                                <rect key="frame" x="63" y="525" width="71" height="34"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dka-T6-VOa">
                                 <rect key="frame" x="152" y="326" width="215" height="153"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rbE-fu-9s0">
+                                <rect key="frame" x="135" y="460" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sDe-hX-azW">
+                                <rect key="frame" x="303" y="375" width="52" height="87"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -266,8 +269,11 @@
                         <outlet property="animal" destination="fO6-m3-W19" id="d6k-oI-5u7"/>
                         <outlet property="clockImage" destination="RlJ-N0-dXQ" id="Yr0-xS-nov"/>
                         <outlet property="couchImage" destination="dka-T6-VOa" id="TzU-ZS-y1q"/>
+                        <outlet property="flowerImage" destination="sDe-hX-azW" id="fjs-os-26p"/>
                         <outlet property="head" destination="4No-eB-J0T" id="qSN-qu-dmG"/>
                         <outlet property="neck" destination="zNb-7P-q15" id="7oI-sd-ZOt"/>
+                        <outlet property="paintingImage" destination="Shz-Ze-OP2" id="WdO-QA-KUa"/>
+                        <outlet property="tableImage" destination="rbE-fu-9s0" id="y9u-jw-eyY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HP8-qp-CIC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -340,7 +346,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="eU2-Ig-k83" customClass="StoreViewController" customModule="Fitness_Friends" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DOu-nK-pJS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2953.5" y="-838.5"/>
+            <point key="canvasLocation" x="-3222" y="-715"/>
         </scene>
         <!--StoreA1 View Controller-->
         <scene sceneID="qJE-tx-DFc">
@@ -364,7 +370,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kZR-61-WOf">
                                 <rect key="frame" x="77" y="402" width="51" height="31"/>
                                 <connections>
-                                    <action selector="clockSwitch:" destination="TKQ-WX-7c6" eventType="valueChanged" id="N2i-af-uby"/>
+                                    <action selector="spikyCollarSwitch:" destination="TKQ-WX-7c6" eventType="valueChanged" id="g3D-OK-GTR"/>
                                 </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psP-8y-wLg" userLabel="buyCouch">
@@ -424,7 +430,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bzz-LQ-iCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2447.5" y="-767.5"/>
+            <point key="canvasLocation" x="-2496.5" y="-735.5"/>
         </scene>
         <!--StoreB View Controller-->
         <scene sceneID="qez-cZ-BqO">
@@ -601,7 +607,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KJw-ro-Rhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1654.5" y="-711.5"/>
+            <point key="canvasLocation" x="-1666.5" y="-723.5"/>
         </scene>
         <!--StoreD View Controller-->
         <scene sceneID="AkE-W5-Hn2">
@@ -684,7 +690,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7LA-Kk-M9J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1248.5" y="-711.5"/>
+            <point key="canvasLocation" x="-1256.5" y="-723.5"/>
         </scene>
         <!--TrackingMethod-->
         <scene sceneID="3AU-im-Rr7">
@@ -1094,8 +1100,8 @@
         <image name="table store" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ioS-xu-NfH"/>
         <segue reference="hN7-V7-VeY"/>
+        <segue reference="ioS-xu-NfH"/>
         <segue reference="XTg-e9-FOi"/>
     </inferredMetricsTieBreakers>
 </document>
