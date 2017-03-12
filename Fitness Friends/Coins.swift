@@ -14,7 +14,7 @@ class Coins {
     var totalMinutesExercised = 0.0
     
     
-    func calculateCoins(exerciseType: String, minutes: Double, method: String) -> Double {
+    func calculateCoins(_ exerciseType: String, minutes: Double, method: String) -> Double {
         var coinRate = 0.0
         if exerciseType == "Run" {
             coinRate = 59.0
@@ -56,7 +56,7 @@ class Coins {
         }
     }
     
-    func addCoins(exerciseType: String, minutes: Double, method: String) -> Double {
+    func addCoins(_ exerciseType: String, minutes: Double, method: String) -> Double {
         let amount = calculateCoins(exerciseType, minutes: minutes, method: method)
         totalCoins += amount
         totalCoinsEarned += amount
@@ -65,7 +65,7 @@ class Coins {
         return amount
     }
     
-    func canPay(itemCost: Double) -> Bool {
+    func canPay(_ itemCost: Double) -> Bool {
         if totalCoins < itemCost {
             return false
         }
@@ -74,7 +74,7 @@ class Coins {
         }
     }
     
-    func pay(itemCost: Double) {
+    func pay(_ itemCost: Double) {
         totalCoins -= itemCost
     }
 }

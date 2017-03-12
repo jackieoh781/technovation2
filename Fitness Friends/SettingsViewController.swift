@@ -19,9 +19,9 @@ class SettingsViewController: UIViewController {
         coinsEarned.text = "\(mainInstance.coins.totalCoinsEarned)"
         
         if mainInstance.items.pet == "Dog" {
-            dog.enabled = false
+            dog.isEnabled = false
         } else {
-            cat.enabled = false
+            cat.isEnabled = false
         }
     }
 
@@ -50,16 +50,16 @@ class SettingsViewController: UIViewController {
     
     
     //MARK: Actions
-    @IBAction func chooseDog(sender: UIButton) {
+    @IBAction func chooseDog(_ sender: UIButton) {
         mainInstance.items.setPet("Dog")
-        dog.enabled = false
-        cat.enabled = true
+        dog.isEnabled = false
+        cat.isEnabled = true
     }
     
-    @IBAction func chooseCat(sender: UIButton) {
+    @IBAction func chooseCat(_ sender: UIButton) {
         mainInstance.items.setPet("Cat")
-        cat.enabled = false
-        dog.enabled = true
+        cat.isEnabled = false
+        dog.isEnabled = true
     }
 
 }

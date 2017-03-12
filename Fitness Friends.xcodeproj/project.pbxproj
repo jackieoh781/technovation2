@@ -134,8 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				F4DF45261CDB929000826CEB /* AppDelegate.swift */,
-				F43CC51D1CE1058C008D1A83 /* Store.swift */,
 				F4DB47041CEB5FA500FF35E7 /* SettingsViewController.swift */,
+				F43CC51D1CE1058C008D1A83 /* Store.swift */,
 				F43CC51B1CE0DAEE008D1A83 /* Coins.swift */,
 				F4DF452A1CDB929000826CEB /* GameScene.swift */,
 				F4DF452C1CDB929000826CEB /* GameViewController.swift */,
@@ -247,7 +247,7 @@
 				TargetAttributes = {
 					F4DF45221CDB929000826CEB = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 7835EYY49C;
+						LastSwiftMigration = 0820;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -256,10 +256,12 @@
 					};
 					F4DF453A1CDB929000826CEB = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0820;
 						TestTargetID = F4DF45221CDB929000826CEB;
 					};
 					F4DF45451CDB929000826CEB = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0820;
 						TestTargetID = F4DF45221CDB929000826CEB;
 					};
 				};
@@ -479,11 +481,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Fitness Friends/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TriSquare.Fitness-Friends";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -493,11 +497,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Fitness Friends/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TriSquare.Fitness-Friends";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -510,6 +516,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TriSquare.Fitness-FriendsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fitness Friends.app/Fitness Friends";
 			};
 			name = Debug;
@@ -522,6 +529,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TriSquare.Fitness-FriendsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fitness Friends.app/Fitness Friends";
 			};
 			name = Release;
@@ -534,6 +542,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TriSquare.Fitness-FriendsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Fitness Friends";
 			};
 			name = Debug;
@@ -545,6 +554,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TriSquare.Fitness-FriendsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Fitness Friends";
 			};
 			name = Release;

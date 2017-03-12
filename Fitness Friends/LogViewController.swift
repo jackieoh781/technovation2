@@ -36,27 +36,27 @@ class LogViewController: UIViewController {
     
 
     //MARK: Actions
-    @IBAction func timeStepper(sender: UIStepper) {
+    @IBAction func timeStepper(_ sender: UIStepper) {
         x = timeStepperOutlet.value
-        minutesLabel.text = "\((Int)(x % 60))"
+        minutesLabel.text = "\((Int)(x.truncatingRemainder(dividingBy: 60)))"
         hoursLabel.text = "\((Int)(x/60))"
     }
 
-    @IBAction func milesStepper(sender: UIStepper) {
+    @IBAction func milesStepper(_ sender: UIStepper) {
         milesLabel.text = "\(milesStepperOutlet.value / 10)"
     }
     
-    @IBAction func next(sender: UIButton) {
+    @IBAction func next(_ sender: UIButton) {
         //add coins
         let x = mainInstance.coins.addCoins(mainInstance.exercise, minutes: Double(timeStepperOutlet.value), method: "Log")
         
         //present alert
-        let saveAlert = UIAlertController(title: "Congratulations!", message: "You have earned \(x) coins!", preferredStyle: .Alert)
-        let continueAction = UIAlertAction(title: "Collect and continue", style: .Default) { (action:UIAlertAction!) in
+        let saveAlert = UIAlertController(title: "Congratulations!", message: "You have earned \(x) coins!", preferredStyle: .alert)
+        let continueAction = UIAlertAction(title: "Collect and continue", style: .default) { (action:UIAlertAction!) in
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             
-            let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("My Room") as! RoomViewController
-            self.presentViewController(nextViewController, animated:true, completion:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "My Room") as! RoomViewController
+            self.present(nextViewController, animated:true, completion:nil)
         }
         saveAlert.addAction(continueAction)
         /*
@@ -65,7 +65,7 @@ class LogViewController: UIViewController {
         }
         saveAlert.addAction(tweetAction)
         */
-        self.presentViewController(saveAlert, animated: true, completion: nil)
+        self.present(saveAlert, animated: true, completion: nil)
     }
     
 }

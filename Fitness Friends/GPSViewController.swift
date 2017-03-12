@@ -16,7 +16,7 @@ class GPSViewController: UIViewController {
     var secondsCounter = 0
     var minutesCounter = 0
     var paused = false
-    var timer = NSTimer()
+    var timer = Timer()
     var coinsEarned = 0.0
     var type = ""
     var value = 0.0
@@ -35,7 +35,7 @@ class GPSViewController: UIViewController {
         timer.invalidate()
         
         // start the timer
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
         
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
@@ -47,13 +47,13 @@ class GPSViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+    func locationManager(_ manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         if startLocation == nil {
             startLocation = locationManager.location
                 //locations.first as! CLLocation
         } else {
             let lastLocation = locations.last as! CLLocation
-            let distance = startLocation.distanceFromLocation(lastLocation)
+            let distance = startLocation.distance(from: lastLocation)
             startLocation = lastLocation
             traveledDistance += distance
             mainInstance.miles += distance
@@ -94,32 +94,32 @@ class GPSViewController: UIViewController {
     
 
     //MARK: Actions
-    @IBAction func pauseResumeTimer(sender: UIButton) {
+    @IBAction func pauseResumeTimer(_ sender: UIButton) {
         paused = !paused
         if paused {
             timer.invalidate()
-            pauseResume.setBackgroundImage(UIImage(named: "ResumeButton2"), forState: .Normal)
+            pauseResume.setBackgroundImage(UIImage(named: "ResumeButton2"), for: UIControlState())
         }
         else {
-            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
-            pauseResume.setBackgroundImage(UIImage(named: "PauseButton2"), forState: .Normal)
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+            pauseResume.setBackgroundImage(UIImage(named: "PauseButton2"), for: UIControlState())
         }
         print("\(type)")
     }
     
     //Will display a pop up window with an option to collect the coins and continue, or tweet about the exercise
-    @IBAction func save(sender: UIButton) {
+    @IBAction func save(_ sender: UIButton) {
         //add coins
         let coinsEarned = mainInstance.coins.addCoins(mainInstance.exercise, minutes: Double(minutesCounter + secondsCounter/60), method: "GPS")
         self.locationManager.stopUpdatingLocation()
         timer.invalidate()
         
         //present alert
-        let saveAlert = UIAlertController(title: "Congratulations!", message: "You have earned \(coinsEarned) coins!", preferredStyle: .Alert)
-        let continueAction = UIAlertAction(title: "Collect and continue", style: .Default) { (action:UIAlertAction!) in
+        let saveAlert = UIAlertController(title: "Congratulations!", message: "You have earned \(coinsEarned) coins!", preferredStyle: .alert)
+        let continueAction = UIAlertAction(title: "Collect and continue", style: .default) { (action:UIAlertAction!) in
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("My Room") as! RoomViewController
-            self.presentViewController(nextViewController, animated:true, completion:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "My Room") as! RoomViewController
+            self.present(nextViewController, animated:true, completion:nil)
         }
         saveAlert.addAction(continueAction)
         /*
@@ -128,7 +128,7 @@ class GPSViewController: UIViewController {
         }
         saveAlert.addAction(tweetAction)
         */
-        self.presentViewController(saveAlert, animated: true, completion: nil)
+        self.present(saveAlert, animated: true, completion: nil)
         }
 
 }

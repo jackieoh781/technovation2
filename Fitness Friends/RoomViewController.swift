@@ -61,18 +61,18 @@ class RoomViewController: UIViewController {
             //place item on screen
             clockImage.image = UIImage(named: "clock")
             clockImage.center = clockLocation
-            self.view.insertSubview(clockImage, atIndex: 1)
+            self.view.insertSubview(clockImage, at: 1)
         }
         if mainInstance.items.isItemOn("Couch") {
             //place item on screen
             couchImage.image = UIImage(named: "couch in room")
-            self.view.insertSubview(couchImage, atIndex: 3)
+            self.view.insertSubview(couchImage, at: 3)
             couchImage.center = couchLocation
         }
         if mainInstance.items.isItemOn("Table") {
             //place item on screen
             tableImage.image = UIImage(named: "table in room")
-            self.view.insertSubview(tableImage, atIndex: 2)
+            self.view.insertSubview(tableImage, at: 2)
         }
         if mainInstance.items.isItemOn("Mountain") {
             //place item on screen
@@ -107,32 +107,32 @@ class RoomViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
-            location = touch.locationInView(self.view)
-            if(CGRectContainsPoint(animal.frame, location))
+            location = touch.location(in: self.view)
+            if(animal.frame.contains(location))
             {
                 animal.center = location
                 animalLocation = location
             }
-            if(CGRectContainsPoint(neck.frame, location))
+            if(neck.frame.contains(location))
             {
                 neck.center = location
                 collarLocation = location
-                self.view.bringSubviewToFront(neck)
+                self.view.bringSubview(toFront: neck)
             }
-            if(CGRectContainsPoint(head.frame, location))
+            if(head.frame.contains(location))
             {
                 head.center = location
                 headpieceLocation = location
-                self.view.bringSubviewToFront(head)
+                self.view.bringSubview(toFront: head)
             }
-            if(CGRectContainsPoint(clockImage.frame, location))
+            if(clockImage.frame.contains(location))
             {
                 clockImage.center = location
                 clockLocation = location
             }
-            if(CGRectContainsPoint(couchImage.frame, location))
+            if(couchImage.frame.contains(location))
             {
                 couchImage.center = location
                 couchLocation = location

@@ -22,31 +22,31 @@ class ExerciseViewController: UIViewController {
     }
     
     //MARK: Actions
-    @IBAction func run(sender: UIButton) {
+    @IBAction func run(_ sender: UIButton) {
         mainInstance.setExercise("Run")
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("Exercise Methods") as! ExerciseMethodViewController
-        self.presentViewController(nextViewController, animated:true, completion:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Exercise Methods") as! ExerciseMethodViewController
+        self.present(nextViewController, animated:true, completion:nil)
     }
     
-    @IBAction func walk(sender: UIButton) {
+    @IBAction func walk(_ sender: UIButton) {
         mainInstance.setExercise("Walk")
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("Exercise Methods") as! ExerciseMethodViewController
-        self.presentViewController(nextViewController, animated:true, completion:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Exercise Methods") as! ExerciseMethodViewController
+        self.present(nextViewController, animated:true, completion:nil)
     }
     
-    @IBAction func bike(sender: UIButton) {
+    @IBAction func bike(_ sender: UIButton) {
         mainInstance.setExercise("Bike")
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("Exercise Methods") as! ExerciseMethodViewController
-        self.presentViewController(nextViewController, animated:true, completion:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Exercise Methods") as! ExerciseMethodViewController
+        self.present(nextViewController, animated:true, completion:nil)
     }
     
-    @IBAction func swim(sender: UIButton) {
+    @IBAction func swim(_ sender: UIButton) {
         mainInstance.setExercise("Swim")
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("Exercise Methods") as! ExerciseMethodViewController
-        self.presentViewController(nextViewController, animated:true, completion:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Exercise Methods") as! ExerciseMethodViewController
+        self.present(nextViewController, animated:true, completion:nil)
     }
 }

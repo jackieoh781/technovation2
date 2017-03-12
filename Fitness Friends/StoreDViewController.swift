@@ -19,16 +19,16 @@ class StoreDViewController: UIViewController {
         super.viewDidLoad()
 
         if mainInstance.items.hasItem("Couch") {
-            self.couchSwitch.enabled = true
+            self.couchSwitch.isEnabled = true
         }
         if mainInstance.items.hasItem("Mountain") {
-            self.mountainSwitch.enabled = true
+            self.mountainSwitch.isEnabled = true
         }
         if mainInstance.items.hasItem("Clock") {
-            self.clockSwitch.enabled = true
+            self.clockSwitch.isEnabled = true
         }
         if mainInstance.items.hasItem("Table") {
-            self.tableSwitch.enabled = true
+            self.tableSwitch.isEnabled = true
         }
         
         if mainInstance.items.isItemOn("Couch") {
@@ -63,109 +63,109 @@ class StoreDViewController: UIViewController {
     @IBOutlet weak var tableSwitch: UISwitch!
     
     //MARK: Actions
-    @IBAction func buyCouch(sender: UIButton) {
-        let alert = UIAlertController(title: "Buy Couch", message: "What a comfy couch! Would you like to buy it?", preferredStyle: .Alert)
-        let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
+    @IBAction func buyCouch(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Buy Couch", message: "What a comfy couch! Would you like to buy it?", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "Sure!", style: .default) { (action:UIAlertAction!) in
             if mainInstance.coins.canPay(150.0) {
                 mainInstance.coins.pay(150.0);
                 mainInstance.items.buyItem("Couch", price: 150.0)
-                self.couchSwitch.enabled = true
-                self.couch.enabled = false
+                self.couchSwitch.isEnabled = true
+                self.couch.isEnabled = false
             }
             else {
-                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .alert)
+                let no = UIAlertAction(title: "Okay", style: .cancel) { (action:UIAlertAction!) in
                     print("Okay!")
                 }
                 brokeAlert.addAction(no)
-                self.presentViewController(brokeAlert, animated: true, completion: nil)
+                self.present(brokeAlert, animated: true, completion: nil)
                 
             }
         }
         alert.addAction(OKAction)
-        let cancelAction = UIAlertAction(title: "No thanks!", style: .Cancel) { (action:UIAlertAction!) in
+        let cancelAction = UIAlertAction(title: "No thanks!", style: .cancel) { (action:UIAlertAction!) in
             print("Okay!");
         }
         alert.addAction(cancelAction)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
-    @IBAction func buyMountain(sender: UIButton) {
-        let alert = UIAlertController(title: "Buy a Painting", message: "It's a painting of a mountain! Are you sure you want to buy it?", preferredStyle: .Alert)
-        let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
+    @IBAction func buyMountain(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Buy a Painting", message: "It's a painting of a mountain! Are you sure you want to buy it?", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "Sure!", style: .default) { (action:UIAlertAction!) in
             if mainInstance.coins.canPay(100.0) {
                 mainInstance.coins.pay(100.0)
                 mainInstance.items.buyItem("Mountain", price: 100.0)
-                self.mountainSwitch.enabled = true
-                self.mountain.enabled = false
+                self.mountainSwitch.isEnabled = true
+                self.mountain.isEnabled = false
             }
             else {
-                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .alert)
+                let no = UIAlertAction(title: "Okay", style: .cancel) { (action:UIAlertAction!) in
                     print("Okay!")
                 }
                 brokeAlert.addAction(no)
-                self.presentViewController(brokeAlert, animated: true, completion: nil)
+                self.present(brokeAlert, animated: true, completion: nil)
             }
         }
         alert.addAction(OKAction)
-        let cancelAction = UIAlertAction(title: "No thanks!", style: .Cancel) { (action:UIAlertAction!) in
+        let cancelAction = UIAlertAction(title: "No thanks!", style: .cancel) { (action:UIAlertAction!) in
             print("Okay!");
         }
         alert.addAction(cancelAction)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
-    @IBAction func buyClock(sender: UIButton) {
-        let alert = UIAlertController(title: "Buy a Clock", message: "Tick tock, it's a clock! Would you like to buy it?", preferredStyle: .Alert)
-        let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
+    @IBAction func buyClock(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Buy a Clock", message: "Tick tock, it's a clock! Would you like to buy it?", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "Sure!", style: .default) { (action:UIAlertAction!) in
             if mainInstance.coins.canPay(150.0) {
                 mainInstance.coins.pay(150.0)
                 mainInstance.items.buyItem("Clock", price: 150.0)
-                self.clockSwitch.enabled = true
-                self.clockSwitch.enabled = false
+                self.clockSwitch.isEnabled = true
+                self.clockSwitch.isEnabled = false
             }
             else {
-                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .alert)
+                let no = UIAlertAction(title: "Okay", style: .cancel) { (action:UIAlertAction!) in
                     print("Okay!")
                 }
                 brokeAlert.addAction(no)
-                self.presentViewController(brokeAlert, animated: true, completion: nil)
+                self.present(brokeAlert, animated: true, completion: nil)
             }
         }
         alert.addAction(OKAction)
-        let cancelAction = UIAlertAction(title: "No thanks!", style: .Cancel) { (action:UIAlertAction!) in
+        let cancelAction = UIAlertAction(title: "No thanks!", style: .cancel) { (action:UIAlertAction!) in
             print("Okay!");
         }
         alert.addAction(cancelAction)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
-    @IBAction func buyTable(sender: UIButton) {
-        let alert = UIAlertController(title: "Buy a Wooden Table", message: "It's a sturdy wooden table! Would you like to buy it?", preferredStyle: .Alert)
-        let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
+    @IBAction func buyTable(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Buy a Wooden Table", message: "It's a sturdy wooden table! Would you like to buy it?", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "Sure!", style: .default) { (action:UIAlertAction!) in
             if mainInstance.coins.canPay(200.0) {
                 mainInstance.coins.pay(200.0)
                 mainInstance.items.buyItem("Table", price: 200.0)
-                self.tableSwitch.enabled = true
-                self.tableSwitch.enabled = false
+                self.tableSwitch.isEnabled = true
+                self.tableSwitch.isEnabled = false
             }
             else {
-                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .alert)
+                let no = UIAlertAction(title: "Okay", style: .cancel) { (action:UIAlertAction!) in
                     print("Okay!")
                 }
                 brokeAlert.addAction(no)
-                self.presentViewController(brokeAlert, animated: true, completion: nil)
+                self.present(brokeAlert, animated: true, completion: nil)
             }
         }
         alert.addAction(OKAction)
-        let cancelAction = UIAlertAction(title: "No thanks!", style: .Cancel) { (action:UIAlertAction!) in
+        let cancelAction = UIAlertAction(title: "No thanks!", style: .cancel) { (action:UIAlertAction!) in
             print("Okay!");
         }
         alert.addAction(cancelAction)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
     
-    @IBAction func couchOnOff(sender: UISwitch) {
+    @IBAction func couchOnOff(_ sender: UISwitch) {
         couchCounter += 1
         if couchCounter % 2 == 1 {
             mainInstance.items.itemOn("Couch")
@@ -174,7 +174,7 @@ class StoreDViewController: UIViewController {
             mainInstance.items.itemOff("Couch")
         }
     }
-    @IBAction func mountainOnOff(sender: UISwitch) {
+    @IBAction func mountainOnOff(_ sender: UISwitch) {
         mountainCounter += 1
         if mountainCounter % 2 == 1 {
             mainInstance.items.itemOn("Mountain")
@@ -183,7 +183,7 @@ class StoreDViewController: UIViewController {
             mainInstance.items.itemOff("Mountain")
         }
     }
-    @IBAction func clockOnOff(sender: UISwitch) {
+    @IBAction func clockOnOff(_ sender: UISwitch) {
         clockCounter += 1
         if clockCounter % 2 == 1 {
             mainInstance.items.itemOn("Clock")
@@ -192,7 +192,7 @@ class StoreDViewController: UIViewController {
             mainInstance.items.itemOff("Clock")
         }
     }
-    @IBAction func tableOnOff(sender: UISwitch) {
+    @IBAction func tableOnOff(_ sender: UISwitch) {
         tableCounter += 1
         if tableCounter % 2 == 1 {
             mainInstance.items.itemOn("Table")

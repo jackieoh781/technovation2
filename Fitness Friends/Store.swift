@@ -21,12 +21,12 @@ class Store {
     var pet = "Dog"
     var totalCoinsSpent = 0.0
     
-    func buyItem(item: String, price: Double) {
+    func buyItem(_ item: String, price: Double) {
         itemsOwned.append(item)
         totalCoinsSpent += price
     }
     
-    func itemOn(item: String) {
+    func itemOn(_ item: String) {
         itemsOn.insert(item)
         
         for items in head {
@@ -46,15 +46,15 @@ class Store {
         }
     }
     
-    func itemOff(item: String) {
+    func itemOff(_ item: String) {
         itemsOn.remove(item)
     }
     
-    func setPet(animal:String) {
+    func setPet(_ animal:String) {
         pet = animal
     }
     
-    func isItemOn(item:String) -> Bool {
+    func isItemOn(_ item:String) -> Bool {
         for items in itemsOn {
             if items == item {
                 return true
@@ -63,7 +63,7 @@ class Store {
         return false
     }
     
-    func hasItem(item:String) -> Bool {
+    func hasItem(_ item:String) -> Bool {
         for items in itemsOwned {
             if items == item {
                 return true
@@ -73,7 +73,7 @@ class Store {
     }
     
     
-    func slotFull(category:String) -> Bool {
+    func slotFull(_ category:String) -> Bool {
         if category == "head" {
             for items in head {
                 if isItemOn(items) {

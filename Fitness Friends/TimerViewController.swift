@@ -14,7 +14,7 @@ class TimerViewController: UIViewController {
     var minutesCounter = 0
     var value = 0.0
     var paused = false
-    var timer = NSTimer()
+    var timer = Timer()
     var type = ""
 
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class TimerViewController: UIViewController {
         timer.invalidate()
         
         // start the timer
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,31 +57,31 @@ class TimerViewController: UIViewController {
     //MARK: Actions
     
     //if the timer is activated, the button will pause it. If it isn't, then it will play it
-    @IBAction func pauseResumeTimer(sender: UIButton) {
+    @IBAction func pauseResumeTimer(_ sender: UIButton) {
         paused = !paused
         if paused {
             timer.invalidate()
-            pauseResume.setBackgroundImage(UIImage(named: "ResumeButton"), forState: .Normal)
+            pauseResume.setBackgroundImage(UIImage(named: "ResumeButton"), for: UIControlState())
         }
         else {
-             timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
-            pauseResume.setBackgroundImage(UIImage(named: "PauseButton"), forState: .Normal)
+             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+            pauseResume.setBackgroundImage(UIImage(named: "PauseButton"), for: UIControlState())
         }
     }
 
     //Will display a pop up window with an option to collect the coins and continue, or tweet about the exercise
-    @IBAction func save(sender: UIButton) {
+    @IBAction func save(_ sender: UIButton) {
         //add coins
         let x = mainInstance.coins.addCoins(mainInstance.exercise, minutes: Double(minutesCounter + secondsCounter/60), method: "Timer")
         timer.invalidate()
         
         //present alert
-        let saveAlert = UIAlertController(title: "Congratulations!", message: "You have earned \(x) coins!", preferredStyle: .Alert)
-        let continueAction = UIAlertAction(title: "Collect and continue", style: .Default) { (action:UIAlertAction!) in
+        let saveAlert = UIAlertController(title: "Congratulations!", message: "You have earned \(x) coins!", preferredStyle: .alert)
+        let continueAction = UIAlertAction(title: "Collect and continue", style: .default) { (action:UIAlertAction!) in
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             
-            let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("My Room") as! RoomViewController
-            self.presentViewController(nextViewController, animated:true, completion:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "My Room") as! RoomViewController
+            self.present(nextViewController, animated:true, completion:nil)
         }
         saveAlert.addAction(continueAction)
         /*
@@ -90,7 +90,7 @@ class TimerViewController: UIViewController {
         }
         saveAlert.addAction(tweetAction)
         */
-        self.presentViewController(saveAlert, animated: true, completion: nil)
+        self.present(saveAlert, animated: true, completion: nil)
     }
 
 }

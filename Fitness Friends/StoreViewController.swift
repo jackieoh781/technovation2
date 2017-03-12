@@ -10,16 +10,16 @@ import UIKit
 
 class StoreViewController: UIPageViewController {
     
-       private(set) lazy var orderedViewControllers: [UIViewController] = {
+       fileprivate(set) lazy var orderedViewControllers: [UIViewController] = {
         return [self.newStoreViewController("A1"),
                 self.newStoreViewController("B"),
                 self.newStoreViewController("C"),
                 self.newStoreViewController("D")]
     }()
     
-    private func newStoreViewController(letter: String) -> UIViewController {
+    fileprivate func newStoreViewController(_ letter: String) -> UIViewController {
         return UIStoryboard(name: "Main", bundle: nil) .
-            instantiateViewControllerWithIdentifier("Store\(letter)ViewController")
+            instantiateViewController(withIdentifier: "Store\(letter)ViewController")
     }
     
     override func viewDidLoad() {
@@ -29,7 +29,7 @@ class StoreViewController: UIPageViewController {
         
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],
-                               direction: .Forward,
+                               direction: .forward,
                                animated: true,
                                completion: nil)
         }
@@ -40,9 +40,9 @@ class StoreViewController: UIPageViewController {
 
 extension StoreViewController: UIPageViewControllerDataSource {
     
-    func pageViewController(pageViewController: UIPageViewController,
-                            viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = orderedViewControllers.indexOf(viewController) else {
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
             return nil
         }
         
@@ -59,9 +59,9 @@ extension StoreViewController: UIPageViewControllerDataSource {
         return orderedViewControllers[previousIndex]
     }
     
-    func pageViewController(pageViewController: UIPageViewController,
-                            viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = orderedViewControllers.indexOf(viewController) else {
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
             return nil
         }
         

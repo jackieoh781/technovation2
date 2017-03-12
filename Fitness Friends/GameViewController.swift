@@ -15,7 +15,7 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
         

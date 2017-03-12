@@ -19,16 +19,16 @@ class StoreBViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if mainInstance.items.hasItem("Necklace") {
-            self.necklaceSwitch.enabled = true
+            self.necklaceSwitch.isEnabled = true
         }
         if mainInstance.items.hasItem("Red Scarf") {
-            self.redScarfSwitch.enabled = true
+            self.redScarfSwitch.isEnabled = true
         }
         if mainInstance.items.hasItem("Daisy") {
-            self.daisySwitch.enabled = true
+            self.daisySwitch.isEnabled = true
         }
         if mainInstance.items.hasItem("Hibiscus") {
-            self.hibiscusSwitch.enabled = true
+            self.hibiscusSwitch.isEnabled = true
         }
         
         if mainInstance.items.isItemOn("Necklace") {
@@ -65,118 +65,118 @@ class StoreBViewController: UIViewController {
     
     //MARK: Actions
     
-    @IBAction func buyNecklace(sender: UIButton) {
-        let alert = UIAlertController(title: "Buy Pearl Necklace", message: "A pearl necklace! How pretty! Do you want to buy it?", preferredStyle: .Alert)
-        let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
+    @IBAction func buyNecklace(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Buy Pearl Necklace", message: "A pearl necklace! How pretty! Do you want to buy it?", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "Sure!", style: .default) { (action:UIAlertAction!) in
             if mainInstance.coins.canPay(75.0) {
                 mainInstance.coins.pay(75.0)
                 mainInstance.items.buyItem("Necklace", price: 75.0)
-                self.necklaceSwitch.enabled = true
-                self.necklace.enabled = false
+                self.necklaceSwitch.isEnabled = true
+                self.necklace.isEnabled = false
             }
             else {
-                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .alert)
+                let no = UIAlertAction(title: "Okay", style: .cancel) { (action:UIAlertAction!) in
                     print("Okay!")
                 }
                 brokeAlert.addAction(no)
-                self.presentViewController(brokeAlert, animated: true, completion: nil)
+                self.present(brokeAlert, animated: true, completion: nil)
             }
         }
         alert.addAction(OKAction)
-        let cancelAction = UIAlertAction(title: "No thanks!", style: .Cancel) { (action:UIAlertAction!) in
+        let cancelAction = UIAlertAction(title: "No thanks!", style: .cancel) { (action:UIAlertAction!) in
             print("Okay!");
         }
         alert.addAction(cancelAction)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
-    @IBAction func buyRedScarf(sender: UIButton) {
-        let alert = UIAlertController(title: "Buy Red Scarf", message: "This scarf looks pretty warm! Do you want to buy it?", preferredStyle: .Alert)
-        let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
+    @IBAction func buyRedScarf(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Buy Red Scarf", message: "This scarf looks pretty warm! Do you want to buy it?", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "Sure!", style: .default) { (action:UIAlertAction!) in
             if mainInstance.coins.canPay(150.0) {
                 mainInstance.coins.pay(150.0)
                 mainInstance.items.buyItem("Red Scarf", price: 150.0)
-                self.redScarfSwitch.enabled = true
-                self.redScarf.enabled = false
+                self.redScarfSwitch.isEnabled = true
+                self.redScarf.isEnabled = false
             }
             else {
-                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .alert)
+                let no = UIAlertAction(title: "Okay", style: .cancel) { (action:UIAlertAction!) in
                     print("Okay!")
                 }
                 brokeAlert.addAction(no)
-                self.presentViewController(brokeAlert, animated: true, completion: nil)
+                self.present(brokeAlert, animated: true, completion: nil)
             }
         }
         alert.addAction(OKAction)
-        let cancelAction = UIAlertAction(title: "No thanks!", style: .Cancel) { (action:UIAlertAction!) in
+        let cancelAction = UIAlertAction(title: "No thanks!", style: .cancel) { (action:UIAlertAction!) in
             print("Okay!");
         }
         alert.addAction(cancelAction)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
-    @IBAction func buyDaisy(sender: UIButton) {
-        let alert = UIAlertController(title: "Buy Daisy", message: "What a pretty daisy! Do you want to buy it?", preferredStyle: .Alert)
-        let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
+    @IBAction func buyDaisy(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Buy Daisy", message: "What a pretty daisy! Do you want to buy it?", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "Sure!", style: .default) { (action:UIAlertAction!) in
             if mainInstance.coins.canPay(50.0) {
                 mainInstance.coins.pay(50.0)
                 mainInstance.items.buyItem("Daisy", price: 100.0)
-                self.daisySwitch.enabled = true
-                self.daisy.enabled = false
+                self.daisySwitch.isEnabled = true
+                self.daisy.isEnabled = false
             }
             else {
-                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .alert)
+                let no = UIAlertAction(title: "Okay", style: .cancel) { (action:UIAlertAction!) in
                     print("Okay!")
                 }
                 brokeAlert.addAction(no)
-                self.presentViewController(brokeAlert, animated: true, completion: nil)
+                self.present(brokeAlert, animated: true, completion: nil)
             }
         }
         alert.addAction(OKAction)
-        let cancelAction = UIAlertAction(title: "No thanks!", style: .Cancel) { (action:UIAlertAction!) in
+        let cancelAction = UIAlertAction(title: "No thanks!", style: .cancel) { (action:UIAlertAction!) in
             print("Okay!");
         }
         alert.addAction(cancelAction)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
-    @IBAction func buyHibiscus(sender: UIButton) {
-        let alert = UIAlertController(title: "Buy a Hibiscus", message: "What a snazzy flower! Do you want to buy it?", preferredStyle: .Alert)
-        let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
+    @IBAction func buyHibiscus(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Buy a Hibiscus", message: "What a snazzy flower! Do you want to buy it?", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "Sure!", style: .default) { (action:UIAlertAction!) in
             if mainInstance.coins.canPay(75.0) {
                 mainInstance.coins.pay(75.0)
                 mainInstance.items.buyItem("Hibiscus", price: 75.0)
-                self.hibiscusSwitch.enabled = true
-                self.hibiscus.enabled = false
+                self.hibiscusSwitch.isEnabled = true
+                self.hibiscus.isEnabled = false
             }
             else {
-                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .alert)
+                let no = UIAlertAction(title: "Okay", style: .cancel) { (action:UIAlertAction!) in
                     print("Okay!")
                 }
                 brokeAlert.addAction(no)
-                self.presentViewController(brokeAlert, animated: true, completion: nil)
+                self.present(brokeAlert, animated: true, completion: nil)
             }
         }
         alert.addAction(OKAction)
-        let cancelAction = UIAlertAction(title: "No thanks!", style: .Cancel) { (action:UIAlertAction!) in
+        let cancelAction = UIAlertAction(title: "No thanks!", style: .cancel) { (action:UIAlertAction!) in
             print("Okay!");
         }
         alert.addAction(cancelAction)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
     
-    @IBAction func necklaceOnOff(sender: UISwitch) {
+    @IBAction func necklaceOnOff(_ sender: UISwitch) {
         necklaceCounter += 1
         if necklaceCounter % 2 == 1 {
             if mainInstance.items.slotFull("neck") {
-                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one item on your pet's neck. Turn off other items to put this one on!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one item on your pet's neck. Turn off other items to put this one on!", preferredStyle: .alert)
+                let no = UIAlertAction(title: "Okay", style: .cancel) { (action:UIAlertAction!) in
                     print("Okay!")
                 }
                 fullAlert.addAction(no)
                 
-                self.presentViewController(fullAlert, animated: true, completion: nil)
+                self.present(fullAlert, animated: true, completion: nil)
             }
             else {
                 mainInstance.items.itemOn("Necklace")
@@ -186,17 +186,17 @@ class StoreBViewController: UIViewController {
             mainInstance.items.itemOff("Necklace")
         }
     }
-    @IBAction func redScarfOnOff(sender: UISwitch) {
+    @IBAction func redScarfOnOff(_ sender: UISwitch) {
         scarfCounter += 1
         if scarfCounter % 2 == 1 {
             if mainInstance.items.slotFull("neck") {
-                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one item on your pet's neck. Turn off other items to put this one on!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one item on your pet's neck. Turn off other items to put this one on!", preferredStyle: .alert)
+                let no = UIAlertAction(title: "Okay", style: .cancel) { (action:UIAlertAction!) in
                     print("Okay!")
                 }
                 fullAlert.addAction(no)
                 
-                self.presentViewController(fullAlert, animated: true, completion: nil)
+                self.present(fullAlert, animated: true, completion: nil)
             }
             else {
                 mainInstance.items.itemOn("Red Scarf")
@@ -206,17 +206,17 @@ class StoreBViewController: UIViewController {
             mainInstance.items.itemOff("Red Scarf")
         }
     }
-    @IBAction func daisyOnOff(sender: UISwitch) {
+    @IBAction func daisyOnOff(_ sender: UISwitch) {
         daisyCounter += 1
         if daisyCounter % 2 == 1 {
             if mainInstance.items.slotFull("head") {
-                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one item on your pet's neck. Turn off other items to put this one on!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one item on your pet's neck. Turn off other items to put this one on!", preferredStyle: .alert)
+                let no = UIAlertAction(title: "Okay", style: .cancel) { (action:UIAlertAction!) in
                     print("Okay!")
                 }
                 fullAlert.addAction(no)
                 
-                self.presentViewController(fullAlert, animated: true, completion: nil)
+                self.present(fullAlert, animated: true, completion: nil)
             }
             else {
                 mainInstance.items.itemOn("Daisy")
@@ -226,17 +226,17 @@ class StoreBViewController: UIViewController {
             mainInstance.items.itemOff("Daisy")
         }
     }
-    @IBAction func hibiscusOnOff(sender: UISwitch) {
+    @IBAction func hibiscusOnOff(_ sender: UISwitch) {
         hibiscusCounter += 1
         if hibiscusCounter % 2 == 1 {
             if mainInstance.items.slotFull("head") {
-                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one item on your pet's neck. Turn off other items to put this one on!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one item on your pet's neck. Turn off other items to put this one on!", preferredStyle: .alert)
+                let no = UIAlertAction(title: "Okay", style: .cancel) { (action:UIAlertAction!) in
                     print("Okay!")
                 }
                 fullAlert.addAction(no)
                 
-                self.presentViewController(fullAlert, animated: true, completion: nil)
+                self.present(fullAlert, animated: true, completion: nil)
             }
             else {
                 mainInstance.items.itemOn("Hibiscus")

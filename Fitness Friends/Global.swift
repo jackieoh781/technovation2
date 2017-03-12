@@ -19,7 +19,7 @@ class Main {
         self.name = name
     }
     
-    func setExercise(x:String) {
+    func setExercise(_ x:String) {
         exercise = x
     }
 }

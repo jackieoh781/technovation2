@@ -19,16 +19,16 @@ class StoreCViewController: UIViewController {
         super.viewDidLoad()
 
         if mainInstance.items.hasItem("Flowercrown") {
-            self.flowercrownSwitch.enabled = true
+            self.flowercrownSwitch.isEnabled = true
         }
         if mainInstance.items.hasItem("Flowercan") {
-            self.flowercanSwitch.enabled = true
+            self.flowercanSwitch.isEnabled = true
         }
         if mainInstance.items.hasItem("Flowerpot") {
-            self.flowerpotSwitch.enabled = true
+            self.flowerpotSwitch.isEnabled = true
         }
         if mainInstance.items.hasItem("Flowervase") {
-            self.flowervaseSwitch.enabled = true
+            self.flowervaseSwitch.isEnabled = true
         }
         
         if mainInstance.items.isItemOn("Flowercrown") {
@@ -64,117 +64,117 @@ class StoreCViewController: UIViewController {
     
     //MARK: Actions
 
-    @IBAction func buyFlowercrown(sender: UIButton) {
-        let alert = UIAlertController(title: "Buy Flowercrown", message: "A flower crown to embrace your inner flower child. Do you want to buy it?", preferredStyle: .Alert)
-        let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
+    @IBAction func buyFlowercrown(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Buy Flowercrown", message: "A flower crown to embrace your inner flower child. Do you want to buy it?", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "Sure!", style: .default) { (action:UIAlertAction!) in
             if mainInstance.coins.canPay(175.0) {
                 mainInstance.coins.pay(175.0)
                 mainInstance.items.buyItem("Flowercrown", price: 175.0)
-                self.flowercrownSwitch.enabled = true
-                self.flowercrown.enabled = false
+                self.flowercrownSwitch.isEnabled = true
+                self.flowercrown.isEnabled = false
             }
             else {
-                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .alert)
+                let no = UIAlertAction(title: "Okay", style: .cancel) { (action:UIAlertAction!) in
                     print("Okay!")
                 }
                 brokeAlert.addAction(no)
-                self.presentViewController(brokeAlert, animated: true, completion: nil)
+                self.present(brokeAlert, animated: true, completion: nil)
             }
         }
         alert.addAction(OKAction)
-        let cancelAction = UIAlertAction(title: "No thanks!", style: .Cancel) { (action:UIAlertAction!) in
+        let cancelAction = UIAlertAction(title: "No thanks!", style: .cancel) { (action:UIAlertAction!) in
             print("Okay!");
         }
         alert.addAction(cancelAction)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
-    @IBAction func buyFlowercan(sender: UIButton) {
-        let alert = UIAlertController(title: "Buy a Flower in a Tin Can", message: "It's a flower in a tin can! Are you sure you want to buy it?", preferredStyle: .Alert)
-        let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
+    @IBAction func buyFlowercan(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Buy a Flower in a Tin Can", message: "It's a flower in a tin can! Are you sure you want to buy it?", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "Sure!", style: .default) { (action:UIAlertAction!) in
             if mainInstance.coins.canPay(25.0) {
                 mainInstance.coins.pay(25.0)
                 mainInstance.items.buyItem("Flowercan", price: 25.0)
-                self.flowercanSwitch.enabled = true
-                self.flowercan.enabled = false
+                self.flowercanSwitch.isEnabled = true
+                self.flowercan.isEnabled = false
             }
             else {
-                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .alert)
+                let no = UIAlertAction(title: "Okay", style: .cancel) { (action:UIAlertAction!) in
                     print("Okay!")
                 }
                 brokeAlert.addAction(no)
-                self.presentViewController(brokeAlert, animated: true, completion: nil)
+                self.present(brokeAlert, animated: true, completion: nil)
             }
         }
         alert.addAction(OKAction)
-        let cancelAction = UIAlertAction(title: "No thanks!", style: .Cancel) { (action:UIAlertAction!) in
+        let cancelAction = UIAlertAction(title: "No thanks!", style: .cancel) { (action:UIAlertAction!) in
             print("Okay!");
         }
         alert.addAction(cancelAction)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
-    @IBAction func buyFlowerpot(sender: UIButton) {
-        let alert = UIAlertController(title: "Buy a Flower in a Tin Can", message: "It's a flower in a tin can! Are you sure you want to buy it?", preferredStyle: .Alert)
-        let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
+    @IBAction func buyFlowerpot(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Buy a Flower in a Tin Can", message: "It's a flower in a tin can! Are you sure you want to buy it?", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "Sure!", style: .default) { (action:UIAlertAction!) in
             if mainInstance.coins.canPay(25.0) {
                 mainInstance.coins.pay(25.0)
                 mainInstance.items.buyItem("Flowercan", price: 25.0)
-                self.flowerpotSwitch.enabled = true
-                self.flowerpot.enabled = false
+                self.flowerpotSwitch.isEnabled = true
+                self.flowerpot.isEnabled = false
             }
             else {
-                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .alert)
+                let no = UIAlertAction(title: "Okay", style: .cancel) { (action:UIAlertAction!) in
                     print("Okay!")
                 }
                 brokeAlert.addAction(no)
-                self.presentViewController(brokeAlert, animated: true, completion: nil)
+                self.present(brokeAlert, animated: true, completion: nil)
             }
         }
         alert.addAction(OKAction)
-        let cancelAction = UIAlertAction(title: "No thanks!", style: .Cancel) { (action:UIAlertAction!) in
+        let cancelAction = UIAlertAction(title: "No thanks!", style: .cancel) { (action:UIAlertAction!) in
             print("Okay!");
         }
         alert.addAction(cancelAction)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
-    @IBAction func buyFlowervase(sender: UIButton) {
-        let alert = UIAlertController(title: "Buy a Flowervase", message: "Wow, what a nice vase! Do you want to buy it?", preferredStyle: .Alert)
-        let OKAction = UIAlertAction(title: "Sure!", style: .Default) { (action:UIAlertAction!) in
+    @IBAction func buyFlowervase(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Buy a Flowervase", message: "Wow, what a nice vase! Do you want to buy it?", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "Sure!", style: .default) { (action:UIAlertAction!) in
             if mainInstance.coins.canPay(150.0) {
                 mainInstance.coins.pay(150.0)
                 mainInstance.items.buyItem("Flowervase", price: 150.0)
-                self.flowervaseSwitch.enabled = true
-                self.flowervase.enabled = false
+                self.flowervaseSwitch.isEnabled = true
+                self.flowervase.isEnabled = false
             }
             else {
-                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                let brokeAlert = UIAlertController(title: "Oh no!", message: "It looks like you don't have enough coins to buy this item. Earn more coins and come back later!", preferredStyle: .alert)
+                let no = UIAlertAction(title: "Okay", style: .cancel) { (action:UIAlertAction!) in
                     print("Okay!")
                 }
                 brokeAlert.addAction(no)
-                self.presentViewController(brokeAlert, animated: true, completion: nil)
+                self.present(brokeAlert, animated: true, completion: nil)
             }
         }
         alert.addAction(OKAction)
-        let cancelAction = UIAlertAction(title: "No thanks!", style: .Cancel) { (action:UIAlertAction!) in
+        let cancelAction = UIAlertAction(title: "No thanks!", style: .cancel) { (action:UIAlertAction!) in
             print("Okay!");
         }
         alert.addAction(cancelAction)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
-    @IBAction func flowercrownOnOff(sender: UISwitch) {
+    @IBAction func flowercrownOnOff(_ sender: UISwitch) {
         flowercrownCounter += 1
         if flowercrownCounter % 2 == 1 {
             if mainInstance.items.slotFull("head") {
-                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one item on your pet's neck. Turn off other items to put this one on!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one item on your pet's neck. Turn off other items to put this one on!", preferredStyle: .alert)
+                let no = UIAlertAction(title: "Okay", style: .cancel) { (action:UIAlertAction!) in
                     print("Okay!")
                 }
                 fullAlert.addAction(no)
                 
-                self.presentViewController(fullAlert, animated: true, completion: nil)
+                self.present(fullAlert, animated: true, completion: nil)
             }
             else {
                 mainInstance.items.itemOn("Flowercrown")
@@ -184,17 +184,17 @@ class StoreCViewController: UIViewController {
             mainInstance.items.itemOff("Flowercrown")
         }
     }
-    @IBAction func flowercanOnOff(sender: UISwitch) {
+    @IBAction func flowercanOnOff(_ sender: UISwitch) {
         flowercanCounter += 1
         if flowercanCounter % 2 == 1 {
             if mainInstance.items.slotFull("flowers") {
-                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one flower item. Turn off other items to put this one on!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one flower item. Turn off other items to put this one on!", preferredStyle: .alert)
+                let no = UIAlertAction(title: "Okay", style: .cancel) { (action:UIAlertAction!) in
                     print("Okay!")
                 }
                 fullAlert.addAction(no)
                 
-                self.presentViewController(fullAlert, animated: true, completion: nil)
+                self.present(fullAlert, animated: true, completion: nil)
             }
             else {
                 mainInstance.items.itemOn("Flowercan")
@@ -204,17 +204,17 @@ class StoreCViewController: UIViewController {
             mainInstance.items.itemOff("Flowercan")
         }
     }
-    @IBAction func flowerpotOnOff(sender: UISwitch) {
+    @IBAction func flowerpotOnOff(_ sender: UISwitch) {
         flowerpotCounter += 1
         if flowerpotCounter % 2 == 1 {
             if mainInstance.items.slotFull("flowers") {
-                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one flower item. Turn off other items to put this one on!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one flower item. Turn off other items to put this one on!", preferredStyle: .alert)
+                let no = UIAlertAction(title: "Okay", style: .cancel) { (action:UIAlertAction!) in
                     print("Okay!")
                 }
                 fullAlert.addAction(no)
                 
-                self.presentViewController(fullAlert, animated: true, completion: nil)
+                self.present(fullAlert, animated: true, completion: nil)
             }
             else {
                 mainInstance.items.itemOn("Flowerpot")
@@ -224,17 +224,17 @@ class StoreCViewController: UIViewController {
             mainInstance.items.itemOff("Flowerpot")
         }
     }
-    @IBAction func flowervaseOnOff(sender: UISwitch) {
+    @IBAction func flowervaseOnOff(_ sender: UISwitch) {
         flowervaseCounter += 1
         if flowervaseCounter % 2 == 1 {
             if mainInstance.items.slotFull("flowers") {
-                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one flower item. Turn off other items to put this one on!", preferredStyle: .Alert)
-                let no = UIAlertAction(title: "Okay", style: .Cancel) { (action:UIAlertAction!) in
+                let fullAlert = UIAlertController(title: "Whoops!", message: "You can only have one flower item. Turn off other items to put this one on!", preferredStyle: .alert)
+                let no = UIAlertAction(title: "Okay", style: .cancel) { (action:UIAlertAction!) in
                     print("Okay!")
                 }
                 fullAlert.addAction(no)
                 
-                self.presentViewController(fullAlert, animated: true, completion: nil)
+                self.present(fullAlert, animated: true, completion: nil)
             }
             else {
                 mainInstance.items.itemOn("Flowervase")

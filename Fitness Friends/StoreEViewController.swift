@@ -33,14 +33,14 @@ class StoreEViewController: UIViewController {
     
     
     //MARK: Actions
-    @IBAction func buyMountain(sender: UIButton) {
+    @IBAction func buyMountain(_ sender: UIButton) {
     }
-    @IBAction func buyTable(sender: UIButton) {
+    @IBAction func buyTable(_ sender: UIButton) {
     }
-    @IBAction func buyDogCard(sender: UIButton) {
+    @IBAction func buyDogCard(_ sender: UIButton) {
     }
     
-    @IBAction func mountainSwitch(sender: UISwitch) {
+    @IBAction func mountainSwitch(_ sender: UISwitch) {
     }
     
 }
